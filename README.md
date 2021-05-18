@@ -1,7 +1,7 @@
 # ProjetReseauSocialPro
 Réalisé par des professionnels : 
 
-Théo MAES
-Loïc MATHIEU
-Philippe VENET
+Théo M.
+Loïc M.
+Philippe V.
 Camille BINET
