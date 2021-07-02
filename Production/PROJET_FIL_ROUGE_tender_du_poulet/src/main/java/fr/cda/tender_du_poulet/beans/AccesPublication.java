@@ -22,17 +22,17 @@ public class AccesPublication {
 		
 	}
 	
-	public AccesPublication(AccesPublicationId id, boolean accessible) {
-		this.id = id;
+	public AccesPublication(AccesPublicationId acces_publication_id, boolean accessible) {
+		this.acces_publication_id = acces_publication_id;
 		this.accessible = accessible;
 	}
 
-	public AccesPublicationId getId() {
-		return id;
+	public AccesPublicationId getAcces_publication_id() {
+		return acces_publication_id;
 	}
 
-	public void setId(AccesPublicationId id) {
-		this.id = id;
+	public void setAcces_publication_id(AccesPublicationId acces_publication_id) {
+		this.acces_publication_id = acces_publication_id;
 	}
 
 	public boolean isAccessible() {
