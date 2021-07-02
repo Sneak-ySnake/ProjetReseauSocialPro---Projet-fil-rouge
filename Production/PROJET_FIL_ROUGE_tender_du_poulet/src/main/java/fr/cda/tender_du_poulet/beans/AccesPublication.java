@@ -6,8 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "acces_publication")
 public class AccesPublication {
 
 	@Id
@@ -21,7 +23,7 @@ public class AccesPublication {
 	public AccesPublication() {
 		
 	}
-	
+
 	public AccesPublication(AccesPublicationId acces_publication_id, boolean accessible) {
 		this.acces_publication_id = acces_publication_id;
 		this.accessible = accessible;
