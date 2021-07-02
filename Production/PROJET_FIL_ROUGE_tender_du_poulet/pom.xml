@@ -6,7 +6,7 @@
 	<artifactId>tender_du_poulet</artifactId>
 	<name>PROJET_FIL_ROUGE_tender_du_poulet</name>
 	<packaging>war</packaging>
-	<version>1.0.0-BUILD-SNAPSHOT</version>
+	<version>0.1.1-BUILD-SNAPSHOT</version>
 	<properties>
 		<java-version>1.8</java-version>
 		<org.springframework-version>5.2.2.RELEASE</org.springframework-version>
