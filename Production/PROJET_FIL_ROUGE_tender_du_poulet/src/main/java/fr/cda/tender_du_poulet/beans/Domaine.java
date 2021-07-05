@@ -9,33 +9,43 @@ import javax.persistence.Id;
 @Entity
 public class Domaine {
 	
-	@Id
+	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int idDomaine;
+	private int id_domaine;
 	
-	@Column(name="nomDomaine")
-	String nomDomaine;
-
-	public Domaine(int idDomaine, String nomDomaine) {
- 		this.idDomaine = idDomaine;
-		this.nomDomaine = nomDomaine;
+	@Column(name="nom_domaine")
+	private String nom_domaine;
+	
+	public Domaine(String nom_domaine) {
+		 
+		this.id_domaine = id_domaine;
+		this.nom_domaine = nom_domaine;
+	}
+	
+	public Domaine(int id_domaine, String nom_domaine) {
+		 
+		this.id_domaine = id_domaine;
+		this.nom_domaine = nom_domaine;
 	}
 
-	public int getIdDomaine() {
-		return idDomaine;
+
+	public int getId_domaine() {
+		return id_domaine;
 	}
 
-	public void setIdDomaine(int idDomaine) {
-		this.idDomaine = idDomaine;
+	public void setId_domaine(int id_domaine) {
+		this.id_domaine = id_domaine;
 	}
 
-	public String getNomDomaine() {
-		return nomDomaine;
+	public String getNom_domaine() {
+		return nom_domaine;
 	}
 
-	public void setNomDomaine(String nomDomaine) {
-		this.nomDomaine = nomDomaine;
+	public void setNom_domaine(String nom_domaine) {
+		this.nom_domaine = nom_domaine;
 	}
+	
+	
 	
 	
 	

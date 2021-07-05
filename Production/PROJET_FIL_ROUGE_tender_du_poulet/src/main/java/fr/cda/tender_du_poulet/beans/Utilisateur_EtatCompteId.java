@@ -9,9 +9,9 @@ import javax.persistence.ManyToOne;
 
 @Embeddable
 public class Utilisateur_EtatCompteId implements Serializable {
-	@ManyToOne() @JoinColumn(name="id_domaine")
+	@ManyToOne() @JoinColumn(name="id_utilisateur")
 	private Utilisateur utilisateur;
-	@ManyToOne() @JoinColumn(name="id_domaine")
+	@ManyToOne() @JoinColumn(name="id_etat_compte")
 	private EtatCompte etat_compte;
 	private Date date_debut;
 
