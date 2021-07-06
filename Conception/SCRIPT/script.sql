@@ -250,9 +250,12 @@ OWNER to gestionnaire
 create table pfr_tender.negociation
 (
 id_negociation serial not null,
-CONSTRAINT PK_NEGOCATION primary key (id_negociation),
-OWNER to gestionnaire
+CONSTRAINT PK_NEGOCATION primary key (id_negociation)
 );
+
+alter table pfr_tender.negociation 
+OWNER to gestionnaire
+;
 
 create table pfr_tender.negocier
 (
@@ -264,6 +267,9 @@ message text,
 constraint PK_NEGOCIER primary key (id_utilisateur, id_publication, id_negociation, date),
 constraint FK_NEGOCIER_UTILISATEUR foreign key (id_utilisateur) references pfr_tender.utilisateur(id_utilisateur),
 constraint FK_NEGOCIER_PUBLICATION foreign key (id_publication) references pfr_tender.publication(id_publication),
-constraint FK_NEGOCIER_NEGOCIATION foreign key (id_negociation) references pfr_tender.negociation(id_negociation),
-OWNER to gestionnaire
+constraint FK_NEGOCIER_NEGOCIATION foreign key (id_negociation) references pfr_tender.negociation(id_negociation)
 );
+
+alter table pfr_tender.negocier 
+OWNER to gestionnaire
+;
