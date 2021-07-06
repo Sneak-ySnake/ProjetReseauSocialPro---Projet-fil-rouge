@@ -16,21 +16,21 @@ public class AdministrerPublication {
 	@Id
 	@EmbeddedId
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private AdministrerPublicationId administrerPublicationId;
+	private AdministrerPublicationId administrer_publicationId;
 
 	public AdministrerPublication() {
 	}
 
-	public AdministrerPublication(AdministrerPublicationId administrerPublicationId) {
-		this.administrerPublicationId = administrerPublicationId;
+	public AdministrerPublication(AdministrerPublicationId administrer_publicationId) {
+		this.administrer_publicationId = administrer_publicationId;
 
+	}
+	public AdministrerPublicationId getAdministrer_publicationId() {
+		return administrer_publicationId;
+	}
+
+	public void setAdministrer_publicationId(AdministrerPublicationId administrer_publicationId) {
+		this.administrer_publicationId = administrer_publicationId;
 	}
 	
-	public AdministrerPublicationId getAdministrerPublicationId() {
-		return administrerPublicationId;
-	}
-
-	public void setAdministrerUtilisateurId(AdministrerPublicationId administrerPublicationId) {
-		this.administrerPublicationId = administrerPublicationId;
-	}
 }

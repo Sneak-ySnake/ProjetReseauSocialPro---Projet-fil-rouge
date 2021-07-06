@@ -21,9 +21,12 @@ public class ActionSurPublication {
 	public ActionSurPublication() {	
 	}
 	
-	public ActionSurPublication(int id_action_sur_publication, String nom_action_sur_publication) {
-		this.id_action_sur_publication = id_action_sur_publication;
+	public ActionSurPublication(String nom_action_sur_publication) {
 		this.nom_action_sur_publication = nom_action_sur_publication;
+	}
+	
+	public ActionSurPublication(int id_action_sur_publication) {
+		this.id_action_sur_publication = id_action_sur_publication;
 	}
 
 	public int getId_action_sur_publication() {

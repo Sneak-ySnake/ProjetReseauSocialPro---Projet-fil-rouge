@@ -20,9 +20,12 @@ public class ActionSurUtilisateur {
 	public ActionSurUtilisateur() {	
 	}
 	
-	public ActionSurUtilisateur (int id_action_sur_utilisateur, String nom_action_sur_utilisateur) {
-		this.id_action_sur_utilisateur = id_action_sur_utilisateur;
+	public ActionSurUtilisateur (String nom_action_sur_utilisateur) {
 		this.nom_action_sur_utilisateur = nom_action_sur_utilisateur;
+	}
+	
+	public ActionSurUtilisateur(int id_action_sur_utilisateur) {
+		this.id_action_sur_utilisateur = id_action_sur_utilisateur;
 	}
 		
 	public int getId_action_sur_utilisateur() {
