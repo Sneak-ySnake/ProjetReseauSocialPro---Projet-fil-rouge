@@ -47,6 +47,19 @@ public class Utilisateur {
 		this.domaine = domaine;
 	}
 	
+	public Utilisateur(String nom_utilisateur, String prenom_utilisateur,
+			String telephone, String code_postal, String poste_occupe, String email_utilisateur,
+			String mot_de_passe_utilisateur, Domaine domaine) {
+		this.nom_utilisateur = nom_utilisateur;
+		this.prenom_utilisateur = prenom_utilisateur;
+		this.telephone = telephone;
+		this.code_postal = code_postal;
+		this.poste_occupe = poste_occupe;
+		this.email_utilisateur = email_utilisateur;
+		this.mot_de_passe_utilisateur = mot_de_passe_utilisateur;
+		this.domaine = domaine;
+	}
+	
 	
 /////////////////////////////// GETTER / SETTER ///////////////////////////////////////////////////////////////////////////
 	public int getId_utilisateur() {

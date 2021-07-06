@@ -18,7 +18,6 @@ public class Utilisateur_EtatCompteId implements Serializable {
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
 	public Utilisateur_EtatCompteId() {
-		
 	}
 
 	public Utilisateur_EtatCompteId(Utilisateur utilisateur, EtatCompte etat_compte, Date date_debut) {
