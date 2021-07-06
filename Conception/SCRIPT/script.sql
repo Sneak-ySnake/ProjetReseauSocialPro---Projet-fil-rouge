@@ -103,7 +103,7 @@ owner to gestionnaire;
 create table pfr_tender.type_publication
 (
 id_type_publication serial not null,
-nom_publication varchar(20) not null
+nom_type_publication varchar(20) not null
 );
 
 alter table pfr_tender.type_publication
