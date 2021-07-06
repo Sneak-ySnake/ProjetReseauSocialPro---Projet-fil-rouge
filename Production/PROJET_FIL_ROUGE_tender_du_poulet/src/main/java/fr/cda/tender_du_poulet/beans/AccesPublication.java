@@ -20,6 +20,9 @@ public class AccesPublication {
 	@Column(name = "accessible")
 	private boolean accessible;
 
+		
+		///CONSTRUCTEUR///
+	
 	public AccesPublication() {
 		
 	}
@@ -29,6 +32,9 @@ public class AccesPublication {
 		this.accessible = accessible;
 	}
 
+	
+		///GETTER SETTER///
+	
 	public AccesPublicationId getAcces_publication_id() {
 		return acces_publication_id;
 	}

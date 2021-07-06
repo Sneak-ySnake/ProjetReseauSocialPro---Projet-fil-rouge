@@ -54,6 +54,9 @@ public class Publication {
 	@JoinColumn(name = "id_etat_publication")
 	private EtatPublication etat_publication;
 	
+	
+		///CONSTRUCTEURS///
+	
 	public Publication() {
 		
 	}
@@ -73,6 +76,9 @@ public class Publication {
 		this.etat_publication = etat_publication;
 	}
 
+	
+		///GETTERS SETTERS///
+	
 	public int getId_publication() {
 		return id_publication;
 	}

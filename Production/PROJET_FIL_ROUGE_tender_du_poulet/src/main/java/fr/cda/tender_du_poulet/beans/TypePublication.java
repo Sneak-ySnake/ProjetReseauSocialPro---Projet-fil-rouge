@@ -19,6 +19,9 @@ public class TypePublication {
 	@Column(name = "nom_type_publication")
 	private String nom_type_publication;
 
+	
+		///CONSTRUCTEUR///
+	
 	public TypePublication() {
 		
 	}
@@ -28,6 +31,9 @@ public class TypePublication {
 		this.nom_type_publication = nom_type_publication;
 	}
 
+	
+		///GETTERS SETTERS///
+	
 	public int getId_type_publication() {
 		return id_type_publication;
 	}
