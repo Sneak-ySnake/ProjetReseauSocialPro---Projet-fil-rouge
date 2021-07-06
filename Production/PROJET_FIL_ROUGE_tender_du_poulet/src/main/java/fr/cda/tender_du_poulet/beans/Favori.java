@@ -5,8 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity
+@Entity @Table(name="favori")
 public class Favori {
 
 	@Id
@@ -15,8 +16,7 @@ public class Favori {
 	private FavoriId favoriId;
 
 	public Favori(FavoriId favoriId) {
-		super();
-		this.favoriId = favoriId;
+		 this.favoriId = favoriId;
 	}
 
 	public FavoriId getFavoriId() {
