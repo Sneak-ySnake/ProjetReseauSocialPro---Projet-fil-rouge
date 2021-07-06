@@ -12,24 +12,16 @@ public class Negociation implements Serializable{
 	
 	@Id
 	@GeneratedValue( strategy=GenerationType.IDENTITY)
-	int idNegociation;
+	int id_negociation;
 
-	public Negociation(int idNegociation) {
-		super();
-		this.idNegociation = idNegociation;
-	}
-
+	public Negociation() {}
+	 
 	public int getIdNegociation() {
-		return idNegociation;
+		return id_negociation;
 	}
 
-	public void setIdNegociation(int idNegociation) {
-		this.idNegociation = idNegociation;
+	public void setIdNegociation(int id_negociation) {
+		this.id_negociation = id_negociation;
 	}
 	
-	
-	
-	
-	
-
 }
