@@ -28,7 +28,6 @@ public class NegocierId implements Serializable{
 	}
 
 	public NegocierId(Negociation negociation, Publication publication, Utilisateur utilisateur, Date date) {
-
 		this.negociation = negociation;
 		this.publication = publication;
 		this.utilisateur = utilisateur;
@@ -67,6 +66,5 @@ public class NegocierId implements Serializable{
 		this.date = date;
 	}
 	 
-	
 
 }

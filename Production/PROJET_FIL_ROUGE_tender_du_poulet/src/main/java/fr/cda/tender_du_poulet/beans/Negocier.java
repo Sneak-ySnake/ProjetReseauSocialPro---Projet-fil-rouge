@@ -19,6 +19,10 @@ public class Negocier {
 	private String message;
 
 	public Negocier() {}
+	
+	public Negocier( String message) {
+		this.message = message;
+	}
 
 	public Negocier(NegocierId negocierid, String message) {
 		this.negocierid = negocierid;
