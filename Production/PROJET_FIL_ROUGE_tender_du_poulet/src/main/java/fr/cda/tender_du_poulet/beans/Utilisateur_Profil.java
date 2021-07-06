@@ -15,7 +15,6 @@ public class Utilisateur_Profil {
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
 	public Utilisateur_Profil() {
-		
 	}
 
 	public Utilisateur_Profil(Utilisateur_ProfilId utilisateur_ProfilId) {
@@ -30,6 +29,4 @@ public class Utilisateur_Profil {
 	public void setUtilisateur_ProfilId(Utilisateur_ProfilId utilisateur_ProfilId) {
 		this.utilisateur_ProfilId = utilisateur_ProfilId;
 	}
-	
-	
 }

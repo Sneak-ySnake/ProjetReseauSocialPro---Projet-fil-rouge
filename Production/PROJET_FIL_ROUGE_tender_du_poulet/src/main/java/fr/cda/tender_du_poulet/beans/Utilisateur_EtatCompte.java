@@ -14,7 +14,6 @@ public class Utilisateur_EtatCompte {
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
 	public Utilisateur_EtatCompte() {
-		
 	}
 
 	public Utilisateur_EtatCompte(Utilisateur_EtatCompteId utilisateur_EtatCompteId) {

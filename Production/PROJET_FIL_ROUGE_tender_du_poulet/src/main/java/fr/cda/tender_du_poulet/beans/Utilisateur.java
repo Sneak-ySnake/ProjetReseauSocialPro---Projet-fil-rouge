@@ -29,13 +29,11 @@ public class Utilisateur {
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
 	public Utilisateur() {
-		
 	}
 
-	public Utilisateur(int id_utilisateur, String nom_utilisateur, String prenom_utilisateur, String site_web,
+	public Utilisateur(String nom_utilisateur, String prenom_utilisateur, String site_web,
 			String telephone, String code_postal, String poste_occupe, String email_utilisateur,
 			String mot_de_passe_utilisateur, String siret, String nom_entreprise, Domaine domaine) {
-		this.id_utilisateur = id_utilisateur;
 		this.nom_utilisateur = nom_utilisateur;
 		this.prenom_utilisateur = prenom_utilisateur;
 		this.site_web = site_web;

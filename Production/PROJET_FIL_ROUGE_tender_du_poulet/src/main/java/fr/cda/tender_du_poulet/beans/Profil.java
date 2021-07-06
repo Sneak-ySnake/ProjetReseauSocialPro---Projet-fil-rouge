@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity @Table(name="utilisateur")
+@Entity @Table(name="profil")
 public class Profil {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id_profil;
@@ -15,11 +15,9 @@ public class Profil {
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
 	public Profil() {
-		
 	}
 
-	public Profil(int id_profil, String nom_profil) {
-		this.id_profil = id_profil;
+	public Profil(String nom_profil) {
 		this.nom_profil = nom_profil;
 	}
 	
@@ -38,5 +36,4 @@ public class Profil {
 	public void setNom_profil(String nom_profil) {
 		this.nom_profil = nom_profil;
 	}
-	
 }

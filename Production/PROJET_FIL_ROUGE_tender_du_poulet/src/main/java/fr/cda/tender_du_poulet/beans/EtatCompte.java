@@ -16,11 +16,9 @@ public class EtatCompte {
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
 	public EtatCompte() {
-		
 	}
 
-	public EtatCompte(int id_etat_compte, String nom_etat_compte, int duree) {
-		this.id_etat_compte = id_etat_compte;
+	public EtatCompte(String nom_etat_compte, int duree) {
 		this.nom_etat_compte = nom_etat_compte;
 		this.duree = duree;
 	}
