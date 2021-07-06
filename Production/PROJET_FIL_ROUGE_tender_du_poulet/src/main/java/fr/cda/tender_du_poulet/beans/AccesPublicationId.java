@@ -17,6 +17,10 @@ public class AccesPublicationId implements Serializable {
 	@JoinColumn(name = "id_publication")
 	private Publication publication;
 
+	public AccesPublicationId() {
+		
+	}
+	
 	public AccesPublicationId(Utilisateur utilisateur, Publication publication) {
 		this.utilisateur = utilisateur;
 		this.publication = publication;

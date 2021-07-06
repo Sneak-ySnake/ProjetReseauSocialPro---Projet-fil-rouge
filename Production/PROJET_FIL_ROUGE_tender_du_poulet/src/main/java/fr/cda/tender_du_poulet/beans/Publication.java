@@ -58,10 +58,9 @@ public class Publication {
 		
 	}
 
-	public Publication(int id_publication, String nom_publication, String description_publication, float prix,
+	public Publication(String nom_publication, String description_publication, float prix,
 			String type_produit, Date date_publication, int quantite, Utilisateur utilisateur,
 			TypePublication type_publication, StatutPublication statut_publication, EtatPublication etat_publication) {
-		this.id_publication = id_publication;
 		this.nom_publication = nom_publication;
 		this.description_publication = description_publication;
 		this.prix = prix;
