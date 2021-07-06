@@ -16,6 +16,10 @@ public class Domaine {
 	@Column(name="nom_domaine")
 	private String nom_domaine;
 	
+	
+	public Domaine() {
+	}
+	
 	public Domaine(String nom_domaine) {
 		 
 		this.id_domaine = id_domaine;
