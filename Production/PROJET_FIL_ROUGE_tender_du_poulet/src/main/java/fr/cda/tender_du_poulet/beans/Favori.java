@@ -1,6 +1,5 @@
 package fr.cda.tender_du_poulet.beans;
 
-import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

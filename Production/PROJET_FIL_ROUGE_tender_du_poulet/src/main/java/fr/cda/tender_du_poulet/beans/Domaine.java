@@ -21,13 +21,10 @@ public class Domaine {
 	}
 	
 	public Domaine(String nom_domaine) {
-		 
-		this.id_domaine = id_domaine;
 		this.nom_domaine = nom_domaine;
 	}
 	
 	public Domaine(int id_domaine, String nom_domaine) {
-		 
 		this.id_domaine = id_domaine;
 		this.nom_domaine = nom_domaine;
 	}
@@ -36,7 +33,6 @@ public class Domaine {
 	public int getId_domaine() {
 		return id_domaine;
 	}
-
 	public void setId_domaine(int id_domaine) {
 		this.id_domaine = id_domaine;
 	}
@@ -44,13 +40,7 @@ public class Domaine {
 	public String getNom_domaine() {
 		return nom_domaine;
 	}
-
 	public void setNom_domaine(String nom_domaine) {
 		this.nom_domaine = nom_domaine;
 	}
-	
-	
-	
-	
-	
 }
