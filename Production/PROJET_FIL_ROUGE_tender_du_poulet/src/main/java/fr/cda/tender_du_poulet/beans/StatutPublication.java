@@ -26,8 +26,7 @@ public class StatutPublication {
 		
 	}
 	
-	public StatutPublication(int id_statut_publication, String nom_statut_publication) {
-		this.id_statut_publication = id_statut_publication;
+	public StatutPublication(String nom_statut_publication) {
 		this.nom_statut_publication = nom_statut_publication;
 	}
 

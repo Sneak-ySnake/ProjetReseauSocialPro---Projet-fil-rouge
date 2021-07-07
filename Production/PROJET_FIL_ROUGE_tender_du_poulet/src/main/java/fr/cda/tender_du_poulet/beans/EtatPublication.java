@@ -26,8 +26,7 @@ public class EtatPublication {
 		
 	}
 	
-	public EtatPublication(int id_etat_publication, String nom_etat_publication) {
-		this.id_etat_publication = id_etat_publication;
+	public EtatPublication(String nom_etat_publication) {
 		this.nom_etat_publication = nom_etat_publication;
 	}
 

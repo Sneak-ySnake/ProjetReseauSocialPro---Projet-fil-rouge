@@ -26,8 +26,7 @@ public class TypePublication {
 		
 	}
 	
-	public TypePublication(int id_type_publication, String nom_type_publication) {
-		this.id_type_publication = id_type_publication;
+	public TypePublication(String nom_type_publication) {
 		this.nom_type_publication = nom_type_publication;
 	}
 
