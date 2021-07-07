@@ -14,7 +14,7 @@ public class Favori {
 	@Embedded
 	@GeneratedValue( strategy=GenerationType.IDENTITY)
 	private FavoriId favoriId;
-
+	
 	public Favori() {
 		
 	}
