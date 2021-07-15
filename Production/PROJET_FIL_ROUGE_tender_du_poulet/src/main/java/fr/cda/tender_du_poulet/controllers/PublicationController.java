@@ -9,7 +9,7 @@ import fr.cda.tender_du_poulet.dto.PublicationDTO;
 import fr.cda.tender_du_poulet.service.PublicationService;
 
 @RestController
-public class PublicationControlleur {
+public class PublicationController {
 
 	private PublicationService service = new PublicationService();
 	
