@@ -1,6 +1,6 @@
 package fr.cda.tender_du_poulet.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.cda.tender_du_poulet.dto.PublicationDTO;
@@ -11,7 +11,7 @@ public class PublicationController {
 
 	private PublicationService service = new PublicationService();
 	
-	@GetMapping(value = "/ajoutPublication")
+	@PostMapping(value = "/ajoutPublication")
 	public void AjoutPublication(PublicationDTO p) {
 		service.ajoutPublication(p);
 	}
