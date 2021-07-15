@@ -12,13 +12,13 @@ import fr.cda.tender_du_poulet.dto.StatutPublicationDTO;
 @Component
 public class StatutPublicationConverter {
 
-	public StatutPublicationDTO entityVersDto(StatutPublicationDTO s) {
+	public StatutPublicationDTO entityVersDto(StatutPublication s) {
 		ModelMapper mapper = new ModelMapper();
 		StatutPublicationDTO map = mapper.map(s, StatutPublicationDTO.class);
 		return map;
 	}
 	
-	public List<StatutPublicationDTO> entityVersDto(List<StatutPublicationDTO> s) {
+	public List<StatutPublicationDTO> entityVersDto(List<StatutPublication> s) {
 		return s.stream().map(x -> entityVersDto(x)).collect(Collectors.toList());
 	}
 	
