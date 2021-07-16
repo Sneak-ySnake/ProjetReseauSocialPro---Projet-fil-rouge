@@ -2,11 +2,6 @@ package fr.cda.tender_du_poulet.dto;
 
 import java.util.Date;
 
-import fr.cda.tender_du_poulet.beans.EtatPublication;
-import fr.cda.tender_du_poulet.beans.StatutPublication;
-import fr.cda.tender_du_poulet.beans.TypePublication;
-import fr.cda.tender_du_poulet.beans.Utilisateur;
-
 public class PublicationDTO {
 	
 	private String nom_publication;
@@ -128,7 +123,7 @@ public class PublicationDTO {
 		return etat_publication;
 	}
 
-	public void setEtat_publication(EtatPublication etat_publication) {
+	public void setEtat_publication(EtatPublicationDTO etat_publication) {
 		this.etat_publication = etat_publication;
 	}
 	
