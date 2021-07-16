@@ -25,7 +25,7 @@ public class PublicationService {
 		return converter.entityVersDto(publicationRepository.findById(id).get());
 	}
 	
-	public List<PublicationDTO> recupAllPublication(int id) {
+	public List<PublicationDTO> recupAllPublication() {
 		return converter.entityVersDto(publicationRepository.findAll());
 	}
 	
