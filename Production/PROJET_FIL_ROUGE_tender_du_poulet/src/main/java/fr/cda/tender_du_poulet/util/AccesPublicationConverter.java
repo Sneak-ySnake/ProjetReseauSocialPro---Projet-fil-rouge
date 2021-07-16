@@ -2,10 +2,8 @@ package fr.cda.tender_du_poulet.util;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
-
 import fr.cda.tender_du_poulet.beans.AccesPublication;
 import fr.cda.tender_du_poulet.dto.AccesPublicationDTO;
 

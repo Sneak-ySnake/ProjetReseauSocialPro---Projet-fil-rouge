@@ -273,3 +273,13 @@ constraint FK_NEGOCIER_NEGOCIATION foreign key (id_negociation) references pfr_t
 alter table pfr_tender.negocier 
 OWNER to gestionnaire
 ;
+
+INSERT INTO Etudiant VALUES ('Denard', 'bob', 'afrique', 'mercenaire')
+INSERT INTO Etudiant VALUES ('gotlib', 'serge', 'france', 'dessinateur')
+INSERT INTO Etudiant VALUES ('uderzo', 'marcel', 'gaule', 'dessinateur')
+INSERT INTO Etudiant VALUES ('miora', 'kentaro', 'japon', 'artiste')
+INSERT INTO Etudiant VALUES ('loic', 'theo', 'roubaix', 'génie en herbe')
+INSERT INTO Etudiant VALUES ('Camille', 'Philippe', 'roubaix', 'galérien')
+
+commit;
+
