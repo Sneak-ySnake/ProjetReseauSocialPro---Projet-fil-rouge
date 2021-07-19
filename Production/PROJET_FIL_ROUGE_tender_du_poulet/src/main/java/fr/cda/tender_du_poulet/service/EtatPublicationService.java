@@ -15,7 +15,7 @@ public class EtatPublicationService {
 	EtatPublicationConverter converter = new EtatPublicationConverter();
 	
 	@Autowired
-	EtatPublicationRepository etatPublicationRepository;
+	private EtatPublicationRepository etatPublicationRepository;
 	
 	public void ajoutEtatPublication(EtatPublicationDTO e) {
 		etatPublicationRepository.save(converter.dtoVersEntity(e));
