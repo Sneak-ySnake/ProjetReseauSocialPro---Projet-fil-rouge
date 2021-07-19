@@ -6,9 +6,9 @@ import fr.cda.tender_du_poulet.dto.NegociationDTO;
 
  public interface NegociationInterfaceService {
  
-	public void ajoutNegociation();  
+	public void ajoutNegociation(NegociationDTO n);  
 	
-	public NegociationDTO recupNegociation();
+	public NegociationDTO recupNegociation(int id);
 	
 	public List<NegociationDTO> recupAllNegociation(); 
 	

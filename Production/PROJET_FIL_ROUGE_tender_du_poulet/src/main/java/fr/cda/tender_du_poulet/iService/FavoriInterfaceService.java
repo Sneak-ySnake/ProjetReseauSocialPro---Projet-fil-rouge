@@ -4,14 +4,12 @@ import java.util.List;
 
 import fr.cda.tender_du_poulet.dto.FavoriDTO;
 
-public interface FavoriInterfaceService {
+public interface FavoriInterfaceService { 
  
- 
-		public void ajoutFavori();  
+		public void ajoutFavori(FavoriDTO f);  
 		
-		public FavoriDTO recupFavori();
+		public FavoriDTO recupFavori(int id);
 		
-		public List<FavoriDTO> recupAllFavori(); 
-		
+		public List<FavoriDTO> recupAllFavori(int id);  
 	  
 }

@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.NegociationRepository;
 import fr.cda.tender_du_poulet.dto.NegociationDTO;
+import fr.cda.tender_du_poulet.iService.NegociationInterfaceService;
 import fr.cda.tender_du_poulet.util.NegociationConverter;
 
 @Service
-public class NegociationService {
+public class NegociationService implements NegociationInterfaceService {
 	
 	private NegociationConverter negociationconverter = new NegociationConverter();
 	
@@ -25,9 +26,11 @@ public class NegociationService {
 		return negociationconverter.entityVersDto(negociationRepository.findById(id).get());
 	}
 	
-	public List<NegociationDTO> recupAllNegociation(int id) {
+	public List<NegociationDTO> recupAllNegociation() {
 		return negociationconverter.entityVersDto(negociationRepository.findAll());
 	}
+
+	 
 
 }
 
