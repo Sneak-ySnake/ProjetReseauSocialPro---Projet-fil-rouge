@@ -18,8 +18,8 @@ public class NegociationService implements NegociationInterfaceService {
 	@Autowired
 	NegociationRepository negociationRepository;
 
-	public void ajoutNegociation(NegociationDTO p) {
-		negociationRepository.save(negociationconverter.dtoVersEntity(p));
+	public void ajoutNegociation(NegociationDTO n) {
+		negociationRepository.save(negociationconverter.dtoVersEntity(n));
 	}
 	
 	public NegociationDTO recupNegociation(int id) {
