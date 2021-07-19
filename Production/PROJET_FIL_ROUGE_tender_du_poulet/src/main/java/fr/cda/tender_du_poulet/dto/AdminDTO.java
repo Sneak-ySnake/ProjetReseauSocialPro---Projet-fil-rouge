@@ -48,10 +48,4 @@ public class AdminDTO {
 	public void setMot_de_passe_admin(String mot_de_passe_admin) {
 		this.mot_de_passe_admin = mot_de_passe_admin;
 	}
-	
-	
-	
-	
-	
-
 }

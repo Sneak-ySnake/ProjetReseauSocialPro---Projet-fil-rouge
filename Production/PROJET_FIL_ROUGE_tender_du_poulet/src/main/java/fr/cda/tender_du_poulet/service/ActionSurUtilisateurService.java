@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.ActionSurUtilisateurRepository;
 import fr.cda.tender_du_poulet.dto.ActionSurUtilisateurDTO;
+import fr.cda.tender_du_poulet.iService.ActionSurUtilisateurInterfaceService;
 import fr.cda.tender_du_poulet.util.ActionSurUtilisateurConverter;
 
 @Service
-public class ActionSurUtilisateurService {
+public class ActionSurUtilisateurService implements ActionSurUtilisateurInterfaceService{
 	
 	private ActionSurUtilisateurConverter converter = new ActionSurUtilisateurConverter();
 	
@@ -28,7 +29,5 @@ public class ActionSurUtilisateurService {
 	public List<ActionSurUtilisateurDTO> recupAllActionSurUtilisateur() {
 		return converter.entityVersDto(actionSurUtilisateurRepo.findAll());
 	}
-	
-	
 
 }
