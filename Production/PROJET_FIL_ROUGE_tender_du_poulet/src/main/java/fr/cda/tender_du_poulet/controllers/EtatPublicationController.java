@@ -16,7 +16,7 @@ public class EtatPublicationController {
 	
 	@GetMapping(value = "/recupEtatPublication") 
 	public EtatPublicationDTO recupEtatPublication(int id) {
-		return service.recupEtatPublication(id);
+return service.recupEtatPublication(id);
 	}
 	
 	@GetMapping(value = "/recupEtatPublications")
@@ -24,9 +24,14 @@ public class EtatPublicationController {
 		return service.recupAllEtatPublication();
 	}
 	
-	@PostMapping(value = "/ajouterEtatPublication")
-	public void ajouterEtatPublication(EtatPublicationDTO e) {
+	@GetMapping(value = "/ajouterEtatPublication")
+	public void ajouterEtatPublication(/*EtatPublicationDTO e*/) {
+		
+		EtatPublicationDTO e = new EtatPublicationDTO("test");
+
 		service.ajoutEtatPublication(e);
+		
+		/*service.ajoutEtatPublication(e);*/
 	}
 	
 }

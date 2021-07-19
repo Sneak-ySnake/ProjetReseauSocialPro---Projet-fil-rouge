@@ -2,8 +2,6 @@ package fr.cda.tender_du_poulet.dto;
 
 public class TypePublicationDTO {
 
-	private int id_type_publication;
-	
 	private String nom_type_publication;
 
 	
@@ -19,14 +17,6 @@ public class TypePublicationDTO {
 
 	
 		///GETTERS SETTERS///
-	
-	public int getId_type_publication() {
-		return id_type_publication;
-	}
-
-	public void setId_type_publication(int id_type_publication) {
-		this.id_type_publication = id_type_publication;
-	}
 
 	public String getNom_type_publication() {
 		return nom_type_publication;
