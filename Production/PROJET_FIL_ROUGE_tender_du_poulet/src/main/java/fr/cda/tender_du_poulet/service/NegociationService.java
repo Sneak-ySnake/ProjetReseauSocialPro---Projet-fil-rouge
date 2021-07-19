@@ -16,7 +16,7 @@ public class NegociationService {
 	
 	@Autowired
 	NegociationRepository negociationRepository;
-	
+
 	public void ajoutNegociation(NegociationDTO p) {
 		negociationRepository.save(negociationconverter.dtoVersEntity(p));
 	}
