@@ -10,6 +10,6 @@ public interface FavoriInterfaceService {
 		
 		public FavoriDTO recupFavori(int id);
 		
-		public List<FavoriDTO> recupAllFavori(int id);  
+		public List<FavoriDTO> recupAllFavori();  
 	  
 }
