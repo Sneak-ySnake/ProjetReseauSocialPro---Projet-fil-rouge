@@ -6,10 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import fr.cda.tender_du_poulet.dao.AdministrerUtilisateurRepository;
 import fr.cda.tender_du_poulet.dto.AdministrerUtilisateurDTO;
+import fr.cda.tender_du_poulet.iService.AdministrerUtilisateurInterfaceService;
 import fr.cda.tender_du_poulet.util.AdministrerUtilisateurConverter;
 
 @Service
-public class AdministrerUtilisateurService {
+public class AdministrerUtilisateurService implements AdministrerUtilisateurInterfaceService {
 	
 	private AdministrerUtilisateurConverter converter = new AdministrerUtilisateurConverter();
 	
