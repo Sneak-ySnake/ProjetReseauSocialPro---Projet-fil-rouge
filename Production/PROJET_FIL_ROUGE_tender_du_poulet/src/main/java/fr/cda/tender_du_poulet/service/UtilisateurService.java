@@ -25,7 +25,7 @@ public class UtilisateurService {
 		return converter.entityVersDto(utilisateurRepository.findById(id).get());
 	}
 	
-	public List<UtilisateurDTO> recupAllUtilisateur(int id) {
+	public List<UtilisateurDTO> recupAllUtilisateur() {
 		return converter.entityVersDto(utilisateurRepository.findAll());
 	}
 }
