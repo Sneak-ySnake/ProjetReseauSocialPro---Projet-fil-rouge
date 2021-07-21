@@ -6,10 +6,11 @@ import fr.cda.tender_du_poulet.dto.PublicationDTO;
 
 public interface PublicationInterfaceService {
 
-	public void ajouterPublication();
+	public void ajoutPublication(PublicationDTO p);
 	
 	public PublicationDTO recupPublication(int id);
 	
 	public List<PublicationDTO> recupAllPublication();
-	
+
+	public void supprimerPublication(int id);
 }

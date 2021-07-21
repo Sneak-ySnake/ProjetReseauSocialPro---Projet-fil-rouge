@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.PublicationRepository;
 import fr.cda.tender_du_poulet.dto.PublicationDTO;
+import fr.cda.tender_du_poulet.iService.PublicationInterfaceService;
 import fr.cda.tender_du_poulet.util.PublicationConverter;
 
 @Service
-public class PublicationService {
+public class PublicationService implements PublicationInterfaceService {
 
 	private PublicationConverter converter = new PublicationConverter();
 	
@@ -27,6 +28,10 @@ public class PublicationService {
 	
 	public List<PublicationDTO> recupAllPublication() {
 		return converter.entityVersDto(publicationRepository.findAll());
+	}
+	
+	public void supprimerPublication(int id) {
+		publicationRepository.deleteById(id);
 	}
 	
 }
