@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 import fr.cda.tender_du_poulet.beans.AccesPublicationId;
 import fr.cda.tender_du_poulet.dao.AccesPublicationRepository;
 import fr.cda.tender_du_poulet.dto.AccesPublicationDTO;
+import fr.cda.tender_du_poulet.iService.AccesPublicationInterfaceService;
 import fr.cda.tender_du_poulet.util.AccesPublicationConverter;
 
 @Service
-public class AccesPublicationService {
+public class AccesPublicationService implements AccesPublicationInterfaceService {
 
 	private AccesPublicationConverter converter;
 	
