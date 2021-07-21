@@ -7,14 +7,13 @@ public class TypePublicationDTO {
 	
 		///CONSTRUCTEUR///
 	
-	public TypePublicationDTO() {
-		
-	}
-	
 	public TypePublicationDTO(String nom_type_publication) {
 		this.nom_type_publication = nom_type_publication;
 	}
 
+	public TypePublicationDTO() {
+		
+	}
 	
 		///GETTERS SETTERS///
 

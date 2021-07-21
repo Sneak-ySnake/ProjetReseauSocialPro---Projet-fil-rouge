@@ -7,16 +7,17 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.TypePublicationRepository;
 import fr.cda.tender_du_poulet.dto.TypePublicationDTO;
+import fr.cda.tender_du_poulet.iService.TypePublicationInterfaceService;
 import fr.cda.tender_du_poulet.util.TypePublicationConverter;
 
 @Service
-public class TypePublicationService {
+public class TypePublicationService implements TypePublicationInterfaceService{
 
 	TypePublicationConverter converter = new TypePublicationConverter();
-	
+
 	@Autowired
 	TypePublicationRepository typePublicationRepository;
-	
+
 	public void ajoutTypePublication(TypePublicationDTO t) {
 		typePublicationRepository.save(converter.dtoVersEntity(t));
 	}
