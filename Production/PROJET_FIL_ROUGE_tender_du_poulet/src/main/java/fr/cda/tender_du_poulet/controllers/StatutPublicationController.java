@@ -32,4 +32,14 @@ public class StatutPublicationController {
 		service.ajoutStatutPublication(s);
 	}
 	
+	@PostMapping(value = "/supprimerStatutPublication")
+	public void supprimerStatutPublication(@RequestBody String id) {
+		service.supprimerStatutPublication(Integer.parseInt(id));
+	}
+
+	@PostMapping(value = "/modifStatutPublication")
+	public void modifStatutPublication(@RequestBody StatutPublicationDTO s) {
+		service.modifStatutPublication(s);
+	}
+	
 }

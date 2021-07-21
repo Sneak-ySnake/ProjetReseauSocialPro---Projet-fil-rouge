@@ -38,8 +38,8 @@ public class TypePublicationController {
 	}
 	
 	@PostMapping("/modifTypePublication")
-	public void modifTypePublication(@RequestBody String id, @RequestBody String modif) {
-		service.modifTypePublication(Integer.parseInt(id), modif);
+	public void modifTypePublication(@RequestBody TypePublicationDTO t) {
+		service.modifTypePublication(t);
 	}
 	
 }

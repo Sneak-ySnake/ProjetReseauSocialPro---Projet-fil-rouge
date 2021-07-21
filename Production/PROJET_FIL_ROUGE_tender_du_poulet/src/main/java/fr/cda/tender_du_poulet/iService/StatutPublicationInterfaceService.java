@@ -13,4 +13,6 @@ public interface StatutPublicationInterfaceService {
 	public List<StatutPublicationDTO> recupAllStatutPublication();
 	
 	public void supprimerStatutPublication(int id);
+	
+	public void modifStatutPublication(StatutPublicationDTO s);
 }

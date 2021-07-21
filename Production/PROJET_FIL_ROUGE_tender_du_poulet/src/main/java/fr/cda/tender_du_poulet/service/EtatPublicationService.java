@@ -34,4 +34,8 @@ public class EtatPublicationService implements EtatPublicationInterfaceService {
 		etatPublicationRepository.deleteById(id);
 	}
 	
+	public void modifEtatPublication(EtatPublicationDTO e) {
+		etatPublicationRepository.save(converter.dtoVersEntity(e));
+	}
+	
 }

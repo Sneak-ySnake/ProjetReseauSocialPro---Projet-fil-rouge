@@ -37,4 +37,9 @@ public class EtatPublicationController {
 		service.supprimerEtatPublication(Integer.parseInt(id));
 	}
 	
+	@PostMapping(value = "/modifEtatPublication")
+	public void modifEtatPublication(@RequestBody EtatPublicationDTO e) {
+		service.modifEtatPublication(e);
+	}
+	
 }
