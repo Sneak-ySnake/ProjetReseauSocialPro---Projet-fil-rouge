@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.cda.tender_du_poulet.beans.TypePublication;
 import fr.cda.tender_du_poulet.dto.TypePublicationDTO;
 import fr.cda.tender_du_poulet.service.TypePublicationService;
 
