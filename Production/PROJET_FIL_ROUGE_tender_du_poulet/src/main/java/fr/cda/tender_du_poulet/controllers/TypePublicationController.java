@@ -17,9 +17,9 @@ public class TypePublicationController {
 	@Autowired
 	private TypePublicationService service;
 	
-	@GetMapping(value = "/recupTypePublication")
-	public TypePublicationDTO recupTypePublication(int id) {
-		return service.recupTypePublication(id);
+	@PostMapping(value = "/recupTypePublication")
+	public TypePublicationDTO recupTypePublication(@RequestBody String id) {
+		return service.recupTypePublication(Integer.parseInt(id));
 	}
 	
 	@GetMapping(value = "/recupTypePublications")
@@ -30,6 +30,16 @@ public class TypePublicationController {
 	@PostMapping("/ajoutTypePublication")
 	public void ajoutTypePublication(@RequestBody TypePublicationDTO t) {
 		service.ajoutTypePublication(t);		
+	}
+	
+	@PostMapping("/supprimerTypePublication")
+	public void supprimerTypePublication(@RequestBody String id) {
+		service.supprimerTypePublication(Integer.parseInt(id));
+	}
+	
+	@PostMapping("/modifTypePublication")
+	public void modifTypePublication(@RequestBody String id, @RequestBody String modif) {
+		service.modifTypePublication(Integer.parseInt(id), modif);
 	}
 	
 }

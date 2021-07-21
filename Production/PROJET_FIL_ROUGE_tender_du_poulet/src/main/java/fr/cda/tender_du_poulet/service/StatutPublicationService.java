@@ -7,12 +7,13 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.StatutPublicationRepository;
 import fr.cda.tender_du_poulet.dto.StatutPublicationDTO;
+import fr.cda.tender_du_poulet.iService.StatutPublicationInterfaceService;
 import fr.cda.tender_du_poulet.util.StatutPublicationConverter;
 
 @Service
-public class StatutPublicationService {
+public class StatutPublicationService implements StatutPublicationInterfaceService {
 
-	private StatutPublicationConverter converter;
+	private StatutPublicationConverter converter = new StatutPublicationConverter();
 	
 	@Autowired
 	StatutPublicationRepository statutPublicationRepository;
@@ -29,4 +30,7 @@ public class StatutPublicationService {
 		return converter.entityVersDto(statutPublicationRepository.findAll());
 	}
 	
+	public void supprimerStatutPublication(int id) {
+		statutPublicationRepository.deleteById(id);
+	}
 }

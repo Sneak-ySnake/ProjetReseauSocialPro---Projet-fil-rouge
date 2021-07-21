@@ -12,4 +12,5 @@ public interface EtatPublicationInterfaceService {
 	
 	public List<EtatPublicationDTO> recupAllEtatPublication();
 	
+	public void supprimerEtatPublication(int id);
 }

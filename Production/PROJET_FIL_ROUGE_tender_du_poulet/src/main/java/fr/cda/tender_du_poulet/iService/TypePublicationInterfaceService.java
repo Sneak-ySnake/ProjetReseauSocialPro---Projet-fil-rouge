@@ -12,4 +12,7 @@ public interface TypePublicationInterfaceService {
 	
 	public List<TypePublicationDTO> recupAllTypePublication();
 	
+	public void supprimerTypePublication(int id);
+	
+	public void modifTypePublication(int id, String modif);
 }

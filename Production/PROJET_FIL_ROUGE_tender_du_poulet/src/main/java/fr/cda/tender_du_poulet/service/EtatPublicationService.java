@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.EtatPublicationRepository;
 import fr.cda.tender_du_poulet.dto.EtatPublicationDTO;
+import fr.cda.tender_du_poulet.iService.EtatPublicationInterfaceService;
 import fr.cda.tender_du_poulet.util.EtatPublicationConverter;
 
 @Service
-public class EtatPublicationService {
+public class EtatPublicationService implements EtatPublicationInterfaceService {
 
 	EtatPublicationConverter converter = new EtatPublicationConverter();
 	
@@ -27,6 +28,10 @@ public class EtatPublicationService {
 	
 	public List<EtatPublicationDTO> recupAllEtatPublication() {
 		return converter.entityVersDto(etatPublicationRepository.findAll());
+	}
+	
+	public void supprimerEtatPublication(int id) {
+		etatPublicationRepository.deleteById(id);
 	}
 	
 }
