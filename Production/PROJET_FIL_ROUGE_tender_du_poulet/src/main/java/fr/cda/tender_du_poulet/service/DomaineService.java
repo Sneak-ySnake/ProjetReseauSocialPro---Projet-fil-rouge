@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.DomaineRepository;
 import fr.cda.tender_du_poulet.dto.DomaineDTO;
+import fr.cda.tender_du_poulet.iService.DomaineInterfaceService;
 import fr.cda.tender_du_poulet.util.DomaineConverter;
 
 @Service
-public class DomaineService {
+public class DomaineService implements DomaineInterfaceService {
 
 	private DomaineConverter converter = new DomaineConverter();
 	
