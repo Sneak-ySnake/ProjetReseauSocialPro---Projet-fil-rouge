@@ -41,6 +41,15 @@ public class AdminService implements AdminInterfaceService{
 		return converter.entityVersDto(adminRepo.findById(id).get());
 	}
 	
+	public void UpdateAdmin (AdminDTO a) {
+		adminRepo.saveAndFlush(converter.dtoVersEntity(a));
+		
+	}
+	
+	public void deleteAdmin (AdminDTO a) {
+		adminRepo.deleteById(a.getId_admin());
+	}
+	
 	public List<PublicationDTO> recupAllPublication(int id) {
 		return publicationConverter.entityVersDto(publicationRepo.findAll());
 	}
