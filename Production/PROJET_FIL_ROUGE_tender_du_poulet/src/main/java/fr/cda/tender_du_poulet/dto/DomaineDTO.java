@@ -14,7 +14,7 @@ public class DomaineDTO {
 /////////////////////////////// GETTER / SETTER ///////////////////////////////////////////////////////////////////////////
 	public int getId_domaine() {
 		return id_domaine;
-	}
+	} 
 	public void setId_domaine(int id_domaine) {
 		this.id_domaine = id_domaine;
 	}
