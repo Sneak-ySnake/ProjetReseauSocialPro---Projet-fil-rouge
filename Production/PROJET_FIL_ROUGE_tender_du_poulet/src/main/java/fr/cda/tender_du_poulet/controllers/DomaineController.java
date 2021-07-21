@@ -34,7 +34,13 @@ public class DomaineController {
 	}
 
 	@RequestMapping(value = "/updateDomaine", method = RequestMethod.POST)
-	public DomaineDTO modifDomaine() {
-		
+	public void modifDomaine(@RequestBody DomaineDTO d) {
+		domaineService.modifDomaine(d);
+	}
+
+	@RequestMapping(value = "/deleteDomaine", method = RequestMethod.POST)
+	public void supprimerDomaine(@RequestBody String id) {
+		int idDomaine = Integer.parseInt(id);
+		domaineService.supprimerDomaine(idDomaine);
 	}
 }

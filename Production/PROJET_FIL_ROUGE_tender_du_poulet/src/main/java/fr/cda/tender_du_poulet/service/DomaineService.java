@@ -3,16 +3,13 @@ package fr.cda.tender_du_poulet.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Modifying;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
+import fr.cda.tender_du_poulet.beans.Domaine;
 import fr.cda.tender_du_poulet.dao.DomaineRepository;
 import fr.cda.tender_du_poulet.dto.DomaineDTO;
 import fr.cda.tender_du_poulet.iService.DomaineInterfaceService;
 import fr.cda.tender_du_poulet.util.DomaineConverter;
-import fr.cda.tpemploye.beans.Emp;
 
 @Service
 public class DomaineService implements DomaineInterfaceService {
@@ -34,10 +31,11 @@ public class DomaineService implements DomaineInterfaceService {
 		return converter.entityVersDto(domaineRepository.findAll());
 	}
 	
+	public void modifDomaine(DomaineDTO d) {
+		domaineRepository.save(converter.dtoVersEntity(d));
+	}
 	
-	@Modifying
-    @Query("UPDATE DomaineDTO d SET d.nom_domaine = :nomDomaine WHERE d.id = :id")
-	public void modifDomaine(@Param("id") int id, @Param("nomDomaine") String nomDomaine) {
-		domaineRepository.
+	public void supprimerDomaine(int id) {
+		domaineRepository.deleteById(id);
 	}
 }

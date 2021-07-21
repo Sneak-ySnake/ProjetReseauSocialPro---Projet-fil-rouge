@@ -14,5 +14,9 @@ public interface DomaineInterfaceService {
 	public DomaineDTO recupDomaine(int id);
 	
 	public List<DomaineDTO> recupAllDomaine();
+	
+	public void modifDomaine(DomaineDTO d);
+	
+	public void supprimerDomaine(int id);
 
 }
