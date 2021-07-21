@@ -146,8 +146,8 @@ public class PublicationDTO {
 	public void setEtat_publication(EtatPublication etat_publication) {
 		this.etat_publication = etat_publication;
 	}
-	
 	*/
+	
 	
 
 	public UtilisateurDTO getUtilisateur() {
