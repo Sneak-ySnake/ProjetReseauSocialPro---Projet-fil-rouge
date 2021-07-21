@@ -14,5 +14,5 @@ public interface TypePublicationInterfaceService {
 	
 	public void supprimerTypePublication(int id);
 	
-	public void modifTypePublication(int id, String modif);
+	public void modifTypePublication(TypePublicationDTO t);
 }

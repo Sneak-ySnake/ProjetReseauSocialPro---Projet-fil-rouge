@@ -33,4 +33,8 @@ public class StatutPublicationService implements StatutPublicationInterfaceServi
 	public void supprimerStatutPublication(int id) {
 		statutPublicationRepository.deleteById(id);
 	}
+	
+	public void modifStatutPublication(StatutPublicationDTO s) {
+		statutPublicationRepository.save(converter.dtoVersEntity(s));
+	}
 }

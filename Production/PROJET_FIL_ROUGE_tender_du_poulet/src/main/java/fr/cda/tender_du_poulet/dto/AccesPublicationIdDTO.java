@@ -1,12 +1,6 @@
 package fr.cda.tender_du_poulet.dto;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-
 import org.springframework.stereotype.Component;
-
-import fr.cda.tender_du_poulet.beans.Publication;
-import fr.cda.tender_du_poulet.beans.Utilisateur;
 
 @Component
 public class AccesPublicationIdDTO {

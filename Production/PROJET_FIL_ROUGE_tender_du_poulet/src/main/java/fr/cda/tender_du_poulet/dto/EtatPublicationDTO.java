@@ -2,6 +2,8 @@ package fr.cda.tender_du_poulet.dto;
 
 public class EtatPublicationDTO {
 
+		private int id_etat_publication;
+	
 		private String nom_etat_publication;
 		
 			
@@ -10,11 +12,6 @@ public class EtatPublicationDTO {
 		public EtatPublicationDTO() {
 			
 		}
-		
-		public EtatPublicationDTO(String nom_etat_publication) {
-			this.nom_etat_publication = nom_etat_publication;
-		}
-
 		
 			///GETTER SETTER///
 

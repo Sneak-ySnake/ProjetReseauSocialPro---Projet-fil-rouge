@@ -2,6 +2,8 @@ package fr.cda.tender_du_poulet.dto;
 
 public class StatutPublicationDTO {
 
+	private int id_statut_publication;
+	
 	private String nom_statut_publication;
 
 	
@@ -9,11 +11,6 @@ public class StatutPublicationDTO {
 	public StatutPublicationDTO() {
 		
 	}
-	
-	public StatutPublicationDTO(String nom_statut_publication) {
-		this.nom_statut_publication = nom_statut_publication;
-	}
-
 	
 		///GETTERS SETTERS///
 

@@ -35,10 +35,14 @@ public class TypePublicationService implements TypePublicationInterfaceService{
 		typePublicationRepository.deleteById(id);
 	}
 	
-	public void modifTypePublication(int id, String modif) {
+	public void modifTypePublication(TypePublicationDTO t) {
+		typePublicationRepository.save(converter.dtoVersEntity(t));
+	}
+	
+	/*public void modifTypePublication(int id, String modif) {
 		TypePublication t = typePublicationRepository.findById(id).get();
 		t.setNom_type_publication(modif);
 		typePublicationRepository.save(t);
-	}
+	}*/
 	
 }
