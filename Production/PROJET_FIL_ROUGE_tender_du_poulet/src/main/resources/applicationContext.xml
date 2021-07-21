@@ -48,7 +48,10 @@
 	<context:component-scan base-package="fr.cda.tender_du_poulet.dao">
     	<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
 	</context:component-scan>
-
-
+	
+	<context:component-scan base-package="fr.cda.tender_du_poulet.util" />
+	<context:component-scan base-package="fr.cda.tender_du_poulet.service" />
+	<context:component-scan base-package="fr.cda.tender_du_poulet.dto" />
+	<context:component-scan base-package="fr.cda.tender_du_poulet.iService" />
 
 </beans:beans>
