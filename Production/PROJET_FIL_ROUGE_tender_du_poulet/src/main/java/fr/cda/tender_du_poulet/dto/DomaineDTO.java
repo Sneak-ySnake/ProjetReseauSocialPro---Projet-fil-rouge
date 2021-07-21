@@ -6,6 +6,9 @@ public class DomaineDTO {
 	
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
+	public DomaineDTO() {
+	}
+	
 	public DomaineDTO(String nom_domaine) {
 		this.nom_domaine = nom_domaine;
 	}
@@ -14,7 +17,7 @@ public class DomaineDTO {
 /////////////////////////////// GETTER / SETTER ///////////////////////////////////////////////////////////////////////////
 	public int getId_domaine() {
 		return id_domaine;
-	} 
+	}
 	public void setId_domaine(int id_domaine) {
 		this.id_domaine = id_domaine;
 	}

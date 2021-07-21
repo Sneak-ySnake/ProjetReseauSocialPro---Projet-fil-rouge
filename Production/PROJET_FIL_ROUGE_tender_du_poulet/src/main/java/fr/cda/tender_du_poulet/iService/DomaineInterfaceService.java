@@ -13,6 +13,6 @@ public interface DomaineInterfaceService {
 	
 	public DomaineDTO recupDomaine(int id);
 	
-	public List<DomaineDTO> recupAllDomaine(int id);
+	public List<DomaineDTO> recupAllDomaine();
 
 }
