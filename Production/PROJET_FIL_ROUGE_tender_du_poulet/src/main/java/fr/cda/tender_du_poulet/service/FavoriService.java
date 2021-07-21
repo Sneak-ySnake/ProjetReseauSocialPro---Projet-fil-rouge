@@ -32,7 +32,7 @@ import fr.cda.tender_du_poulet.util.FavoriConverter;
 		}
 
 		@Override
-		public List<FavoriDTO> recupAllFavori(int id) {
+		public List<FavoriDTO> recupAllFavori() {
 			return favoriconverter.entityVersDto(favoriRepository.findAll());
 		 
 		}
