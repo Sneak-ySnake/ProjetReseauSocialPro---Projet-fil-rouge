@@ -31,8 +31,8 @@ public class AccesPublicationService implements AccesPublicationInterfaceService
 		return converter.entityVersDto(accesPublicationRepository.findAll());
 	}
 	
-	public void supprimerAccesPublication(AccesPublicationDTO a) {
-		accesPublicationRepository.delete(converter.dtoVersEntity(a));
+	public void supprimerAccesPublication(AccesPublicationId id) {
+		accesPublicationRepository.deleteById(id);
 	}
 	
 	public void modifAccesPublication(AccesPublicationDTO a) {
