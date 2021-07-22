@@ -15,13 +15,15 @@ public class Favori {
 	@GeneratedValue( strategy=GenerationType.IDENTITY)
 	private FavoriId favoriId;
 
+		
+	public Favori() {
+			
+		}
 	public Favori(FavoriId favoriId) {
 		 this.favoriId = favoriId;
 	}
 	
-	public Favori() {
-		
-	}
+	
 
 	public FavoriId getFavoriId() {
 		return favoriId;
