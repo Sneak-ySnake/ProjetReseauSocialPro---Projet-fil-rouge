@@ -7,9 +7,7 @@ public class EtatCompteDTO {
 	
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
-	public EtatCompteDTO(String nom_etat_compte, int duree) {
-		this.nom_etat_compte = nom_etat_compte;
-		this.duree = duree;
+	public EtatCompteDTO() {
 	}
 	
 	

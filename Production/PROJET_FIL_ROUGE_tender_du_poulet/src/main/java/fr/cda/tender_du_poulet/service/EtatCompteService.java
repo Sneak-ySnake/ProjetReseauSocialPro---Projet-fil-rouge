@@ -3,12 +3,15 @@ package fr.cda.tender_du_poulet.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.EtatCompteRepository;
 import fr.cda.tender_du_poulet.dto.EtatCompteDTO;
+import fr.cda.tender_du_poulet.iService.EtatCompteInterfaceService;
 import fr.cda.tender_du_poulet.util.EtatCompteConverter;
 
-public class EtatCompteService {
+@Service
+public class EtatCompteService implements EtatCompteInterfaceService {
 
 	private EtatCompteConverter converter = new EtatCompteConverter();
 	
@@ -23,7 +26,15 @@ public class EtatCompteService {
 		return converter.entityVersDto(etatCompteRepository.findById(id).get());
 	}
 	
-	public List<EtatCompteDTO> recupAllEtatCompte(int id) {
+	public List<EtatCompteDTO> recupAllEtatCompte() {
 		return converter.entityVersDto(etatCompteRepository.findAll());
+	}
+	
+	public void modifEtatCompte(EtatCompteDTO d) {
+		etatCompteRepository.save(converter.dtoVersEntity(d));
+	}
+	
+	public void supprimerEtatCompte(int id) {
+		etatCompteRepository.deleteById(id);
 	}
 }
