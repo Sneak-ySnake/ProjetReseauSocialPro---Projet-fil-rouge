@@ -4,17 +4,18 @@ package fr.cda.tender_du_poulet.controllers;
 
 import java.util.List;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import fr.cda.tender_du_poulet.dto.FavoriDTO;
 import fr.cda.tender_du_poulet.service.FavoriService;
 
-@Controller
+@RestController
 public class FavoriController {
 
-
+	@Autowired
 	private FavoriService service = new FavoriService();
 	
 	@GetMapping(value = "/recupFavoris")

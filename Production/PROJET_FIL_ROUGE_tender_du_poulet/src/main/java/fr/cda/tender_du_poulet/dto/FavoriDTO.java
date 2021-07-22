@@ -3,8 +3,7 @@ package fr.cda.tender_du_poulet.dto;
 import fr.cda.tender_du_poulet.beans.FavoriId;
 
 public class FavoriDTO { 
-
-	  
+ 
 		private FavoriId favoriId;
 		
 		public FavoriDTO() {		
