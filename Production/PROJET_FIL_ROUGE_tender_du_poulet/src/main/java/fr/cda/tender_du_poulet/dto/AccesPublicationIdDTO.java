@@ -2,12 +2,15 @@ package fr.cda.tender_du_poulet.dto;
 
 import org.springframework.stereotype.Component;
 
+import fr.cda.tender_du_poulet.beans.Publication;
+import fr.cda.tender_du_poulet.beans.Utilisateur;
+
 @Component
 public class AccesPublicationIdDTO {
 
-	private UtilisateurDTO utilisateur;
+	private Utilisateur utilisateur;
 
-	private PublicationDTO publication;
+	private Publication publication;
 
 	
 		///CONSTRUCTEUR///
@@ -15,26 +18,26 @@ public class AccesPublicationIdDTO {
 		
 	}
 	
-	public AccesPublicationIdDTO(UtilisateurDTO utilisateur, PublicationDTO publication) {
+	public AccesPublicationIdDTO(Utilisateur utilisateur, Publication publication) {
 		this.utilisateur = utilisateur;
 		this.publication = publication;
 	}
 
 	
 		///GETTER SETTER///
-	public UtilisateurDTO getUtilisateur() {
+	public Utilisateur getUtilisateur() {
 		return utilisateur;
 	}
 
-	public void setUtilisateur(UtilisateurDTO utilisateur) {
+	public void setUtilisateur(Utilisateur utilisateur) {
 		this.utilisateur = utilisateur;
 	}
 
-	public PublicationDTO getPublication() {
+	public Publication getPublication() {
 		return publication;
 	}
 
-	public void setPublication(PublicationDTO publication) {
+	public void setPublication(Publication publication) {
 		this.publication = publication;
 	}
 	

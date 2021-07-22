@@ -14,7 +14,7 @@ import fr.cda.tender_du_poulet.util.AccesPublicationConverter;
 @Service
 public class AccesPublicationService implements AccesPublicationInterfaceService {
 
-	private AccesPublicationConverter converter;
+	private AccesPublicationConverter converter = new AccesPublicationConverter();
 	
 	@Autowired
 	AccesPublicationRepository accesPublicationRepository;
@@ -29,6 +29,14 @@ public class AccesPublicationService implements AccesPublicationInterfaceService
 	
 	public List<AccesPublicationDTO> recupAllAccesPublication() {
 		return converter.entityVersDto(accesPublicationRepository.findAll());
+	}
+	
+	public void supprimerAccesPublication(AccesPublicationDTO a) {
+		accesPublicationRepository.delete(converter.dtoVersEntity(a));
+	}
+	
+	public void modifAccesPublication(AccesPublicationDTO a) {
+		accesPublicationRepository.save(converter.dtoVersEntity(a));
 	}
 	
 }

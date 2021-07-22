@@ -13,4 +13,7 @@ public interface AccesPublicationInterfaceService {
 	
 	public List<AccesPublicationDTO> recupAllAccesPublication();
 	
+	public void supprimerAccesPublication(AccesPublicationDTO a);
+	
+	public void modifAccesPublication(AccesPublicationDTO a);
 }

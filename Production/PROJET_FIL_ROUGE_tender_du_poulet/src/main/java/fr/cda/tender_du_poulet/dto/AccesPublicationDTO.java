@@ -3,6 +3,7 @@ package fr.cda.tender_du_poulet.dto;
 public class AccesPublicationDTO {
 	
 	private AccesPublicationIdDTO acces_publication_id;
+	
 	private boolean accessible;
 		
 		///CONSTRUCTEUR///
@@ -10,12 +11,6 @@ public class AccesPublicationDTO {
 		
 	}
 
-	public AccesPublicationDTO(AccesPublicationIdDTO acces_publication_id, boolean accessible) {
-		this.acces_publication_id = acces_publication_id;
-		this.accessible = accessible;
-	}
-
-	
 		///GETTER SETTER///
 	public boolean isAccessible() {
 		return accessible;
