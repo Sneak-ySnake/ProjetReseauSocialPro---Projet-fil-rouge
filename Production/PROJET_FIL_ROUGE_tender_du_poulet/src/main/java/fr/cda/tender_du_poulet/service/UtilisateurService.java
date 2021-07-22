@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.UtilisateurRepository;
+import fr.cda.tender_du_poulet.dto.DomaineDTO;
 import fr.cda.tender_du_poulet.dto.UtilisateurDTO;
 import fr.cda.tender_du_poulet.util.UtilisateurConverter;
 
@@ -27,5 +28,13 @@ public class UtilisateurService {
 	
 	public List<UtilisateurDTO> recupAllUtilisateur() {
 		return converter.entityVersDto(utilisateurRepository.findAll());
+	}
+
+	public void modifUtilisateur(UtilisateurDTO u) {
+		utilisateurRepository.save(converter.dtoVersEntity(u));
+	}
+	
+	public void supprimerUtilisateur(int id) {
+		utilisateurRepository.deleteById(id);
 	}
 }

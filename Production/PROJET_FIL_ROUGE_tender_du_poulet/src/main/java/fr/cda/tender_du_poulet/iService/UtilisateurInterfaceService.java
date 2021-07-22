@@ -13,4 +13,7 @@ public interface UtilisateurInterfaceService {
 	
 	public List<UtilisateurDTO> recupAllUtilisateur();
 	
+	public void modifUtilisateur(UtilisateurDTO u);
+	
+	public void supprimerUtilisateur(int id);
 }

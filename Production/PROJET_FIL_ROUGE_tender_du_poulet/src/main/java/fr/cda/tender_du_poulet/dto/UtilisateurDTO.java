@@ -1,5 +1,7 @@
 package fr.cda.tender_du_poulet.dto;
 
+import fr.cda.tender_du_poulet.beans.Domaine;
+
 public class UtilisateurDTO {
 	private int id_utilisateur;
 	private String nom_utilisateur;
@@ -12,13 +14,16 @@ public class UtilisateurDTO {
 	private String mot_de_passe_utilisateur;
 	private String siret;
 	private String nom_entreprise;
-	private DomaineDTO domaineDTO;
+	private Domaine domaine;
 	
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
+	public UtilisateurDTO() {
+	}
+	
 	public UtilisateurDTO(int id_utilisateur, String nom_utilisateur, String prenom_utilisateur, String site_web,
 			String telephone, String code_postal, String poste_occupe, String email_utilisateur,
-			String mot_de_passe_utilisateur, String siret, String nom_entreprise, DomaineDTO domaineDTO) {
+			String mot_de_passe_utilisateur, String siret, String nom_entreprise, Domaine domaine) {
 		this.id_utilisateur = id_utilisateur;
 		this.nom_utilisateur = nom_utilisateur;
 		this.prenom_utilisateur = prenom_utilisateur;
@@ -30,7 +35,7 @@ public class UtilisateurDTO {
 		this.mot_de_passe_utilisateur = mot_de_passe_utilisateur;
 		this.siret = siret;
 		this.nom_entreprise = nom_entreprise;
-		this.domaineDTO = domaineDTO;
+		this.domaine = domaine;
 	}
 	
 	
@@ -112,10 +117,10 @@ public class UtilisateurDTO {
 		this.nom_entreprise = nom_entreprise;
 	}
 
-	public DomaineDTO getDomaineDTO() {
-		return domaineDTO;
+	public Domaine getDomaine() {
+		return domaine;
 	}
-	public void setDomaineDTO(DomaineDTO domaineDTO) {
-		this.domaineDTO = domaineDTO;
+	public void setDomaine(Domaine domaine) {
+		this.domaine = domaine;
 	}
 }
