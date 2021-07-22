@@ -41,7 +41,7 @@ public class Publication {
 	@ManyToOne()
 	@JoinColumn(name = "id_utilisateur")
 	private Utilisateur utilisateur;
-	
+
 	@ManyToOne()
 	@JoinColumn(name = "id_type_publication")
 	private TypePublication type_publication;
