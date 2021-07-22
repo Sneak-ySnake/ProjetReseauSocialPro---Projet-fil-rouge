@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.ProfilRepository;
 import fr.cda.tender_du_poulet.dto.ProfilDTO;
+import fr.cda.tender_du_poulet.iService.ProfilInterfaceService;
 import fr.cda.tender_du_poulet.util.ProfilConverter;
 
 @Service
-public class ProfilService {
+public class ProfilService implements ProfilInterfaceService {
 
 	private ProfilConverter converter = new ProfilConverter();
 	
@@ -25,7 +26,15 @@ public class ProfilService {
 		return converter.entityVersDto(profilRepository.findById(id).get());
 	}
 	
-	public List<ProfilDTO> recupAllProfil(int id) {
+	public List<ProfilDTO> recupAllProfil() {
 		return converter.entityVersDto(profilRepository.findAll());
+	}
+	
+	public void modifProfil(ProfilDTO p) {
+		profilRepository.save(converter.dtoVersEntity(p));
+	}
+	
+	public void supprimerProfil(int id) {
+		profilRepository.deleteById(id);
 	}
 }
