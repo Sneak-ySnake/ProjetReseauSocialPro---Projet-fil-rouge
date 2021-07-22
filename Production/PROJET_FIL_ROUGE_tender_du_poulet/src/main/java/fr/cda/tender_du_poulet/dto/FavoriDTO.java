@@ -1,23 +1,21 @@
 package fr.cda.tender_du_poulet.dto;
- 
-import fr.cda.tender_du_poulet.beans.FavoriId;
 
 public class FavoriDTO { 
  
-		private FavoriId favoriId;
+		private FavoriIdDTO favoriIdDTO;
 		
 		public FavoriDTO() {		
 		}
-		public FavoriDTO(FavoriId favoriId) {
-			 this.favoriId = favoriId;
+		public FavoriDTO(FavoriIdDTO favoriIdDTO) {
+			 this.favoriIdDTO = favoriIdDTO;
 		}
 
-		public FavoriId getFavoriId() {
-			return favoriId;
+		public FavoriIdDTO getFavoriIdDTO() {
+			return favoriIdDTO;
 		}
 
-		public void setFavoriId(FavoriId favoriId) {
-			this.favoriId = favoriId;
+		public void setFavoriIdDTO(FavoriIdDTO favoriIdDTO) {
+			this.favoriIdDTO = favoriIdDTO;
 		} 
 	 
 	

@@ -34,4 +34,8 @@ public class PublicationService implements PublicationInterfaceService {
 		publicationRepository.deleteById(id);
 	}
 	
+	public void modifPublication(PublicationDTO p) {
+		publicationRepository.save(converter.dtoVersEntity(p));
+	}
+	
 }

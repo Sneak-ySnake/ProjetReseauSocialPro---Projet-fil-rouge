@@ -37,4 +37,9 @@ public class PublicationController {
 		service.supprimerPublication(Integer.parseInt(id));
 	}
 	
+	@PostMapping(value = "/modifPublication")
+	public void modifPublication(@RequestBody PublicationDTO p) {
+		service.modifPublication(p);
+	}
+	
 }

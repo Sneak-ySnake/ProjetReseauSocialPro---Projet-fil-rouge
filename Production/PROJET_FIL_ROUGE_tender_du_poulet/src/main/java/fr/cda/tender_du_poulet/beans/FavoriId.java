@@ -11,10 +11,11 @@ import javax.persistence.Table;
 public class FavoriId  implements Serializable {
 	
 	@ManyToOne()
+
 	@JoinColumn(name = "id_utilisateur")
 	private Utilisateur utilisateur;
-	
-	@JoinColumn(name = "id_utilisateur")
+
+	@JoinColumn(name = "id_utilisateur_favori")
 	private int id_utilisateur_favori;
 
    public FavoriId() {}
@@ -27,7 +28,6 @@ public class FavoriId  implements Serializable {
 	public Utilisateur getUtilisateur() {
 		return utilisateur;
 	}
-	
 
 	public void setUtilisateur(Utilisateur utilisateur) {
 		this.utilisateur = utilisateur;
