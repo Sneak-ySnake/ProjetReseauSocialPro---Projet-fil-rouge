@@ -2,18 +2,19 @@ package fr.cda.tender_du_poulet.controllers;
 
 import java.util.List;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import fr.cda.tender_du_poulet.dto.NegociationDTO;
-import fr.cda.tender_du_poulet.dto.PublicationDTO;
 import fr.cda.tender_du_poulet.service.NegociationService;
 
-@Controller
+@RestController
 public class NegociationController {
 
-
+	@Autowired
 	private NegociationService service = new NegociationService();
 	
 	@GetMapping(value = "/recupNegociations")
@@ -21,13 +22,13 @@ public class NegociationController {
 		return service.recupAllNegociation();
 	}
 	
-	@GetMapping(value = "/recupNegociation")
-	public NegociationDTO recupNegociation(int id) {
+	@PostMapping(value = "/recupNegociation")
+	public NegociationDTO recupNegociation(@RequestBody int id) {
 		return service.recupNegociation(id);
 	}
 	
 	@PostMapping(value = "/ajoutNegociation")
-	public void AjoutNegociation(NegociationDTO n) {
+	public void AjoutNegociation(@RequestBody NegociationDTO n) {
 		service.ajoutNegociation(n);
 	}
 	

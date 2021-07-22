@@ -4,6 +4,9 @@ public class NegociationDTO {
 	
 	int id_negociation;
 
+	public NegociationDTO() { 
+	}
+	
 	public NegociationDTO(int id_negociation) {
 		 
 		this.id_negociation = id_negociation;
