@@ -13,4 +13,6 @@ public interface PublicationInterfaceService {
 	public List<PublicationDTO> recupAllPublication();
 
 	public void supprimerPublication(int id);
+	
+	public void modifPublication(PublicationDTO p);
 }
