@@ -6,8 +6,7 @@ public class ProfilDTO {
 	
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
-	public ProfilDTO(String nom_profil) {
-		this.nom_profil = nom_profil;
+	public ProfilDTO() {
 	}
 	
 	
