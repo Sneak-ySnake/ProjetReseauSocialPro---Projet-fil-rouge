@@ -13,7 +13,6 @@ public class TypePublicationDTO {
 	}
 	
 		///GETTERS SETTERS///
-	
 	public String getNom_type_publication() {
 		return nom_type_publication;
 	}
