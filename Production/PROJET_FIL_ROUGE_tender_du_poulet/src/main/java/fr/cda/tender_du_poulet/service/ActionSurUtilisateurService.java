@@ -30,4 +30,16 @@ public class ActionSurUtilisateurService implements ActionSurUtilisateurInterfac
 		return converter.entityVersDto(actionSurUtilisateurRepo.findAll());
 	}
 
+	
+	public void deleteActionSurUtilisateur(int id) {
+		actionSurUtilisateurRepo.deleteById(id);
+		
+	}
+
+
+	public void updateActionSurUtilisateur(ActionSurUtilisateurDTO au) {
+		actionSurUtilisateurRepo.save(converter.dtoVersEntity(au));
+		
+	}
+
 }

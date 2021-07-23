@@ -25,37 +25,17 @@ public class PublicationDTO {
 
 	private Utilisateur utilisateur;
 
-	private TypePublication type_publication;
+	private TypePublicationDTO type_publication;
 
-	private StatutPublication statut_publication;
+	private StatutPublicationDTO statut_publication;
 
-	private EtatPublication etat_publication;
+	private EtatPublicationDTO etat_publication;
 	
 	
 		///CONSTRUCTEURS///
 	public PublicationDTO() {
 		
 	}
-
-	
-
-		public PublicationDTO(int id_publication, String nom_publication, String description_publication, float prix,
-				String type_produit, Date date_publication, int quantite, Utilisateur utilisateur,
-				TypePublication type_publication, StatutPublication statut_publication,
-				EtatPublication etat_publication) {
-			this.id_publication = id_publication;
-			this.nom_publication = nom_publication;
-			this.description_publication = description_publication;
-			this.prix = prix;
-			this.type_produit = type_produit;
-			this.date_publication = date_publication;
-			this.quantite = quantite;
-			this.utilisateur = utilisateur;
-			this.type_publication = type_publication;
-			this.statut_publication = statut_publication;
-			this.etat_publication = etat_publication;
-		}
-
 
 
 		///GETTERS SETTERS///
@@ -139,34 +119,34 @@ public class PublicationDTO {
 	}
 
 
-	public TypePublication getType_publication() {
+	public TypePublicationDTO getType_publication() {
 		return type_publication;
 	}
 
 
-	public void setType_publication(TypePublication type_publication) {
+	public void setType_publication(TypePublicationDTO type_publication) {
 		this.type_publication = type_publication;
 	}
 
 
-	public StatutPublication getStatut_publication() {
+	public StatutPublicationDTO getStatut_publication() {
 		return statut_publication;
 	}
 
 
-	public void setStatut_publication(StatutPublication statut_publication) {
+	public void setStatut_publication(StatutPublicationDTO statut_publication) {
 		this.statut_publication = statut_publication;
 	}
 
 
-	public EtatPublication getEtat_publication() {
+	public EtatPublicationDTO getEtat_publication() {
 		return etat_publication;
 	}
 
 
-	public void setEtat_publication(EtatPublication etat_publication) {
+	public void setEtat_publication(EtatPublicationDTO etat_publication) {
 		this.etat_publication = etat_publication;
 	}
-	
+
 }
-	
+		

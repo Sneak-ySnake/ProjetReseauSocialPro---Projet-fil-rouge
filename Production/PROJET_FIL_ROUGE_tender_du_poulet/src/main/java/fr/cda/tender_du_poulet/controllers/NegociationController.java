@@ -17,18 +17,18 @@ public class NegociationController {
 	@Autowired
 	private NegociationService service = new NegociationService();
 	
-	@GetMapping(value = "/recupNegociations")
+	@GetMapping(value = "/recupAllNegociation")
 	public List<NegociationDTO> recupAllNegociation() {
 		return service.recupAllNegociation();
 	}
 	
 	@PostMapping(value = "/recupNegociation")
-	public NegociationDTO recupNegociation(@RequestBody int id) {
-		return service.recupNegociation(id);
+	public NegociationDTO recupNegociation(@RequestBody String id) {
+		return service.recupNegociation(Integer.parseInt(id));
 	}
 	
 	@PostMapping(value = "/ajoutNegociation")
-	public void AjoutNegociation(@RequestBody NegociationDTO n) {
+	public void ajoutNegociation(@RequestBody NegociationDTO n) {
 		service.ajoutNegociation(n);
 	}
 	

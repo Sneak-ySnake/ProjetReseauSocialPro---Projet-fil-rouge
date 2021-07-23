@@ -13,7 +13,7 @@ public class Negociation implements Serializable{
 	@Id
 	@GeneratedValue( strategy=GenerationType.IDENTITY)
 	int id_negociation;
-
+	
 	public Negociation() {}
 	 
 	public int getIdNegociation() {

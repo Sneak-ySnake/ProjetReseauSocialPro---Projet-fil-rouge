@@ -15,12 +15,14 @@ public interface AdminInterfaceService {
 	
 	public AdminDTO recupAdmin(int id);
 	
-	public void UpdateAdmin (AdminDTO a);
+	public List<AdminDTO> recupAllAdmin();
 	
-	public void deleteAdmin (AdminDTO a);
+	public void deleteAdmin (int id);
 	
-	public List<PublicationDTO> recupAllPublication(int id);
+	public void updateAdmin (AdminDTO a);
 	
-	public List<UtilisateurDTO> recupAllUtilisateur(int id);
+	public List<PublicationDTO> recupAllPublication();
+	
+	public List<UtilisateurDTO> recupAllUtilisateur();
 
 }
