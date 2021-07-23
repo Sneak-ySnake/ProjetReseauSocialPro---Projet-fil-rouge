@@ -4,7 +4,7 @@ import fr.cda.tender_du_poulet.beans.AccesPublicationId;
 
 public class AccesPublicationDTO {
 	
-	private AccesPublicationId acces_publication_id;
+	private AccesPublicationIdDTO acces_publication_id;
 	
 	private boolean accessible;
 		
@@ -18,11 +18,11 @@ public class AccesPublicationDTO {
 		return accessible;
 	}
 
-	public AccesPublicationId getAcces_publication_id() {
+	public AccesPublicationIdDTO getAcces_publication_id() {
 		return acces_publication_id;
 	}
 
-	public void setAcces_publication_id(AccesPublicationId acces_publication_id) {
+	public void setAcces_publication_id(AccesPublicationIdDTO acces_publication_id) {
 		this.acces_publication_id = acces_publication_id;
 	}
 
