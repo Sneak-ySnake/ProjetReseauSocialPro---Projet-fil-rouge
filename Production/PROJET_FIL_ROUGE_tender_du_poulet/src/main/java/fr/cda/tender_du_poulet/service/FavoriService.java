@@ -5,8 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import fr.cda.tender_du_poulet.beans.FavoriId;
 import fr.cda.tender_du_poulet.dao.FavoriRepository;
 import fr.cda.tender_du_poulet.dto.FavoriDTO;
+import fr.cda.tender_du_poulet.dto.FavoriIdDTO;
 import fr.cda.tender_du_poulet.iService.FavoriInterfaceService;
 import fr.cda.tender_du_poulet.util.FavoriConverter;
 
@@ -26,7 +28,7 @@ import fr.cda.tender_du_poulet.util.FavoriConverter;
 		}
 
 		@Override
-		public FavoriDTO recupFavori(int id) {
+		public FavoriDTO recupFavori(FavoriId id) {
 			return favoriconverter.entityVersDto(favoriRepository.findById(id).get());
 			 
 		}

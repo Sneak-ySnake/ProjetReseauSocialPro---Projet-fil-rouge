@@ -13,9 +13,9 @@ import fr.cda.tender_du_poulet.dto.FavoriDTO;
 public class FavoriConverter {
 
  
-	public FavoriDTO entityVersDto(Favori f) {
+	public FavoriDTO entityVersDto(Favori favori) {
 		ModelMapper mapper = new ModelMapper();
-		FavoriDTO map = mapper.map(f, FavoriDTO.class);
+		FavoriDTO map = mapper.map(favori, FavoriDTO.class);
 		return map;
 	}
 	
