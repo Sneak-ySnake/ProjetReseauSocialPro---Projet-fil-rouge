@@ -1,26 +1,21 @@
 package fr.cda.tender_du_poulet.dto;
 
-import javax.persistence.EmbeddedId;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import fr.cda.tender_du_poulet.beans.Utilisateur_ProfilId;
 
 public class Utilisateur_ProfilDTO {
-	@Id @EmbeddedId @GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Utilisateur_ProfilIdDTO utilisateur_ProfilIdDTO;
+	private Utilisateur_ProfilId utilisateur_ProfilId;
 	
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
-	public Utilisateur_ProfilDTO(Utilisateur_ProfilIdDTO utilisateur_ProfilIdDTO) {
-		this.utilisateur_ProfilIdDTO = utilisateur_ProfilIdDTO;
+	public Utilisateur_ProfilDTO() {
 	}
 
 	
 /////////////////////////////// GETTER / SETTER ///////////////////////////////////////////////////////////////////////////
-	public Utilisateur_ProfilIdDTO getUtilisateur_ProfilIdDTO() {
-		return utilisateur_ProfilIdDTO;
+	public Utilisateur_ProfilId getUtilisateur_ProfilId() {
+		return utilisateur_ProfilId;
 	}
-	public void setUtilisateur_ProfilIdDTO(Utilisateur_ProfilIdDTO utilisateur_ProfilIdDTO) {
-		this.utilisateur_ProfilIdDTO = utilisateur_ProfilIdDTO;
+	public void setUtilisateur_ProfilId(Utilisateur_ProfilId utilisateur_ProfilId) {
+		this.utilisateur_ProfilId = utilisateur_ProfilId;
 	}
 }
