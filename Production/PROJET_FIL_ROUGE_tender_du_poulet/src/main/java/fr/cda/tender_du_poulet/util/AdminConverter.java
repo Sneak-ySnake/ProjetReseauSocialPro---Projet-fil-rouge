@@ -28,7 +28,7 @@ public class AdminConverter {
 		return map;	
 	}
 	
-	public List<Admin> dtoVersEntity (List<AdminDTO>a) {
+	public List<Admin> dtoVersEntity (List<AdminDTO> a) {
 		return a.stream().map(x -> dtoVersEntity(x)).collect(Collectors.toList());	
 	}
 

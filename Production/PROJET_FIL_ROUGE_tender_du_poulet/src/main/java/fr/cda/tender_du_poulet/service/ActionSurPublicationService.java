@@ -18,8 +18,8 @@ public class ActionSurPublicationService implements ActionSurPublicationInterfac
 	@Autowired
 	ActionSurPublicationRepository actionSurPublicationRepo;
 	
-	public void ajoutActionSurPublication(ActionSurPublicationDTO au) {
-		actionSurPublicationRepo.save(converter.dtoVersEntity(au));
+	public void ajoutActionSurPublication(ActionSurPublicationDTO ap) {
+		actionSurPublicationRepo.save(converter.dtoVersEntity(ap));
 	}
 	
 	public ActionSurPublicationDTO recupActionSurPublication(int id) {
@@ -29,5 +29,17 @@ public class ActionSurPublicationService implements ActionSurPublicationInterfac
 	public List<ActionSurPublicationDTO> recupAllActionSurPublication() {
 		return converter.entityVersDto(actionSurPublicationRepo.findAll());
 	}
+	
+	public void deleteActionSurPublication (int id) {
+		actionSurPublicationRepo.deleteById(id);
+	}
+	
+	public void updateActionSurPublication (ActionSurPublicationDTO ap) {
+		actionSurPublicationRepo.save(converter.dtoVersEntity(ap));
+	}
+	
+	
+	
+	
 
 }

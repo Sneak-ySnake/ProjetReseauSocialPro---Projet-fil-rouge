@@ -11,17 +11,19 @@ public class AdminDTO {
 		/// constructeur///
 	
 	public AdminDTO() {
-		
 	}
 	
 	public AdminDTO(int id_admin) {
 		this.id_admin = id_admin;
 	}
+	
 
 	public AdminDTO (String compte_admin, String mot_de_passe_admin) {
 		this.compte_admin= compte_admin;
 		this.mot_de_passe_admin = mot_de_passe_admin;
 	}
+	
+	
 	
 			///GETTER SETTER///
 

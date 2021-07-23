@@ -44,56 +44,41 @@ public class AdminController {
 	
 	@RestController
 	public class AdminController {
+		
 	/////Le Controller lors du test Mapping
 	//@Autowired
 	//private AdminRepository adminRepository;
 		
 	@Autowired
-	private AdminInterfaceService ads;
+	private AdminService ads;
 		
 	
-	@GetMapping (value = "/creerAdmin")
-	public String ajouterAdmin (@RequestBody AdminDTO a) {
-		
-		//String compte_admin = "testCompte";
-		//String mot_de_passe_admin = "testMdp";
-		//AdminDTO a = new AdminDTO(compte_admin, mot_de_passe_admin);
-		//AdminService ads = new AdminService();
-		//ads.ajoutAdmin(a);
-		//System.out.println(compte_admin + " " + mot_de_passe_admin);
+	@PostMapping (value = "/creerAdmin")
+	public void ajouterAdmin (@RequestBody AdminDTO a) {
 		ads.ajoutAdmin(a);
-		System.out.println(a.getId_admin());
-		return "home";
-	}
-	
-	
-	@GetMapping (value = "/deleteAdmin")
-	public String deleteAdmin() {
-		AdminService ads = new AdminService();	
-		AdminDTO a = new AdminDTO();
-		ads.ajoutAdmin(a);
-		System.out.println("Ajout valeur de a = " + a.getId_admin());
-		ads.deleteAdmin(a);
-		System.out.println("Delete valeur de a = " + a.getId_admin());
-		return "home";	
 	}
 	
 	@GetMapping (value ="/recupAdmin")
-	public String recupAdmin () {
-		AdminService ads = new AdminService();
-		String compte_admin = "testCompteRecup";
-		String mot_de_passe_admin = "testMdpRecup";
-		AdminDTO admin = new AdminDTO(compte_admin, mot_de_passe_admin);
-		ads.ajoutAdmin(admin);
-		System.out.println("id admin = " + admin.getId_admin() + " " + admin.getCompte_admin() + " " + admin.getMot_de_passe_admin());
-		return "home";
+	public AdminDTO recupAdmin (@RequestBody String id) {
+		int idAdmin = Integer.parseInt(id);
+		return ads.recupAdmin(idAdmin);
 	}
 	
+	@GetMapping (value = "/recupAllAdmin")
+	public List<AdminDTO> recupAllAdmin() {
+		return ads.recupAllAdmin();	
+	}
 	
+	@GetMapping (value = "/deleteAdmin")
+	public void deleteAdmin(@RequestBody String id) {
+		int idAdmin = Integer.parseInt(id);
+		ads.deleteAdmin(idAdmin);
+	}
 	
-	
-	
-	
+	@PostMapping (value ="/updateAdmin")
+	public void updateAdmin(@RequestBody AdminDTO a) {
+		ads.updateAdmin(a);
+	}
 	}
 
 

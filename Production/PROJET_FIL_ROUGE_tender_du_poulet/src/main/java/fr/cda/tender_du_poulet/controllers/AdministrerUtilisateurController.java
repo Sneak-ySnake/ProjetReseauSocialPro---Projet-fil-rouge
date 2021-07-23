@@ -1,66 +1,45 @@
 package fr.cda.tender_du_poulet.controllers;
 
-import java.text.SimpleDateFormat;
-
-import java.util.Date;
-
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.GetMapping;
-
-import fr.cda.tender_du_poulet.beans.ActionSurUtilisateur;
-import fr.cda.tender_du_poulet.beans.Admin;
-import fr.cda.tender_du_poulet.beans.AdministrerUtilisateur;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 import fr.cda.tender_du_poulet.beans.AdministrerUtilisateurId;
-import fr.cda.tender_du_poulet.beans.Domaine;
-import fr.cda.tender_du_poulet.beans.Utilisateur;
-import fr.cda.tender_du_poulet.dao.AdministrerUtilisateurRepository;
-import fr.cda.tender_du_poulet.dao.DomaineRepository;
-import fr.cda.tender_du_poulet.dao.UtilisateurRepository;
+import fr.cda.tender_du_poulet.dto.AdministrerUtilisateurDTO;
+import fr.cda.tender_du_poulet.service.AdministrerUtilisateurService;
 
-@Controller
+@RestController
 public class AdministrerUtilisateurController {
 
 	@Autowired
-	private AdministrerUtilisateurRepository administrerUtilisateurRepo;
+	private AdministrerUtilisateurService au;
 
-	@Autowired
-	private DomaineRepository domaineRepository;
-
-	@Autowired
-	private UtilisateurRepository utilisateurRepository;
-
-	@GetMapping(value = "/creerAdministrerUtilisateur")
-	public String creerAdministrerUtilisateur() {
-
-		Domaine domaine1 = new Domaine("nomDomaine6");
-		domaineRepository.save(domaine1);
-		
-
-		Utilisateur util = new Utilisateur("nom3", "prenom3", "0123456789", "59000", "poste2", "email2", "mdp1", domaine1);
-		utilisateurRepository.save(util);
-
-		int id = 1;
-		Admin idAdmin = new Admin(id);
-
-		int idActionSurUtil = 1;
-		ActionSurUtilisateur idActionSurUtiliteur = new ActionSurUtilisateur(idActionSurUtil);
-
-		Date dateDebut = null;
-		try {
-			dateDebut = (Date) new SimpleDateFormat("yyyy-MM-dd").parse("2021-06-07");
-		} catch (Exception exc) {
-			exc.printStackTrace();
-		}
-
-		AdministrerUtilisateurId administrerUtilisateurId = new AdministrerUtilisateurId(idAdmin, idActionSurUtiliteur,
-				util, dateDebut);
-
-		AdministrerUtilisateur adminUtil = new AdministrerUtilisateur(administrerUtilisateurId);
-
-		administrerUtilisateurRepo.save(adminUtil);
-
-		return "home";
+	@PostMapping(value = "/creerAdministrerUtilisateur")
+	public void ajouterAdministrerUtilisateur(@RequestBody AdministrerUtilisateurDTO a) { 
+		au.ajoutAdministrerUtilisateur(a);
+	}
+	
+	@GetMapping (value ="/recupAdministrerUtilisateur")
+	public AdministrerUtilisateurDTO recupAdministrerUtilisateur (@RequestBody AdministrerUtilisateurId id ) {
+		return au.recupAdministrerUtilisateur(id);
+	}
+	
+	@GetMapping (value = "/recupAllAdministrerUtilisateur")
+	public List<AdministrerUtilisateurDTO> recupAllAdministrerUtilisateur() {
+		return au.recupAllAdministrerUtilisateur();	
+	}
+	
+	@PostMapping (value = "/deleteAdministrerUtilisateur")
+	public void deleteAdministrerUtilisateur(@RequestBody AdministrerUtilisateurId id) {
+		au.deleteAdministrerUtilisateur(id);
+	}
+	
+	@PostMapping (value = "/updateAdministrerUtilisateur")
+	public void updateAdministrerUtilisateur (@RequestBody AdministrerUtilisateurDTO a) {
+		au.updateAdministrerUtilisateur(a);
+	}
 
 	}
-}

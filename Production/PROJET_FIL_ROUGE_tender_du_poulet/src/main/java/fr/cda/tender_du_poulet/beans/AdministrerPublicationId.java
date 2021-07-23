@@ -1,8 +1,8 @@
 package fr.cda.tender_du_poulet.beans;
 
 import java.io.Serializable;
-import java.util.Date;
 
+import java.util.Date;
 import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -19,6 +19,8 @@ public class AdministrerPublicationId implements Serializable {
 	@JoinColumn (name ="date_action_sur_publication")
 	private Date date_action_sur_publication;
 	
+	
+	/////// constructeur///////
 	public AdministrerPublicationId() {
 		
 	}
@@ -31,6 +33,8 @@ public class AdministrerPublicationId implements Serializable {
 		this.date_action_sur_publication = date_action_sur_publication;
 	}
 
+	
+	////// GETTER et SETTER ///////
 	public Admin getAdmin() {
 		return admin;
 	}

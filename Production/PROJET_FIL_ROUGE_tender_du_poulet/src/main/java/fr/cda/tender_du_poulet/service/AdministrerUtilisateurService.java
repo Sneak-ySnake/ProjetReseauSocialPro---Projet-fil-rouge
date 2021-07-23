@@ -4,6 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import fr.cda.tender_du_poulet.beans.AdministrerPublicationId;
+import fr.cda.tender_du_poulet.beans.AdministrerUtilisateurId;
 import fr.cda.tender_du_poulet.dao.AdministrerUtilisateurRepository;
 import fr.cda.tender_du_poulet.dto.AdministrerUtilisateurDTO;
 import fr.cda.tender_du_poulet.iService.AdministrerUtilisateurInterfaceService;
@@ -15,18 +18,26 @@ public class AdministrerUtilisateurService implements AdministrerUtilisateurInte
 	private AdministrerUtilisateurConverter converter = new AdministrerUtilisateurConverter();
 	
 	@Autowired
-	AdministrerUtilisateurRepository administrerUtilisateurRepo;
+	private AdministrerUtilisateurRepository administrerUtilisateurRepo;
 	
 	public void ajoutAdministrerUtilisateur(AdministrerUtilisateurDTO au) {
 		administrerUtilisateurRepo.save(converter.dtoVersEntity(au));	
 	}
 	
-	public AdministrerUtilisateurDTO recupAdministrerUtilisateur(int id) {
+	public AdministrerUtilisateurDTO recupAdministrerUtilisateur(AdministrerUtilisateurId id) {
 		return converter.entityVersDto(administrerUtilisateurRepo.findById(id).get());
 	}
 	
-	public List<AdministrerUtilisateurDTO> recupAllAdministrerUtilisateur (int id) {
+	public List<AdministrerUtilisateurDTO> recupAllAdministrerUtilisateur () {
 		return converter.entityVersDto(administrerUtilisateurRepo.findAll());
+	}
+	
+	public void deleteAdministrerUtilisateur(AdministrerUtilisateurId id) {
+		administrerUtilisateurRepo.deleteById(id);	
+	}
+	
+	public void updateAdministrerUtilisateur(AdministrerUtilisateurDTO au) {
+		administrerUtilisateurRepo.save(converter.dtoVersEntity(au));
 	}
 
 }
