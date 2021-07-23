@@ -1,34 +1,44 @@
 package fr.cda.tender_du_poulet.dto;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Utilisateur_EtatCompteIdDTO {
-	private UtilisateurDTO utilisateurDTO;
-	private EtatCompteDTO etat_compteDTO;
+import javax.persistence.Embeddable;
+
+import fr.cda.tender_du_poulet.beans.EtatCompte;
+import fr.cda.tender_du_poulet.beans.Utilisateur;
+
+@Embeddable
+public class Utilisateur_EtatCompteIdDTO implements Serializable {
+	private Utilisateur utilisateur;
+	private EtatCompte etat_compte;
 	private Date date_debut;
 
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
-	public Utilisateur_EtatCompteIdDTO(UtilisateurDTO utilisateurDTO, EtatCompteDTO etat_compteDTO, Date date_debut) {
-		this.utilisateurDTO = utilisateurDTO;
-		this.etat_compteDTO = etat_compteDTO;
+	public Utilisateur_EtatCompteIdDTO() {
+	}
+	
+	public Utilisateur_EtatCompteIdDTO(Utilisateur utilisateur, EtatCompte etat_compte, Date date_debut) {
+		this.utilisateur = utilisateur;
+		this.etat_compte = etat_compte;
 		this.date_debut = date_debut;
 	}
 
 
 /////////////////////////////// GETTER / SETTER ///////////////////////////////////////////////////////////////////////////
-	public UtilisateurDTO getUtilisateurDTO() {
-		return utilisateurDTO;
+	public Utilisateur getUtilisateur() {
+		return utilisateur;
 	}
-	public void setUtilisateurDTO(UtilisateurDTO utilisateurDTO) {
-		this.utilisateurDTO = utilisateurDTO;
+	public void setUtilisateur(Utilisateur utilisateur) {
+		this.utilisateur = utilisateur;
 	}
 	
-	public EtatCompteDTO getEtat_compteDTO() {
-		return etat_compteDTO;
+	public EtatCompte getEtat_compte() {
+		return etat_compte;
 	}
-	public void setEtat_compteDTO(EtatCompteDTO etat_compteDTO) {
-		this.etat_compteDTO = etat_compteDTO;
+	public void setEtat_compte(EtatCompte etat_compte) {
+		this.etat_compte = etat_compte;
 	}
 	
 	public Date getDate_debut() {

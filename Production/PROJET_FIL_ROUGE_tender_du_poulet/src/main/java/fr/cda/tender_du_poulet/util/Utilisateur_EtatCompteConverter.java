@@ -6,7 +6,9 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 
 import fr.cda.tender_du_poulet.beans.Utilisateur_EtatCompte;
+import fr.cda.tender_du_poulet.beans.Utilisateur_EtatCompteId;
 import fr.cda.tender_du_poulet.dto.Utilisateur_EtatCompteDTO;
+import fr.cda.tender_du_poulet.dto.Utilisateur_EtatCompteIdDTO;
 
 public class Utilisateur_EtatCompteConverter {
 	
@@ -28,5 +30,18 @@ public class Utilisateur_EtatCompteConverter {
 	
 	public List<Utilisateur_EtatCompte> dtoVersEntity(List<Utilisateur_EtatCompteDTO> uec) {
 		return uec.stream().map(x -> dtoVersEntity(x)).collect(Collectors.toList());
+	}
+
+	
+	public Utilisateur_EtatCompteIdDTO entityIdVersDtoId(Utilisateur_EtatCompteId uec) {
+		ModelMapper mapper = new ModelMapper();
+		Utilisateur_EtatCompteIdDTO map = mapper.map(uec, Utilisateur_EtatCompteIdDTO.class);
+		return map;
+	}
+
+	public Utilisateur_EtatCompteId dtoIdVersEntityId(Utilisateur_EtatCompteIdDTO uec) {
+		ModelMapper mapper = new ModelMapper();
+		Utilisateur_EtatCompteId map = mapper.map(uec, Utilisateur_EtatCompteId.class);
+		return map;
 	}
 }
