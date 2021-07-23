@@ -17,7 +17,7 @@ public class PublicationController {
 	@Autowired
 	private PublicationService service;
 	
-	@GetMapping(value = "/recupPublications")
+	@GetMapping(value = "/recupAllPublication")
 	public List<PublicationDTO> recupAllPublication() {
 		return service.recupAllPublication();
 	}

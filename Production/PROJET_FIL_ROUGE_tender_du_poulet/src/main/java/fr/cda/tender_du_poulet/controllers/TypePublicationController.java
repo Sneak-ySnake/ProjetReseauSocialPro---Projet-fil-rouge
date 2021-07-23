@@ -22,7 +22,7 @@ public class TypePublicationController {
 		return service.recupTypePublication(Integer.parseInt(id));
 	}
 	
-	@GetMapping(value = "/recupTypePublications")
+	@GetMapping(value = "/recupAllTypePublication")
 	public List<TypePublicationDTO> recupAllTypePublication() {
 		return service.recupAllTypePublication();
 	}

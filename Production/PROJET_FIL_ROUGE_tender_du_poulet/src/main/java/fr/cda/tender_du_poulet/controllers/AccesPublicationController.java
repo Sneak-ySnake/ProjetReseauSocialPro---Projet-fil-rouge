@@ -18,7 +18,7 @@ public class AccesPublicationController {
 	@Autowired
 	AccesPublicationService service;
 	
-	@GetMapping(value = "/recupAccesPublications")
+	@GetMapping(value = "/recupAllAccesPublication")
 	public List<AccesPublicationDTO> recupAllAccesPublication() {
 		return service.recupAllAccesPublication();
 	}

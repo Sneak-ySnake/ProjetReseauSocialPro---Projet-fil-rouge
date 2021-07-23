@@ -22,7 +22,7 @@ public class StatutPublicationController {
 		return service.recupStatutPublication(Integer.parseInt(id));
 	}
 	
-	@GetMapping(value = "/recupStatutPublications")
+	@GetMapping(value = "/recupAllStatutPublication")
 	public List<StatutPublicationDTO> recupAllStatutPublication() {
 		return service.recupAllStatutPublication();
 	}

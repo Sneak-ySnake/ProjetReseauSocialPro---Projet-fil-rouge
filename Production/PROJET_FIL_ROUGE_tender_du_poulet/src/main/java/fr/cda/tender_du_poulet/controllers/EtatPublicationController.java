@@ -22,7 +22,7 @@ public class EtatPublicationController {
 		return service.recupEtatPublication(Integer.parseInt(id));
 	}
 	
-	@GetMapping(value = "/recupEtatPublications")
+	@GetMapping(value = "/recupAllEtatPublication")
 	public List<EtatPublicationDTO> recupAllEtatPublication() {
 		return service.recupAllEtatPublication();
 	}
