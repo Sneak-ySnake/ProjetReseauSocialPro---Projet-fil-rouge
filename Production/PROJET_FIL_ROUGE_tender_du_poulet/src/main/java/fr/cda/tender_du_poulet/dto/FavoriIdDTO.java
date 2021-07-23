@@ -1,16 +1,18 @@
 package fr.cda.tender_du_poulet.dto;
 
+import fr.cda.tender_du_poulet.beans.Utilisateur;
+
 public class FavoriIdDTO { 
 	 
 	private UtilisateurDTO utilisateur;
  
-	private int id_utilisateur_favori;
+	private UtilisateurDTO utilisateur_favori;
 
     public FavoriIdDTO() {}
    
-	public FavoriIdDTO(UtilisateurDTO utilisateur, int id_utilisateur_favori) {
+	public FavoriIdDTO(UtilisateurDTO utilisateur, UtilisateurDTO utilisateur_favori) {
 		this.utilisateur = utilisateur;
-		this.id_utilisateur_favori = id_utilisateur_favori;
+		this.utilisateur_favori = utilisateur_favori;
 	}
 	
 	public UtilisateurDTO getUtilisateur() {
@@ -21,12 +23,12 @@ public class FavoriIdDTO {
 		this.utilisateur = utilisateur;
 	}
 
-	public int getId_utilisateur_favori() {
-		return id_utilisateur_favori;
+	public UtilisateurDTO getId_utilisateur_favori() {
+		return utilisateur_favori;
 	}
 
-	public void setId_utilisateur_favori(int id_utilisateur_favori) {
-		this.id_utilisateur_favori = id_utilisateur_favori;
+	public void setId_utilisateur_favori(UtilisateurDTO utilisateur_favori) {
+		this.utilisateur_favori = utilisateur_favori;
 	}
  
 }

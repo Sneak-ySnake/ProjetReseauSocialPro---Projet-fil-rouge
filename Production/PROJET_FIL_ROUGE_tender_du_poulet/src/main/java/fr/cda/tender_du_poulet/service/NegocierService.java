@@ -25,7 +25,7 @@ public class NegocierService {
 		return negocierconverter.entityVersDto(negocierRepository.findById(id).get());
 	}
 	
-	public List<NegocierDTO> recupAllNegocier(int id) {
+	public List<NegocierDTO> recupAllNegocier() {
 		return negocierconverter.entityVersDto(negocierRepository.findAll());
 	}
 
