@@ -29,7 +29,7 @@ public class AccesPublicationController {
 	}
 	
 	@PostMapping(value = "/ajoutAccesPublication")
-	public void ajoutPublication(@RequestBody AccesPublicationDTO a) {
+	public void ajoutAccesPublication(@RequestBody AccesPublicationDTO a) {
 		service.ajoutAccesPublication(a);
 	}
 	
