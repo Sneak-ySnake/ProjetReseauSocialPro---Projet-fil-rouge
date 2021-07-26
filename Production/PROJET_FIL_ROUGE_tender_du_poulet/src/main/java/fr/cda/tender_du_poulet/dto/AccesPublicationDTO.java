@@ -1,7 +1,5 @@
 package fr.cda.tender_du_poulet.dto;
 
-import fr.cda.tender_du_poulet.beans.AccesPublicationId;
-
 public class AccesPublicationDTO {
 	
 	private AccesPublicationIdDTO acces_publication_id;
