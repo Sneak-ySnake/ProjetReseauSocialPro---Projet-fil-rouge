@@ -35,7 +35,7 @@ public class AccesPublicationController {
 	}
 	
 	@PostMapping(value = "/supprimerAccesPublication")
-	public void supprimerAccesPublication(@RequestBody AccesPublicationId id) {
+	public void supprimerAccesPublication(@RequestBody AccesPublicationIdDTO id) {
 		service.supprimerAccesPublication(id);
 	}
 	
