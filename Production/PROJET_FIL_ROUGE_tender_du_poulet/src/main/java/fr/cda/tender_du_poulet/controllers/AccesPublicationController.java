@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.cda.tender_du_poulet.beans.AccesPublicationId;
 import fr.cda.tender_du_poulet.dto.AccesPublicationDTO;
+import fr.cda.tender_du_poulet.dto.AccesPublicationIdDTO;
 import fr.cda.tender_du_poulet.service.AccesPublicationService;
 
 @RestController
@@ -24,7 +25,7 @@ public class AccesPublicationController {
 	}
 	
 	@PostMapping(value = "/recupAccesPublication")
-	public AccesPublicationDTO recupAccesPublication(@RequestBody AccesPublicationId id) {
+	public AccesPublicationDTO recupAccesPublication(@RequestBody AccesPublicationIdDTO id) {
 		return service.recupAccesPublication(id);
 	}
 	

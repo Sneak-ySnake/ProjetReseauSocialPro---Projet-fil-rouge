@@ -8,27 +8,32 @@ import org.springframework.stereotype.Service;
 import fr.cda.tender_du_poulet.beans.AccesPublicationId;
 import fr.cda.tender_du_poulet.dao.AccesPublicationRepository;
 import fr.cda.tender_du_poulet.dto.AccesPublicationDTO;
+import fr.cda.tender_du_poulet.dto.AccesPublicationIdDTO;
 import fr.cda.tender_du_poulet.iService.AccesPublicationInterfaceService;
 import fr.cda.tender_du_poulet.util.AccesPublicationConverter;
+import fr.cda.tender_du_poulet.util.AccesPublicationIdConverter;
 
 @Service
 public class AccesPublicationService implements AccesPublicationInterfaceService {
 
-	private AccesPublicationConverter converter = new AccesPublicationConverter();
+	private AccesPublicationConverter converterAccesPublication = new AccesPublicationConverter();
+	
+	private AccesPublicationIdConverter converterAccesPublicationId = new AccesPublicationIdConverter();
 	
 	@Autowired
 	AccesPublicationRepository accesPublicationRepository;
 	
 	public void ajoutAccesPublication(AccesPublicationDTO a) {
-		accesPublicationRepository.save(converter.dtoVersEntity(a));
+		accesPublicationRepository.save(converterAccesPublication.dtoVersEntity(a));
 	}
 	
-	public AccesPublicationDTO recupAccesPublication(AccesPublicationId id) {
-		return converter.entityVersDto(accesPublicationRepository.findById(id).get());
+	public AccesPublicationDTO recupAccesPublication(AccesPublicationIdDTO id) {
+		AccesPublicationId idEntity = converterAccesPublicationId.dtoVersEntity(id);
+		return converterAccesPublication.entityVersDto(accesPublicationRepository.findById(idEntity).get());
 	}
 	
 	public List<AccesPublicationDTO> recupAllAccesPublication() {
-		return converter.entityVersDto(accesPublicationRepository.findAll());
+		return converterAccesPublication.entityVersDto(accesPublicationRepository.findAll());
 	}
 	
 	public void supprimerAccesPublication(AccesPublicationId id) {
@@ -36,7 +41,7 @@ public class AccesPublicationService implements AccesPublicationInterfaceService
 	}
 	
 	public void modifAccesPublication(AccesPublicationDTO a) {
-		accesPublicationRepository.save(converter.dtoVersEntity(a));
+		accesPublicationRepository.save(converterAccesPublication.dtoVersEntity(a));
 	}
 	
 }

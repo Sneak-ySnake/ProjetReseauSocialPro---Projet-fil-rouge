@@ -6,31 +6,29 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
-import fr.cda.tender_du_poulet.beans.AccesPublication;
 import fr.cda.tender_du_poulet.beans.AccesPublicationId;
-import fr.cda.tender_du_poulet.dto.AccesPublicationDTO;
 import fr.cda.tender_du_poulet.dto.AccesPublicationIdDTO;
 
 @Component
 public class AccesPublicationIdConverter {
 	
-	public AccesPublicationDTO entityVersDto(AccesPublicationId x) {
+	public AccesPublicationIdDTO entityVersDto(AccesPublicationId a) {
 		ModelMapper mapper = new ModelMapper();
-		AccesPublicationDTO map = mapper.map(x, AccesPublicationDTO.class);
+		AccesPublicationIdDTO map = mapper.map(a, AccesPublicationIdDTO.class);
 		return map;
 	}
 	
-	public List<AccesPublicationDTO> entityVersDto(List<AccesPublicationId> a) {
+	public List<AccesPublicationIdDTO> entityVersDto(List<AccesPublicationId> a) {
 		return a.stream().map(x -> entityVersDto(x)).collect(Collectors.toList());
 	}
 	
-	public AccesPublication dtoVersEntity(AccesPublicationIdDTO a) {
+	public AccesPublicationId dtoVersEntity(AccesPublicationIdDTO a) {
 		ModelMapper mapper = new ModelMapper();
-		AccesPublication map = mapper.map(a, AccesPublication.class);
+		AccesPublicationId map = mapper.map(a, AccesPublicationId.class);
 		return map;
 	}
 	
-	public List<AccesPublication> dtoVersEntity(List<AccesPublicationIdDTO> a) {
+	public List<AccesPublicationId> dtoVersEntity(List<AccesPublicationIdDTO> a) {
 		return a.stream().map(x -> dtoVersEntity(x)).collect(Collectors.toList());
 	}
 	
