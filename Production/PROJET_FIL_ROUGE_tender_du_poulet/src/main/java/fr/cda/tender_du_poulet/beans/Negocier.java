@@ -12,9 +12,9 @@ import javax.persistence.Table;
 @Entity @Table(name="negocier")
 public class Negocier {
 	
-	@Id
-	@Embedded
-	@GeneratedValue( strategy=GenerationType.IDENTITY)
+	
+	@EmbeddedId
+	@GeneratedValue( strategy=GenerationType.AUTO)
 	private NegocierId id_negocier;
 	
 	@Column(name="message")
