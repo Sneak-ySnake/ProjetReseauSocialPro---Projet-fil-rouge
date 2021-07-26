@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.cda.tender_du_poulet.beans.Utilisateur_ProfilId;
 import fr.cda.tender_du_poulet.dto.Utilisateur_ProfilDTO;
+import fr.cda.tender_du_poulet.dto.Utilisateur_ProfilIdDTO;
 import fr.cda.tender_du_poulet.service.Utilisateur_ProfilService;
 
 @RestController
@@ -23,7 +24,7 @@ public class Utilisateur_ProfilController {
 	}
 
 	@RequestMapping(value = "/findUtilisateur_Profil", method = RequestMethod.POST)
-	public Utilisateur_ProfilDTO recupUtilisateur_Profil(@RequestBody Utilisateur_ProfilId id) {
+	public Utilisateur_ProfilDTO recupUtilisateur_Profil(@RequestBody Utilisateur_ProfilIdDTO id) {
 		return utilisateur_ProfilService.recupUtilisateur_Profil(id);
 	}
 	

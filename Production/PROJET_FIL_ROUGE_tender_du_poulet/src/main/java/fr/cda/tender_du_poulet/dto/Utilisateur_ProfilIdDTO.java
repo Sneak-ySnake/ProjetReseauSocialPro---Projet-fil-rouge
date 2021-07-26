@@ -1,16 +1,17 @@
 package fr.cda.tender_du_poulet.dto;
 
-import java.io.Serializable;
+import org.springframework.stereotype.Component;
 
-import javax.persistence.Embeddable;
-
-@Embeddable
-public class Utilisateur_ProfilIdDTO implements Serializable {
+@Component
+public class Utilisateur_ProfilIdDTO {
 	private UtilisateurDTO utilisateurDTO;
 	private ProfilDTO profilDTO;
 	
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
+	public Utilisateur_ProfilIdDTO() {
+	}
+	
 	public Utilisateur_ProfilIdDTO(UtilisateurDTO utilisateurDTO, ProfilDTO profilDTO) {
 		this.utilisateurDTO = utilisateurDTO;
 		this.profilDTO = profilDTO;
