@@ -10,6 +10,9 @@ public class Utilisateur_ProfilDTO {
 	public Utilisateur_ProfilDTO() {
 	}
 
+	public Utilisateur_ProfilDTO(Utilisateur_ProfilId utilisateur_ProfilId) {
+		this.utilisateur_ProfilId = utilisateur_ProfilId;
+	}
 	
 /////////////////////////////// GETTER / SETTER ///////////////////////////////////////////////////////////////////////////
 	public Utilisateur_ProfilId getUtilisateur_ProfilId() {
