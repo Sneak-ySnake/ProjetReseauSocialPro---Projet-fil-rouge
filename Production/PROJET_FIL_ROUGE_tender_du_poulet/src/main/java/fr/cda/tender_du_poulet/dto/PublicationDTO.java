@@ -2,9 +2,6 @@ package fr.cda.tender_du_poulet.dto;
 
 import java.util.Date;
 
-import fr.cda.tender_du_poulet.beans.EtatPublication;
-import fr.cda.tender_du_poulet.beans.StatutPublication;
-import fr.cda.tender_du_poulet.beans.TypePublication;
 import fr.cda.tender_du_poulet.beans.Utilisateur;
 
 public class PublicationDTO {

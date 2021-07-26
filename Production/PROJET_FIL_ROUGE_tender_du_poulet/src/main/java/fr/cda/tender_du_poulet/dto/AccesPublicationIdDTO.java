@@ -14,32 +14,30 @@ public class AccesPublicationIdDTO {
 
 	
 		///CONSTRUCTEUR///
+	
 	public AccesPublicationIdDTO() {
 		
 	}
-	
-	public AccesPublicationIdDTO(Utilisateur utilisateur, Publication publication) {
-		this.utilisateur = utilisateur;
-		this.publication = publication;
-	}
 
-	
 		///GETTER SETTER///
+	
 	public Utilisateur getUtilisateur() {
 		return utilisateur;
 	}
+
 
 	public void setUtilisateur(Utilisateur utilisateur) {
 		this.utilisateur = utilisateur;
 	}
 
+
 	public Publication getPublication() {
 		return publication;
 	}
 
+
 	public void setPublication(Publication publication) {
 		this.publication = publication;
 	}
-	
 	
 }
