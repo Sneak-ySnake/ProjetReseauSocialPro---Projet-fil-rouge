@@ -2,25 +2,24 @@ package fr.cda.tender_du_poulet.dto;
 
 public class AdministrerUtilisateurDTO {
 	
-	private AdministrerUtilisateurIdDTO administrer_utilisateurId;
+	private AdministrerUtilisateurIdDTO administrer_utilisateur_id;
 	
 	 	/// CONSTRUCTEUR ///
 
 	public AdministrerUtilisateurDTO() {
 	}
 
-	public AdministrerUtilisateurDTO(AdministrerUtilisateurIdDTO administrer_utilisateurId) {
-		this.administrer_utilisateurId = administrer_utilisateurId;
+	public AdministrerUtilisateurDTO(AdministrerUtilisateurIdDTO administrer_utilisateur_id) {
+		this.administrer_utilisateur_id = administrer_utilisateur_id;
+	}
+	/// GETTER ET SETTER ///
+	
+	public AdministrerUtilisateurIdDTO getAdministrer_utilisateur_id() {
+		return administrer_utilisateur_id;
 	}
 	
-	public AdministrerUtilisateurIdDTO getAdministrerUtilisateurId() {
-		return administrer_utilisateurId;
-	}
-	
-		/// GETTER ET SETTER ///
-
-	public void setAdministrerUtilisateurId(AdministrerUtilisateurIdDTO administrer_utilisateurId) {
-		this.administrer_utilisateurId = administrer_utilisateurId;
+	public void setAdministrer_utilisateur_id(AdministrerUtilisateurIdDTO administrer_utilisateur_id) {
+		this.administrer_utilisateur_id = administrer_utilisateur_id;
 	}
 
 }

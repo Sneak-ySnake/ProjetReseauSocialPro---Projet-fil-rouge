@@ -14,20 +14,20 @@ public class AdministrerUtilisateur {
 	@Id
 	@EmbeddedId
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private AdministrerUtilisateurId administrer_utilisateurId;
+	private AdministrerUtilisateurId administrer_utilisateur_id;
 
 	public AdministrerUtilisateur() {
 	}
 
-	public AdministrerUtilisateur(AdministrerUtilisateurId administrer_utilisateurId) {
-		this.administrer_utilisateurId = administrer_utilisateurId;
+	public AdministrerUtilisateur(AdministrerUtilisateurId administrer_utilisateur_id) {
+		this.administrer_utilisateur_id = administrer_utilisateur_id;
 	}
 	
-	public AdministrerUtilisateurId getAdministrerUtilisateurId() {
-		return administrer_utilisateurId;
+	public AdministrerUtilisateurId getAdministrer_utilisateur_id() {
+		return administrer_utilisateur_id;
 	}
 
-	public void setAdministrerUtilisateurId(AdministrerUtilisateurId administrer_utilisateurId) {
-		this.administrer_utilisateurId = administrer_utilisateurId;
+	public void setAdministrerUtilisateurId(AdministrerUtilisateurId administrer_utilisateur_id) {
+		this.administrer_utilisateur_id = administrer_utilisateur_id;
 	}
 }

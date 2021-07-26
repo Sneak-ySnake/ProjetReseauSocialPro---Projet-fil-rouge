@@ -7,7 +7,7 @@ import fr.cda.tender_du_poulet.dto.AdministrerUtilisateurDTO;
 
 public interface AdministrerUtilisateurInterfaceService {
 	
-	public void ajoutAdministrerUtilisateur (AdministrerUtilisateurDTO ap);	
+	public void creerAdministrerUtilisateur (AdministrerUtilisateurDTO ap);	
 	
 	public AdministrerUtilisateurDTO recupAdministrerUtilisateur (AdministrerUtilisateurId id);
 	

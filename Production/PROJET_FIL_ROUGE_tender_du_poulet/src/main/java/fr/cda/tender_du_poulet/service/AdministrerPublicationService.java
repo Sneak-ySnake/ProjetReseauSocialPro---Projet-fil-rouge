@@ -30,7 +30,7 @@ public class AdministrerPublicationService implements AdministrerPublicationInte
 	
 	
 	
-	public void ajoutAdministrerPublication (AdministrerPublicationDTO ap) {
+	public void creerAdministrerPublication (AdministrerPublicationDTO ap) {
 		administrerPublicationRepo.save(converter.dtoVersEntity(ap));	
 	}
 	

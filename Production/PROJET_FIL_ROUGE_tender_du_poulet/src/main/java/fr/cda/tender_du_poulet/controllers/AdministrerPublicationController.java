@@ -20,8 +20,8 @@ public class AdministrerPublicationController {
 	
 	
 	@PostMapping(value = "/creerAdministrerPublication")
-	public void ajouterAdministrerPublication(@RequestBody AdministrerPublicationDTO a) { 
-		aps.ajoutAdministrerPublication(a);
+	public void creerAdministrerPublication(@RequestBody AdministrerPublicationDTO a) { 
+		aps.creerAdministrerPublication(a);
 	}
 	
 	@GetMapping (value ="/recupAdministrerPublication")

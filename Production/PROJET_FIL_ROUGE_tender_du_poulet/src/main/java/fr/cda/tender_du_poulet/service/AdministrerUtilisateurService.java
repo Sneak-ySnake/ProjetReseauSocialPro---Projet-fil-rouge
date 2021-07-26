@@ -20,7 +20,7 @@ public class AdministrerUtilisateurService implements AdministrerUtilisateurInte
 	@Autowired
 	private AdministrerUtilisateurRepository administrerUtilisateurRepo;
 	
-	public void ajoutAdministrerUtilisateur(AdministrerUtilisateurDTO au) {
+	public void creerAdministrerUtilisateur(AdministrerUtilisateurDTO au) {
 		administrerUtilisateurRepo.save(converter.dtoVersEntity(au));	
 	}
 	
