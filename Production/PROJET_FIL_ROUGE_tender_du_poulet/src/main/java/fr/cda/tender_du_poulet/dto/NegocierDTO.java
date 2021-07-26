@@ -4,7 +4,7 @@ import fr.cda.tender_du_poulet.beans.NegocierId;
 
 public class NegocierDTO {
 	
-	private NegocierId negocierid;
+	private NegocierId id_negocier;
 	 
 	private String message;
 
@@ -14,17 +14,17 @@ public class NegocierDTO {
 		this.message = message;
 	}
 
-	public NegocierDTO(NegocierId negocierid, String message) {
-		this.negocierid = negocierid;
+	public NegocierDTO(NegocierId id_negocier, String message) {
+		this.id_negocier = id_negocier;
 		this.message = message;
 	}
 
 	public NegocierId getNegocierid() {
-		return negocierid;
+		return id_negocier;
 	}
 
-	public void setNegocierid(NegocierId negocierid) {
-		this.negocierid = negocierid;
+	public void setNegocierid(NegocierId id_negocier) {
+		this.id_negocier = id_negocier;
 	}
 
 	public String getMessage() {

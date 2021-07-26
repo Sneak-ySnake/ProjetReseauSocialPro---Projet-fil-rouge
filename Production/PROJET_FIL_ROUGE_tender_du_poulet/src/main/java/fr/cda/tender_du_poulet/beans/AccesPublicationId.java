@@ -24,14 +24,13 @@ public class AccesPublicationId implements Serializable {
 		
 	}
 	
+
+		///GETTER SETTER///
 	public AccesPublicationId(Utilisateur utilisateur, Publication publication) {
 		this.utilisateur = utilisateur;
 		this.publication = publication;
 	}
 
-	
-		///GETTER SETTER///
-	
 	public Utilisateur getUtilisateur() {
 		return utilisateur;
 	}
@@ -47,5 +46,5 @@ public class AccesPublicationId implements Serializable {
 	public void setPublication(Publication publication) {
 		this.publication = publication;
 	}
-	
+
 }

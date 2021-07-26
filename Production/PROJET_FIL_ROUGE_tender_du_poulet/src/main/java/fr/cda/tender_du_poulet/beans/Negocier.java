@@ -12,10 +12,10 @@ import javax.persistence.Table;
 @Entity @Table(name="negocier")
 public class Negocier {
 	
-	@Id
-	@Embedded
-	@GeneratedValue( strategy=GenerationType.IDENTITY)
-	private NegocierId negocierid;
+	
+	@EmbeddedId
+	@GeneratedValue( strategy=GenerationType.AUTO)
+	private NegocierId id_negocier;
 	
 	@Column(name="message")
 	private String message;
@@ -26,17 +26,17 @@ public class Negocier {
 		this.message = message;
 	}
 
-	public Negocier(NegocierId negocierid, String message) {
-		this.negocierid = negocierid;
+	public Negocier(NegocierId id_negocier, String message) {
+		this.id_negocier = id_negocier;
 		this.message = message;
 	}
 
 	public NegocierId getNegocierid() {
-		return negocierid;
+		return id_negocier;
 	}
 
-	public void setNegocierid(NegocierId negocierid) {
-		this.negocierid = negocierid;
+	public void setNegocierid(NegocierId id_negocier) {
+		this.id_negocier = id_negocier;
 	}
 
 	public String getMessage() {

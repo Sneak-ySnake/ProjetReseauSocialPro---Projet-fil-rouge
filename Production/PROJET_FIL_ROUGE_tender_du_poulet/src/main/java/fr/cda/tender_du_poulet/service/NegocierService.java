@@ -7,18 +7,20 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.NegocierRepository;
 import fr.cda.tender_du_poulet.dto.NegocierDTO;
+import fr.cda.tender_du_poulet.iService.NegociationInterfaceService;
+import fr.cda.tender_du_poulet.iService.NegocierInterfaceService;
 import fr.cda.tender_du_poulet.util.NegocierConverter;
 
 @Service
-public class NegocierService {
+public class NegocierService implements NegocierInterfaceService{
 	
 	private NegocierConverter negocierconverter = new NegocierConverter();
 	
 	@Autowired
 	NegocierRepository negocierRepository;
 	
-	public void ajoutNegocier(NegocierDTO p) {
-		negocierRepository.save(negocierconverter.dtoVersEntity(p));
+	public void ajoutNegocier(NegocierDTO n) {
+		negocierRepository.save(negocierconverter.dtoVersEntity(n));
 	}
 	
 	public NegocierDTO recupNegocier(int id) {
