@@ -14,21 +14,16 @@ import fr.cda.tender_du_poulet.util.NegocierConverter;
 @Service
 public class NegocierService implements NegocierInterfaceService{
 	
-	private NegocierConverter negocierconverter = new NegocierConverter();
+	private NegocierConverter negocierConverter = new NegocierConverter();
 	
 	@Autowired
 	NegocierRepository negocierRepository;
 	
 	public void ajoutNegocier(NegocierDTO n) {
-		negocierRepository.save(negocierconverter.dtoVersEntity(n));
+		negocierRepository.save(negocierConverter.dtoVersEntity(n));
 	}
 	
-	public NegocierDTO recupNegocier(int id) {
-		return negocierconverter.entityVersDto(negocierRepository.findById(id).get());
-	}
-	
-	public List<NegocierDTO> recupAllNegocier() {
-		return negocierconverter.entityVersDto(negocierRepository.findAll());
-	}
+	 
+	 
 
 }

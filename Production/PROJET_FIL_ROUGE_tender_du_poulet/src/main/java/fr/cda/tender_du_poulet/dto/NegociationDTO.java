@@ -2,14 +2,25 @@ package fr.cda.tender_du_poulet.dto;
 
 public class NegociationDTO {
 	
-	int id_negociation;
+	private int id_negociation;
+	
+	private String titre;
 
 	public NegociationDTO() { 
 	}
 	
-	public NegociationDTO(int id_negociation) {
+	public NegociationDTO(int id_negociation, String titre) {
 		 
 		this.id_negociation = id_negociation;
+		this.titre = titre;
+	}
+
+	public String getTitre() {
+		return titre;
+	}
+
+	public void setTitre(String titre) {
+		this.titre = titre;
 	}
 
 	public int getId_negociation() {
