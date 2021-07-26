@@ -25,6 +25,38 @@ public class NegocierId implements Serializable{
 	
 	private Date date;
 
+	public Utilisateur getUtilisateur() {
+		return utilisateur;
+	}
+
+	public void setUtilisateur(Utilisateur utilisateur) {
+		this.utilisateur = utilisateur;
+	}
+
+	public Publication getPublication() {
+		return publication;
+	}
+
+	public void setPublication(Publication publication) {
+		this.publication = publication;
+	}
+
+	public Negociation getNegociation() {
+		return negociation;
+	}
+
+	public void setNegociation(Negociation negociation) {
+		this.negociation = negociation;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
 	public NegocierId() {
 	}
 
