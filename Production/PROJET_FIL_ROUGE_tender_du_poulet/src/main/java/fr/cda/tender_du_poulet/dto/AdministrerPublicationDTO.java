@@ -9,22 +9,22 @@ import fr.cda.tender_du_poulet.beans.AdministrerPublicationId;
 
 public class AdministrerPublicationDTO {
 	
-		private AdministrerPublicationId administrer_publicationId;
+		private AdministrerPublicationIdDTO administrer_publication_id;
 
 		public AdministrerPublicationDTO() {
 		}
 		
-		public AdministrerPublicationDTO (AdministrerPublicationId administrer_publicationId) {
-			this.setAdministrer_publicationId(administrer_publicationId);
+		public AdministrerPublicationDTO (AdministrerPublicationIdDTO administrer_publication_id) {
+			this.administrer_publication_id = administrer_publication_id;
 
 		}
 
-		public AdministrerPublicationId getAdministrer_publicationId() {
-			return administrer_publicationId;
+		public AdministrerPublicationIdDTO getAdministrer_publication_id() {
+			return administrer_publication_id;
 		}
 
-		public void setAdministrer_publicationId(AdministrerPublicationId administrer_publicationId) {
-			this.administrer_publicationId = administrer_publicationId;
+		public void setAdministrer_publication_id(AdministrerPublicationIdDTO administrer_publication_id) {
+			this.administrer_publication_id = administrer_publication_id;
 		}
 
 }

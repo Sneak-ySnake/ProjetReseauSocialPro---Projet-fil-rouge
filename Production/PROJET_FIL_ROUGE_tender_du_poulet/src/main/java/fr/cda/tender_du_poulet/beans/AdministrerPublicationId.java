@@ -14,8 +14,10 @@ public class AdministrerPublicationId implements Serializable {
 	private Admin admin;
 	@ManyToOne() @JoinColumn(name="id_action_sur_publication")
 	private ActionSurPublication action_sur_publication;
+	
 	@ManyToOne() @JoinColumn(name ="id_publication")
 	private Publication publication;
+	
 	@JoinColumn (name ="date_action_sur_publication")
 	private Date date_action_sur_publication;
 	

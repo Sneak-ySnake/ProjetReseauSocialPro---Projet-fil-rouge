@@ -2,10 +2,9 @@ package fr.cda.tender_du_poulet.dto;
 
 import java.util.Date;
 
+ 
 public class NegocierIdDTO {
-
-
-
+ 
 	private NegociationDTO negociation;
 	private PublicationDTO publication;
 	private UtilisateurDTO utilisateur;

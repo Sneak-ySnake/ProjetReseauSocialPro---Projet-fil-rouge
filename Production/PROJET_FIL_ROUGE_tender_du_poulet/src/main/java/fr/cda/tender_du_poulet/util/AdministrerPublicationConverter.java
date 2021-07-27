@@ -34,7 +34,5 @@ public class AdministrerPublicationConverter {
 		public List<AdministrerPublication> dtoVersEntity (List<AdministrerPublicationDTO> a) {
 			return a.stream().map(x -> dtoVersEntity(x)).collect(Collectors.toList());
 		}
-	
-	
 
 }

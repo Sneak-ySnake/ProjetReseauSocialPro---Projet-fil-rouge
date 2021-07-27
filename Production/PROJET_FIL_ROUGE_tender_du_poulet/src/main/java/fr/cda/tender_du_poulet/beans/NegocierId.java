@@ -9,37 +9,28 @@ import javax.persistence.ManyToOne;
 
 @Embeddable
 public class NegocierId implements Serializable{
-	
+	 
 	@ManyToOne()
-	@JoinColumn(name = "id_negociation")
-	private Negociation negociation;
-	
+	@JoinColumn(name = "id_utilisateur")
+	private Utilisateur utilisateur;
+	 
 	@ManyToOne()
 	@JoinColumn(name = "id_publication")
 	private Publication publication;
 	
+
 	@ManyToOne()
-	@JoinColumn(name = "id_utilisateur")
-	private Utilisateur utilisateur;
+	@JoinColumn(name = "id_negociation")
+	private Negociation negociation;
 	
 	private Date date;
 
-	public NegocierId() {
+	public Utilisateur getUtilisateur() {
+		return utilisateur;
 	}
 
-	public NegocierId(Negociation negociation, Publication publication, Utilisateur utilisateur, Date date) {
-		this.negociation = negociation;
-		this.publication = publication;
+	public void setUtilisateur(Utilisateur utilisateur) {
 		this.utilisateur = utilisateur;
-		this.date = date;
-	}
-
-	public Negociation getNegociation() {
-		return negociation;
-	}
-
-	public void setNegociation(Negociation negociation) {
-		this.negociation = negociation;
 	}
 
 	public Publication getPublication() {
@@ -50,12 +41,12 @@ public class NegocierId implements Serializable{
 		this.publication = publication;
 	}
 
-	public Utilisateur getUtilisateur() {
-		return utilisateur;
+	public Negociation getNegociation() {
+		return negociation;
 	}
 
-	public void setUtilisateur(Utilisateur utilisateur) {
-		this.utilisateur = utilisateur;
+	public void setNegociation(Negociation negociation) {
+		this.negociation = negociation;
 	}
 
 	public Date getDate() {
@@ -65,6 +56,16 @@ public class NegocierId implements Serializable{
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	 
+
+	public NegocierId() {
+	}
+
+	public NegocierId(Utilisateur utilisateur, Publication publication, Negociation negociation, Date date) {
+		 
+		this.utilisateur = utilisateur;
+		this.publication = publication;
+		this.negociation = negociation;
+		this.date = date;
+	}
 
 }

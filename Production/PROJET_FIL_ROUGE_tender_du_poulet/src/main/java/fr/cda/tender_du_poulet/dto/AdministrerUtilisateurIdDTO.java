@@ -8,21 +8,25 @@ import fr.cda.tender_du_poulet.beans.Utilisateur;
 public class AdministrerUtilisateurIdDTO {
 	
 	private AdminDTO admin;
-	private ActionSurUtilisateurDTO action_sur_utillisateur;
+	private ActionSurUtilisateurDTO action_sur_utilisateur;
 	private UtilisateurDTO utilisateur;
 	private Date date_action_sur_utilisateur;
 	
+	
+	////////constructeur //////
+	
 	public AdministrerUtilisateurIdDTO() {
-		
 	}
 	
-	public AdministrerUtilisateurIdDTO (AdminDTO admin, ActionSurUtilisateurDTO action_sur_utillisateur,
+	public AdministrerUtilisateurIdDTO (AdminDTO admin, ActionSurUtilisateurDTO action_sur_utilisateur,
 			UtilisateurDTO utilisateur,Date date_action_sur_utilisateur){
 		this.admin=admin;
-		this.action_sur_utillisateur = action_sur_utillisateur;
+		this.action_sur_utilisateur = action_sur_utilisateur;
 		this.utilisateur = utilisateur;
 		this.date_action_sur_utilisateur = date_action_sur_utilisateur;
 	}
+	
+	//// Getter et setter
 
 	public AdminDTO getAdmin() {
 		return admin;
@@ -32,12 +36,12 @@ public class AdministrerUtilisateurIdDTO {
 		this.admin = admin;
 	}
 
-	public ActionSurUtilisateurDTO getAction_sur_utillisateur() {
-		return action_sur_utillisateur;
+	public ActionSurUtilisateurDTO getAction_sur_utilisateur() {
+		return action_sur_utilisateur;
 	}
 
-	public void setAction_sur_utillisateur(ActionSurUtilisateurDTO action_sur_utillisateur) {
-		this.action_sur_utillisateur = action_sur_utillisateur;
+	public void setAction_sur_utilisateur(ActionSurUtilisateurDTO action_sur_utilisateur) {
+		this.action_sur_utilisateur = action_sur_utilisateur;
 	}
 
 	public UtilisateurDTO getUtilisateur() {

@@ -18,8 +18,8 @@ public class AdministrerUtilisateurController {
 	private AdministrerUtilisateurService au;
 
 	@PostMapping(value = "/creerAdministrerUtilisateur")
-	public void ajouterAdministrerUtilisateur(@RequestBody AdministrerUtilisateurDTO a) { 
-		au.ajoutAdministrerUtilisateur(a);
+	public void creerAdministrerUtilisateur(@RequestBody AdministrerUtilisateurDTO a) { 
+		au.creerAdministrerUtilisateur(a);
 	}
 	
 	@GetMapping (value ="/recupAdministrerUtilisateur")

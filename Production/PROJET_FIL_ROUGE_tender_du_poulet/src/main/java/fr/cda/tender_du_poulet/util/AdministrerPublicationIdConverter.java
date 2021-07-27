@@ -28,7 +28,7 @@ public class AdministrerPublicationIdConverter {
 		return map;	
 	}
 	
-	public List<AdministrerPublicationId> DtoVersEntity (List<AdministrerPublicationIdDTO> a) {
+	public List<AdministrerPublicationId> dtoVersEntity (List<AdministrerPublicationIdDTO> a) {
 		return a.stream().map(x -> dtoVersEntity(x)).collect(Collectors.toList());
 	}
 
