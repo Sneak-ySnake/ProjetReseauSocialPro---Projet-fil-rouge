@@ -22,9 +22,9 @@ public class AdministrerUtilisateurId implements Serializable {
 	public AdministrerUtilisateurId() {
 		
 	}
-	
-	public AdministrerUtilisateurId (Admin admin, ActionSurUtilisateur action_sur_utilisateur,
-			Utilisateur utilisateur,Date date_action_sur_utilisateur){
+
+	public AdministrerUtilisateurId(Admin admin, ActionSurUtilisateur action_sur_utilisateur, Utilisateur utilisateur,
+			Date date_action_sur_utilisateur) {
 		this.admin = admin;
 		this.action_sur_utilisateur = action_sur_utilisateur;
 		this.utilisateur = utilisateur;
@@ -39,11 +39,11 @@ public class AdministrerUtilisateurId implements Serializable {
 		this.admin = admin;
 	}
 
-	public ActionSurUtilisateur getAction_sur_utillisateur() {
+	public ActionSurUtilisateur getAction_sur_utilisateur() {
 		return action_sur_utilisateur;
 	}
 
-	public void setAction_sur_utillisateur(ActionSurUtilisateur action_sur_utilisateur) {
+	public void setAction_sur_utilisateur(ActionSurUtilisateur action_sur_utilisateur) {
 		this.action_sur_utilisateur = action_sur_utilisateur;
 	}
 
@@ -62,5 +62,8 @@ public class AdministrerUtilisateurId implements Serializable {
 	public void setDate_action_sur_utilisateur(Date date_action_sur_utilisateur) {
 		this.date_action_sur_utilisateur = date_action_sur_utilisateur;
 	}
-
+	
+	
+	
+	
 }
