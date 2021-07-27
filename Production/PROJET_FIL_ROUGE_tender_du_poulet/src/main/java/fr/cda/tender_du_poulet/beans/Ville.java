@@ -34,8 +34,7 @@ public class Ville {
 		
 	}
 
-	public Ville(int id_ville, String nom_ville, String code_postal, Pays pays) {
-		this.id_ville = id_ville;
+	public Ville(String nom_ville, String code_postal, Pays pays) {
 		this.nom_ville = nom_ville;
 		this.code_postal = code_postal;
 		this.pays = pays;
