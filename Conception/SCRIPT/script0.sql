@@ -38,51 +38,24 @@ owner to gestionnaire;
 ;
 
 
-create table pfr_tender.pays
-(id_pays serial not null,
-nom_pays varchar(50) not null
-);
-
-alter table pfr_tender.pays
-add constraint PK_PAYS primary key (id_pays),
-owner to gestionnaire;
-
-
-create table pfr_tender.ville
-(id_ville serial not null,
-nom_ville varchar(50) not null,
-code_postal varchar(50),
-id_pays integer not null
-);
-
-alter table pfr_tender.ville
-add constraint PK_VILLE primary key (id_ville),
-add constraint FK_VILLE_PAYS foreign key (id_pays) references pfr_tender.pays (id_pays),
-owner to gestionnaire;
-
-
 create table pfr_tender.utilisateur
 (id_utilisateur serial not null,
 nom_utilisateur varchar(20) not null,
 prenom_utilisateur varchar(20) not null,
 site_web varchar(20),
 telephone varchar(20) not null,
+code_postal varchar(20) not null,
 poste_occupe varchar(50),
 email_utilisateur varchar(20) not null,
 mot_de_passe_utilisateur varchar(20) not null,
 siret varchar(20),
 nom_entreprise varchar(50),
-num_voie varchar(10),
-adresse varchar(100),
-complement_adresse varchar(150),
-id_domaine integer not null,
-id_ville integer not null
+id_domaine integer not null
 );
 
 alter table pfr_tender.utilisateur
 add constraint PK_UTILISATEUR primary key (id_utilisateur),
 add constraint FK_UTILISATEUR_DOMAINE foreign key (id_domaine) references pfr_tender.domaine (id_domaine),
-add constraint FK_UTILISATEUR_VILLE foreign key (id_ville) references pfr_tender.ville (id_ville),
 owner to gestionnaire;
 ;
 
@@ -226,21 +199,16 @@ add constraint PK_ACTION_SUR_PUBLICATION PRIMARY KEY (id_action_sur_publication)
 OWNER to gestionnaire
 ;
 
-
+ 
 CREATE TABLE pfr_tender.admin
 (
 id_admin Serial NOT NULL,
-mail_admin varchar(30) NOT NULL,
-mot_de_passe_admin varchar(20) NOT NULL,
-num_voie_admin varchar(10),
-adresse_admin varchar(100),
-complement_adresse_admin varchar(150),
-id_ville integer not null
+compte_admin varchar(20) NOT NULL,
+mot_de_passe_admin varchar(20) NOT NULL
 );
 
 alter table pfr_tender.admin
 add constraint PK_ADMIN PRIMARY KEY (id_admin),
-add constraint FK_ADMIN_VILLE foreign key (id_ville) references pfr_tender.ville (id_ville),
 OWNER to gestionnaire
 ;
 
