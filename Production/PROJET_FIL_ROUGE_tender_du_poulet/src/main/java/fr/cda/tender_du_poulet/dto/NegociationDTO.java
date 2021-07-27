@@ -19,13 +19,6 @@ public class NegociationDTO {
 
 	public void setId_negociation(int id_negociation) {
 		this.id_negociation = id_negociation;
-	} 
-	
-	 
-	
- 
-	
-	
-	
+	}
 
 }
