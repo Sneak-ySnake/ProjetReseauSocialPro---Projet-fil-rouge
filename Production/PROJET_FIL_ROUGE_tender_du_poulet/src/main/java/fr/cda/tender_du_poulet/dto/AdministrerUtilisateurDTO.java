@@ -10,16 +10,18 @@ public class AdministrerUtilisateurDTO {
 	}
 
 	public AdministrerUtilisateurDTO(AdministrerUtilisateurIdDTO administrer_utilisateur_id) {
-		this.administrer_utilisateur_id = administrer_utilisateur_id;
+		this.setAdministrer_utilisateur_id(administrer_utilisateur_id);
 	}
 	/// GETTER ET SETTER ///
-	
+
 	public AdministrerUtilisateurIdDTO getAdministrer_utilisateur_id() {
 		return administrer_utilisateur_id;
 	}
-	
+
 	public void setAdministrer_utilisateur_id(AdministrerUtilisateurIdDTO administrer_utilisateur_id) {
 		this.administrer_utilisateur_id = administrer_utilisateur_id;
 	}
+	
+	
 
 }

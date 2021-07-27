@@ -20,14 +20,14 @@ public class AdministrerUtilisateurIdDTO {
 	
 	public AdministrerUtilisateurIdDTO (AdminDTO admin, ActionSurUtilisateurDTO action_sur_utilisateur,
 			UtilisateurDTO utilisateur,Date date_action_sur_utilisateur){
-		this.admin=admin;
+		this.admin = admin;
 		this.action_sur_utilisateur = action_sur_utilisateur;
 		this.utilisateur = utilisateur;
 		this.date_action_sur_utilisateur = date_action_sur_utilisateur;
 	}
-	
-	//// Getter et setter
 
+	//// Getter et setter///////
+	
 	public AdminDTO getAdmin() {
 		return admin;
 	}
