@@ -25,13 +25,11 @@ public class Pays {
 		
 	}
 
-	
-	
-		////GETTERS SETTERS////
 	public Pays(String nom_pays) {
 		this.nom_pays = nom_pays;
 	}
-
+	
+		////GETTERS SETTERS////
 	public int getId_pays() {
 		return id_pays;
 	}
