@@ -7,12 +7,10 @@ public class AdminDTO {
 	private int id_admin;
 	private String mail_admin;
 	private String mot_de_passe_admin;
-	private String num_adresse_admin; 
-	private String intitule_adresse_admin;
-	private String codePostal_admin; 
-	private String ville_admin; 
-	private String pays_admin; 
+	private String num_voie_admin; 
+	private String adresse_admin; 
 	private String complement_adresse_admin;
+	private Ville ville;
 	
 		/// constructeur///
 	
@@ -23,16 +21,14 @@ public class AdminDTO {
 		this.id_admin = id_admin;
 	}
 	
-	public AdminDTO (String mail_admin, String mot_de_passe_admin,String num_adresse_admin, String intitule_adresse_admin,
-			String codePostal_admin, String ville_admin, String pays_admin, String complement_adresse_admin) {
+	public AdminDTO (String mail_admin, String mot_de_passe_admin,String num_voie_admin, String adresse_admin,
+			String complement_adresse_admin, Ville ville) {
 		this.mail_admin= mail_admin;
 		this.mot_de_passe_admin = mot_de_passe_admin;
-		this.num_adresse_admin = num_adresse_admin;
-		this.intitule_adresse_admin = intitule_adresse_admin;
-		this.codePostal_admin =codePostal_admin;
-		this.ville_admin = ville_admin;
-		this.pays_admin = pays_admin;
+		this.num_voie_admin = num_voie_admin;
+		this.adresse_admin = adresse_admin;
 		this.complement_adresse_admin = complement_adresse_admin;
+		this.ville = ville;
 	}
 			///GETTER et SETTER///
 
@@ -60,51 +56,35 @@ public class AdminDTO {
 		this.mot_de_passe_admin = mot_de_passe_admin;
 	}
 
-	public String getNum_adresse_admin() {
-		return num_adresse_admin;
+	public String getNum_voie_admin() {
+		return num_voie_admin;
 	}
 
-	public void setNum_adresse_admin(String num_adresse_admin) {
-		this.num_adresse_admin = num_adresse_admin;
+	public void setNum_voie_admin(String num_voie_admin) {
+		this.num_voie_admin = num_voie_admin;
 	}
 
-	public String getIntitule_adresse_admin() {
-		return intitule_adresse_admin;
+	public String getAdresse_admin() {
+		return adresse_admin;
 	}
 
-	public void setIntitule_adresse_admin(String intitule_adresse_admin) {
-		this.intitule_adresse_admin = intitule_adresse_admin;
+	public void setAdresse_admin(String adresse_admin) {
+		this.adresse_admin = adresse_admin;
 	}
-
-	public String getCodePostal_admin() {
-		return codePostal_admin;
-	}
-
-	public void setCodePostal_admin(String codePostal_admin) {
-		this.codePostal_admin = codePostal_admin;
-	}
-
-	public String getVille_admin() {
-		return ville_admin;
-	}
-
-	public void setVille_admin(String ville_admin) {
-		this.ville_admin = ville_admin;
-	}
-
-	public String getPays_admin() {
-		return pays_admin;
-	}
-
-	public void setPays_admin(String pays_admin) {
-		this.pays_admin = pays_admin;
-	}
-
+	
 	public String getComplement_adresse_admin() {
 		return complement_adresse_admin;
 	}
 
 	public void setComplement_adresse_admin(String complement_adresse_admin) {
 		this.complement_adresse_admin = complement_adresse_admin;
+	}
+	
+	public Ville getVille() {
+		return ville;
+	}
+
+	public void setVille(Ville ville) {
+		this.ville = ville;
 	}
 }
