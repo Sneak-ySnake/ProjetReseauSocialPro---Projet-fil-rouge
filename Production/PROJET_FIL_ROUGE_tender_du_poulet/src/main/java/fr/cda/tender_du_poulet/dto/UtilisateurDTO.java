@@ -1,41 +1,25 @@
 package fr.cda.tender_du_poulet.dto;
 
-import fr.cda.tender_du_poulet.beans.Domaine;
-
 public class UtilisateurDTO {
 	private int id_utilisateur;
 	private String nom_utilisateur;
 	private String prenom_utilisateur;
 	private String site_web;
 	private String telephone;
-	private String code_postal;
 	private String poste_occupe;
 	private String email_utilisateur;
 	private String mot_de_passe_utilisateur;
 	private String siret;
 	private String nom_entreprise;
-	private Domaine domaine;
+	private String num_voie;
+	private String adresse;
+	private String complement_adresse;
+	private DomaineDTO domaine;
+	private VilleDTO ville;
 	
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
 	public UtilisateurDTO() {
-	}
-	
-	public UtilisateurDTO(int id_utilisateur, String nom_utilisateur, String prenom_utilisateur, String site_web,
-			String telephone, String code_postal, String poste_occupe, String email_utilisateur,
-			String mot_de_passe_utilisateur, String siret, String nom_entreprise, Domaine domaine) {
-		this.id_utilisateur = id_utilisateur;
-		this.nom_utilisateur = nom_utilisateur;
-		this.prenom_utilisateur = prenom_utilisateur;
-		this.site_web = site_web;
-		this.telephone = telephone;
-		this.code_postal = code_postal;
-		this.poste_occupe = poste_occupe;
-		this.email_utilisateur = email_utilisateur;
-		this.mot_de_passe_utilisateur = mot_de_passe_utilisateur;
-		this.siret = siret;
-		this.nom_entreprise = nom_entreprise;
-		this.domaine = domaine;
 	}
 	
 	
@@ -75,13 +59,6 @@ public class UtilisateurDTO {
 		this.telephone = telephone;
 	}
 
-	public String getCode_postal() {
-		return code_postal;
-	}
-	public void setCode_postal(String code_postal) {
-		this.code_postal = code_postal;
-	}
-
 	public String getPoste_occupe() {
 		return poste_occupe;
 	}
@@ -117,10 +94,38 @@ public class UtilisateurDTO {
 		this.nom_entreprise = nom_entreprise;
 	}
 
-	public Domaine getDomaine() {
+	public String getNum_voie() {
+		return num_voie;
+	}
+	public void setNum_voie(String num_voie) {
+		this.num_voie = num_voie;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	public String getComplement_adresse() {
+		return complement_adresse;
+	}
+	public void setComplement_adresse(String complement_adresse) {
+		this.complement_adresse = complement_adresse;
+	}
+
+	public DomaineDTO getDomaine() {
 		return domaine;
 	}
-	public void setDomaine(Domaine domaine) {
+	public void setDomaine(DomaineDTO domaine) {
 		this.domaine = domaine;
+	}
+
+	public VilleDTO getVille() {
+		return ville;
+	}
+	public void setVille(VilleDTO ville) {
+		this.ville = ville;
 	}
 }
