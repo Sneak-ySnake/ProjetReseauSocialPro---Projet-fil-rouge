@@ -18,7 +18,7 @@ public class VilleController {
 	private VilleService service;
 	
 	@PostMapping(value = "/ajoutVille")
-	public void ajoutVille(@RestController VilleDTO v) {
+	public void ajoutVille(@RequestBody VilleDTO v) {
 		service.ajoutVille(v);
 	}
 	
