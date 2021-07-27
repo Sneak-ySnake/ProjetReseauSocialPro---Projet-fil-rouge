@@ -13,7 +13,7 @@ public class AdministrerUtilisateurId implements Serializable {
 	@ManyToOne() @JoinColumn(name="id_admin")
 	private Admin admin;
 	@ManyToOne() @JoinColumn(name="id_action_sur_utilisateur")
-	private ActionSurUtilisateur action_sur_utillisateur;
+	private ActionSurUtilisateur action_sur_utilisateur;
 	@ManyToOne() @JoinColumn(name ="id_utilisateur")
 	private Utilisateur utilisateur;
 	@JoinColumn (name ="date_action_sur_utilisateur")
@@ -22,11 +22,11 @@ public class AdministrerUtilisateurId implements Serializable {
 	public AdministrerUtilisateurId() {
 		
 	}
-	
-	public AdministrerUtilisateurId (Admin admin, ActionSurUtilisateur action_sur_utillisateur,
-			Utilisateur utilisateur,Date date_action_sur_utilisateur){
+
+	public AdministrerUtilisateurId(Admin admin, ActionSurUtilisateur action_sur_utilisateur, Utilisateur utilisateur,
+			Date date_action_sur_utilisateur) {
 		this.admin = admin;
-		this.action_sur_utillisateur = action_sur_utillisateur;
+		this.action_sur_utilisateur = action_sur_utilisateur;
 		this.utilisateur = utilisateur;
 		this.date_action_sur_utilisateur = date_action_sur_utilisateur;
 	}
@@ -39,12 +39,12 @@ public class AdministrerUtilisateurId implements Serializable {
 		this.admin = admin;
 	}
 
-	public ActionSurUtilisateur getAction_sur_utillisateur() {
-		return action_sur_utillisateur;
+	public ActionSurUtilisateur getAction_sur_utilisateur() {
+		return action_sur_utilisateur;
 	}
 
-	public void setAction_sur_utillisateur(ActionSurUtilisateur action_sur_utillisateur) {
-		this.action_sur_utillisateur = action_sur_utillisateur;
+	public void setAction_sur_utilisateur(ActionSurUtilisateur action_sur_utilisateur) {
+		this.action_sur_utilisateur = action_sur_utilisateur;
 	}
 
 	public Utilisateur getUtilisateur() {
@@ -62,5 +62,8 @@ public class AdministrerUtilisateurId implements Serializable {
 	public void setDate_action_sur_utilisateur(Date date_action_sur_utilisateur) {
 		this.date_action_sur_utilisateur = date_action_sur_utilisateur;
 	}
-
+	
+	
+	
+	
 }

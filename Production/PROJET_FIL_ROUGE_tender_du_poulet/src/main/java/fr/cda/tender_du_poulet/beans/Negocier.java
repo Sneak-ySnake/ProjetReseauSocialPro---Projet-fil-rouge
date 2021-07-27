@@ -25,11 +25,10 @@ public class Negocier {
 	}
 
 	public Negocier(NegocierId id_negocier, String message) {
-		 
 		this.id_negocier = id_negocier;
 		this.message = message;
 	}
-	
+
 	public NegocierId getId_negocier() {
 		return id_negocier;
 	}
@@ -44,7 +43,6 @@ public class Negocier {
 
 	public void setMessage(String message) {
 		this.message = message;
-	}
-	 
+	} 
 
 }

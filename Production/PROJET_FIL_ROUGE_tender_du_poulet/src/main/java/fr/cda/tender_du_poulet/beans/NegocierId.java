@@ -18,12 +18,22 @@ public class NegocierId implements Serializable{
 	@JoinColumn(name = "id_publication")
 	private Publication publication;
 	
-
 	@ManyToOne()
 	@JoinColumn(name = "id_negociation")
 	private Negociation negociation;
 	
 	private Date date;
+
+	public NegocierId() {
+		
+	}
+
+	public NegocierId(Utilisateur utilisateur, Publication publication, Negociation negociation, Date date) {
+		this.utilisateur = utilisateur;
+		this.publication = publication;
+		this.negociation = negociation;
+		this.date = date;
+	}
 
 	public Utilisateur getUtilisateur() {
 		return utilisateur;
@@ -54,17 +64,6 @@ public class NegocierId implements Serializable{
 	}
 
 	public void setDate(Date date) {
-		this.date = date;
-	}
-
-	public NegocierId() {
-	}
-
-	public NegocierId(Utilisateur utilisateur, Publication publication, Negociation negociation, Date date) {
-		 
-		this.utilisateur = utilisateur;
-		this.publication = publication;
-		this.negociation = negociation;
 		this.date = date;
 	}
 
