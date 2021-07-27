@@ -4,33 +4,28 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Utilisateur_ProfilIdDTO {
-	private UtilisateurDTO utilisateurDTO;
-	private ProfilDTO profilDTO;
+	private UtilisateurDTO utilisateur;
+	private ProfilDTO profil;
 	
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
 	public Utilisateur_ProfilIdDTO() {
 	}
-	
-	public Utilisateur_ProfilIdDTO(UtilisateurDTO utilisateurDTO, ProfilDTO profilDTO) {
-		this.utilisateurDTO = utilisateurDTO;
-		this.profilDTO = profilDTO;
-	}
 
 
 /////////////////////////////// GETTER / SETTER ///////////////////////////////////////////////////////////////////////////
-	public UtilisateurDTO getUtilisateurDTO() {
-		return utilisateurDTO;
+	public UtilisateurDTO getUtilisateur() {
+		return utilisateur;
 	}
-	public void setUtilisateurDTO(UtilisateurDTO utilisateurDTO) {
-		this.utilisateurDTO = utilisateurDTO;
+	public void setUtilisateur(UtilisateurDTO utilisateur) {
+		this.utilisateur = utilisateur;
 	}
 	
-	public ProfilDTO getProfilDTO() {
-		return profilDTO;
+	public ProfilDTO getProfil() {
+		return profil;
 	}
-	public void setProfilDTO(ProfilDTO profilDTO) {
-		this.profilDTO = profilDTO;
+	public void setProfil(ProfilDTO profil) {
+		this.profil = profil;
 	}	
 	
 }

@@ -1,22 +1,19 @@
 package fr.cda.tender_du_poulet.dto;
 
 public class Utilisateur_ProfilDTO {
-	private Utilisateur_ProfilIdDTO utilisateur_ProfilIdDTO;
+	private Utilisateur_ProfilIdDTO utilisateur_ProfilId;
 	
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
 	public Utilisateur_ProfilDTO() {
 	}
-
-	public Utilisateur_ProfilDTO(Utilisateur_ProfilIdDTO utilisateur_ProfilIdDTO) {
-		this.utilisateur_ProfilIdDTO = utilisateur_ProfilIdDTO;
-	}
+	
 	
 /////////////////////////////// GETTER / SETTER ///////////////////////////////////////////////////////////////////////////
-	public Utilisateur_ProfilIdDTO getUtilisateur_ProfilIdDTO() {
-		return utilisateur_ProfilIdDTO;
+	public Utilisateur_ProfilIdDTO getUtilisateur_ProfilId() {
+		return utilisateur_ProfilId;
 	}
-	public void setUtilisateur_ProfilIdDTO(Utilisateur_ProfilIdDTO utilisateur_ProfilIdDTO) {
-		this.utilisateur_ProfilIdDTO = utilisateur_ProfilIdDTO;
+	public void setUtilisateur_ProfilId(Utilisateur_ProfilIdDTO utilisateur_ProfilId) {
+		this.utilisateur_ProfilId = utilisateur_ProfilId;
 	}
 }
