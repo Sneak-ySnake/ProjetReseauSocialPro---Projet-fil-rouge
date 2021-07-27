@@ -16,7 +16,7 @@ public class TypePublicationService implements TypePublicationInterfaceService{
 	private TypePublicationConverter converter = new TypePublicationConverter();
 
 	@Autowired
-	TypePublicationRepository typePublicationRepository;
+	private TypePublicationRepository typePublicationRepository;
 
 	public void ajoutTypePublication(TypePublicationDTO t) {
 		typePublicationRepository.save(converter.dtoVersEntity(t));
