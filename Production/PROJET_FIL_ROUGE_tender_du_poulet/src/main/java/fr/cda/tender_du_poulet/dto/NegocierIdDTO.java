@@ -2,10 +2,9 @@ package fr.cda.tender_du_poulet.dto;
 
 import java.util.Date;
 
+ 
 public class NegocierIdDTO {
-
-
-
+ 
 	private NegociationDTO negociation;
 	private PublicationDTO publication;
 	private UtilisateurDTO utilisateur;
@@ -15,34 +14,27 @@ public class NegocierIdDTO {
 	public NegocierIdDTO() {
 	}
 
-	public NegocierIdDTO(NegociationDTO negociation, PublicationDTO publication, UtilisateurDTO utilisateur, Date date) {
-		this.negociation = negociation;
-		this.publication = publication;
-		this.utilisateur = utilisateur;
-		this.date = date;
-	}
-
-	public NegociationDTO getNegociationDTO() {
+	public NegociationDTO getNegociation() {
 		return negociation;
 	}
 
-	public void setNegociationDTO(NegociationDTO negociation) {
+	public void setNegociation(NegociationDTO negociation) {
 		this.negociation = negociation;
 	}
 
-	public PublicationDTO getPublicationDTO() {
+	public PublicationDTO getPublication() {
 		return publication;
 	}
 
-	public void setPublicationDTO(PublicationDTO publication) {
+	public void setPublication(PublicationDTO publication) {
 		this.publication = publication;
 	}
 
-	public UtilisateurDTO getUtilisateurDTO() {
+	public UtilisateurDTO getUtilisateur() {
 		return utilisateur;
 	}
 
-	public void setUtilisateurDTO(UtilisateurDTO utilisateur) {
+	public void setUtilisateur(UtilisateurDTO utilisateur) {
 		this.utilisateur = utilisateur;
 	}
 
@@ -52,7 +44,6 @@ public class NegocierIdDTO {
 
 	public void setDate(Date date) {
 		this.date = date;
-	}
-	 
+	}	 
 	
 }

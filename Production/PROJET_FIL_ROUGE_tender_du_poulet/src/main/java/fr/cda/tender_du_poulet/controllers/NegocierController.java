@@ -13,22 +13,10 @@ import fr.cda.tender_du_poulet.service.NegocierService;
 
 @RestController
 public class NegocierController {
-
-	  
-
+ 
 		@Autowired
 		private NegocierService service = new NegocierService();
-		
-		@GetMapping(value = "/recupAllNegocier")
-		public List<NegocierDTO> recupAllNegocier() {
-			return service.recupAllNegocier();
-		}
-		
-		@PostMapping(value = "/recupNegocier")
-		public NegocierDTO recupNegociation(@RequestBody String id) {
-			return service.recupNegocier(Integer.parseInt(id));
-		}
-		
+	 
 		@PostMapping(value = "/ajoutNegocier")
 		public void ajoutNegocier(@RequestBody NegocierDTO n) {
 			service.ajoutNegocier(n);

@@ -15,21 +15,21 @@ import fr.cda.tender_du_poulet.service.NegociationService;
 public class NegociationController {
 
 	@Autowired
-	private NegociationService service = new NegociationService();
+	private NegociationService negociationService = new NegociationService();
 	
 	@GetMapping(value = "/recupAllNegociation")
 	public List<NegociationDTO> recupAllNegociation() {
-		return service.recupAllNegociation();
+		return negociationService.recupAllNegociation();
 	}
 	
 	@PostMapping(value = "/recupNegociation")
 	public NegociationDTO recupNegociation(@RequestBody String id) {
-		return service.recupNegociation(Integer.parseInt(id));
+		return negociationService.recupNegociation(Integer.parseInt(id));
 	}
 	
 	@PostMapping(value = "/ajoutNegociation")
 	public void ajoutNegociation(@RequestBody NegociationDTO n) {
-		service.ajoutNegociation(n);
+		negociationService.ajoutNegociation(n);
 	}
 	
 	
