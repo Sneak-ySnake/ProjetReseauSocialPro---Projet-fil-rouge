@@ -22,6 +22,9 @@ public class Admin {
 	@Column (name = "mot_de_passe_admin")
 	private String mot_de_passe_admin;
 	
+	@Column (name = "telephone")
+	private String telephone;
+	
 	@Column (name ="num_voie_admin")
 	private String num_voie_admin;
 	
@@ -32,7 +35,7 @@ public class Admin {
 	private String complement_adresse_admin;
 	
 	@ManyToOne() @JoinColumn(name = "id_ville")
-	private Ville ville;
+	private Ville id_ville;
 	
 	//////// Constructeur ///////
 	public Admin() {
@@ -42,14 +45,15 @@ public class Admin {
 	this.id_admin = id_admin;
 	}
 
-	public Admin (String mail_admin, String mot_de_passe_admin, String num_voie_admin, String adresse_admin,
-			 String complement_adresse_admin, Ville ville) {
+	public Admin (String mail_admin, String mot_de_passe_admin, String telephone, String num_voie_admin, String adresse_admin,
+			 String complement_adresse_admin, Ville id_ville) {
 		this.mail_admin = mail_admin;
 		this.mot_de_passe_admin = mot_de_passe_admin;
+		this.telephone = telephone;
 		this.num_voie_admin = num_voie_admin;
 		this.adresse_admin = adresse_admin;
 		this.complement_adresse_admin = complement_adresse_admin;
-		this.ville = ville;
+		this.id_ville = id_ville;
 	}
 
 
@@ -77,6 +81,14 @@ public class Admin {
 	public void setMot_de_passe_admin(String mot_de_passe_admin) {
 		this.mot_de_passe_admin = mot_de_passe_admin;
 	}
+	
+	public String getTelephone() {
+		return telephone;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
 
 	public String getNum_voie_admin() {
 		return num_voie_admin;
@@ -102,13 +114,17 @@ public class Admin {
 		this.complement_adresse_admin = complement_adresse_admin;
 	}
 
-	public Ville getVille() {
-		return ville;
+	public Ville getId_ville() {
+		return id_ville;
 	}
 
-	public void setVille(Ville ville) {
-		this.ville = ville;
+	public void setId_ville(Ville id_ville) {
+		this.id_ville = id_ville;
 	}
+
+	
+
+	
 	
 	
 }

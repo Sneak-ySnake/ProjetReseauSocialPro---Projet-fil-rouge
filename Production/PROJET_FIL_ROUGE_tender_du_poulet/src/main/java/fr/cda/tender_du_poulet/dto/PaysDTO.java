@@ -12,6 +12,7 @@ public class PaysDTO {
 		
 	}
 
+
 	
 	
 		////GETTERS SETTERS////
@@ -19,13 +20,16 @@ public class PaysDTO {
 		return id_pays;
 	}
 
+
 	public void setId_pays(int id_pays) {
 		this.id_pays = id_pays;
 	}
 
+
 	public String getNom_pays() {
 		return nom_pays;
 	}
+
 
 	public void setNom_pays(String nom_pays) {
 		this.nom_pays = nom_pays;

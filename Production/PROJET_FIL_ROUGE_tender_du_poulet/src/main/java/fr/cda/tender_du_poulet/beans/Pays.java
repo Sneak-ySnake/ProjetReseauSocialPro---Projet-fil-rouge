@@ -25,11 +25,9 @@ public class Pays {
 		
 	}
 
-	public Pays(int id_pays, String nom_pays) {
-		this.id_pays = id_pays;
+	public Pays(String nom_pays) {
 		this.nom_pays = nom_pays;
 	}
-
 	
 		////GETTERS SETTERS////
 	public int getId_pays() {
@@ -47,5 +45,5 @@ public class Pays {
 	public void setNom_pays(String nom_pays) {
 		this.nom_pays = nom_pays;
 	}
-	
+
 }

@@ -1,16 +1,17 @@
 package fr.cda.tender_du_poulet.dto;
 
-
+import fr.cda.tender_du_poulet.beans.Ville;
 
 public class AdminDTO {
 	
 	private int id_admin;
 	private String mail_admin;
 	private String mot_de_passe_admin;
+	private String telephone;
 	private String num_voie_admin; 
 	private String adresse_admin; 
 	private String complement_adresse_admin;
-	private Ville ville;
+	private Ville id_ville;
 	
 		/// constructeur///
 	
@@ -21,14 +22,15 @@ public class AdminDTO {
 		this.id_admin = id_admin;
 	}
 	
-	public AdminDTO (String mail_admin, String mot_de_passe_admin,String num_voie_admin, String adresse_admin,
-			String complement_adresse_admin, Ville ville) {
+	public AdminDTO (String mail_admin, String mot_de_passe_admin, String telephone, String num_voie_admin, String adresse_admin,
+			String complement_adresse_admin, Ville id_ville) {
 		this.mail_admin= mail_admin;
 		this.mot_de_passe_admin = mot_de_passe_admin;
+		this.telephone = telephone;
 		this.num_voie_admin = num_voie_admin;
 		this.adresse_admin = adresse_admin;
 		this.complement_adresse_admin = complement_adresse_admin;
-		this.ville = ville;
+		this.id_ville = id_ville;
 	}
 			///GETTER et SETTER///
 
@@ -55,6 +57,14 @@ public class AdminDTO {
 	public void setMot_de_passe_admin(String mot_de_passe_admin) {
 		this.mot_de_passe_admin = mot_de_passe_admin;
 	}
+	
+	public String getTelephone() {
+		return telephone;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
 
 	public String getNum_voie_admin() {
 		return num_voie_admin;
@@ -79,12 +89,15 @@ public class AdminDTO {
 	public void setComplement_adresse_admin(String complement_adresse_admin) {
 		this.complement_adresse_admin = complement_adresse_admin;
 	}
-	
-	public Ville getVille() {
-		return ville;
+
+	public Ville getId_ville() {
+		return id_ville;
 	}
 
-	public void setVille(Ville ville) {
-		this.ville = ville;
+	public void setId_ville(Ville id_ville) {
+		this.id_ville = id_ville;
 	}
+	
+	
+	
 }
