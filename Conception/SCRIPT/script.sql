@@ -232,6 +232,7 @@ CREATE TABLE pfr_tender.admin
 id_admin Serial NOT NULL,
 mail_admin varchar(30) NOT NULL,
 mot_de_passe_admin varchar(20) NOT NULL,
+telephone varchar(20),
 num_voie_admin varchar(10),
 adresse_admin varchar(100),
 complement_adresse_admin varchar(150),
