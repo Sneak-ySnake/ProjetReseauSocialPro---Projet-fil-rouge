@@ -1,7 +1,6 @@
 package fr.cda.tender_du_poulet.beans;
 
 import javax.persistence.Column;
-import javax.persistence.Embedded;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +12,7 @@ import javax.persistence.Table;
 @Table(name="negocier")
 public class Negocier {
 	 
-	
+	@Id
 	@EmbeddedId 
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private NegocierId id_negocier;
@@ -46,9 +45,6 @@ public class Negocier {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-
-	 
-	
 	 
 
 }
