@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.cda.tender_du_poulet.beans.Utilisateur_ProfilId;
 import fr.cda.tender_du_poulet.dto.Utilisateur_ProfilDTO;
 import fr.cda.tender_du_poulet.dto.Utilisateur_ProfilIdDTO;
 import fr.cda.tender_du_poulet.service.Utilisateur_ProfilService;
@@ -39,7 +38,7 @@ public class Utilisateur_ProfilController {
 	}
 
 	@RequestMapping(value = "/deleteUtilisateur_Profil", method = RequestMethod.POST)
-	public void supprimerUtilisateur_Profil(@RequestBody Utilisateur_ProfilId id) {
+	public void supprimerUtilisateur_Profil(@RequestBody Utilisateur_ProfilIdDTO id) {
 		utilisateur_ProfilService.supprimerUtilisateur_Profil(id);
 	}
 }
