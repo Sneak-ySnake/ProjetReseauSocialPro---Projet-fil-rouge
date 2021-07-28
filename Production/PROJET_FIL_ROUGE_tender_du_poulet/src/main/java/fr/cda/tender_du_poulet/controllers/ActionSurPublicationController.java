@@ -27,7 +27,7 @@ public class ActionSurPublicationController {
 		asps.ajoutActionSurPublication(a);
 	}
 	
-	@GetMapping (value ="/recupActionSurPublication")
+	@PostMapping (value ="/recupActionSurPublication")
 	public ActionSurPublicationDTO recupActionSurPublication (@RequestBody String id) {
 		int idActionSurPublication = Integer.parseInt(id);
 		return asps.recupActionSurPublication(idActionSurPublication);
@@ -38,7 +38,7 @@ public class ActionSurPublicationController {
 		return asps.recupAllActionSurPublication();	
 	}
 	
-	@GetMapping (value = "/deleteActionSurPublication")
+	@PostMapping (value = "/deleteActionSurPublication")
 	public void deleteActionSurPublication(@RequestBody String id) {
 		int idActionSurPublication = Integer.parseInt(id);
 		asps.deleteActionSurPublication(idActionSurPublication);

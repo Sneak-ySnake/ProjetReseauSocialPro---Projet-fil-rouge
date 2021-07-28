@@ -22,7 +22,7 @@ public class AdministrerUtilisateurController {
 		au.creerAdministrerUtilisateur(a);
 	}
 	
-	@GetMapping (value ="/recupAdministrerUtilisateur")
+	@PostMapping (value ="/recupAdministrerUtilisateur")
 	public AdministrerUtilisateurDTO recupAdministrerUtilisateur (@RequestBody AdministrerUtilisateurId id ) {
 		return au.recupAdministrerUtilisateur(id);
 	}

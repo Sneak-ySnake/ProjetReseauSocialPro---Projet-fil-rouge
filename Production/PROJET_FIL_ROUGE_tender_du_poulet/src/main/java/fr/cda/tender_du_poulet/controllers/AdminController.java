@@ -58,7 +58,7 @@ public class AdminController {
 		ads.ajoutAdmin(a);
 	}
 	
-	@GetMapping (value ="/recupAdmin")
+	@PostMapping (value ="/recupAdmin")
 	public AdminDTO recupAdmin (@RequestBody String id) {
 		int idAdmin = Integer.parseInt(id);
 		return ads.recupAdmin(idAdmin);
@@ -69,7 +69,7 @@ public class AdminController {
 		return ads.recupAllAdmin();	
 	}
 	
-	@GetMapping (value = "/deleteAdmin")
+	@PostMapping (value = "/deleteAdmin")
 	public void deleteAdmin(@RequestBody String id) {
 		int idAdmin = Integer.parseInt(id);
 		ads.deleteAdmin(idAdmin);

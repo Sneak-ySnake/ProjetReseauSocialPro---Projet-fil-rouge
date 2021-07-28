@@ -26,7 +26,7 @@ public class ActionSurUtilisateurController {
 		asus.ajoutActionSurUtilisateur(a);
 	}
 	
-	@GetMapping (value ="/recupActionSurUtilisateur")
+	@PostMapping (value ="/recupActionSurUtilisateur")
 	public ActionSurUtilisateurDTO recupActionSurUtilisateur (@RequestBody String id) {
 		int idActionSurUtilisateur = Integer.parseInt(id);
 		return asus.recupActionSurUtilisateur(idActionSurUtilisateur);
@@ -37,7 +37,7 @@ public class ActionSurUtilisateurController {
 		return asus.recupAllActionSurUtilisateur();	
 	}
 	
-	@GetMapping (value = "/deleteActionSurUtilisateur")
+	@PostMapping (value = "/deleteActionSurUtilisateur")
 	public void deleteActionSurUtilisateur(@RequestBody String id) {
 		int idActionSurUtilisateur = Integer.parseInt(id);
 		asus.deleteActionSurUtilisateur(idActionSurUtilisateur);

@@ -24,7 +24,7 @@ public class AdministrerPublicationController {
 		aps.creerAdministrerPublication(a);
 	}
 	
-	@GetMapping (value ="/recupAdministrerPublication")
+	@PostMapping (value ="/recupAdministrerPublication")
 	public AdministrerPublicationDTO recupAdministrerPublication (@RequestBody AdministrerPublicationId id ) {
 		return aps.recupAdministrerPublication(id);
 	}

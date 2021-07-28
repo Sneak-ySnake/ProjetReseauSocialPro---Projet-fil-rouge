@@ -11,7 +11,7 @@ public class AdminDTO {
 	private String num_voie_admin; 
 	private String adresse_admin; 
 	private String complement_adresse_admin;
-	private Ville id_ville;
+	private Ville ville;
 	
 		/// constructeur///
 	
@@ -23,14 +23,14 @@ public class AdminDTO {
 	}
 	
 	public AdminDTO (String mail_admin, String mot_de_passe_admin, String telephone, String num_voie_admin, String adresse_admin,
-			String complement_adresse_admin, Ville id_ville) {
+			String complement_adresse_admin, Ville ville) {
 		this.mail_admin= mail_admin;
 		this.mot_de_passe_admin = mot_de_passe_admin;
 		this.telephone = telephone;
 		this.num_voie_admin = num_voie_admin;
 		this.adresse_admin = adresse_admin;
 		this.complement_adresse_admin = complement_adresse_admin;
-		this.id_ville = id_ville;
+		this.ville = ville;
 	}
 			///GETTER et SETTER///
 
@@ -90,12 +90,12 @@ public class AdminDTO {
 		this.complement_adresse_admin = complement_adresse_admin;
 	}
 
-	public Ville getId_ville() {
-		return id_ville;
+	public Ville getVille() {
+		return ville;
 	}
 
-	public void setId_ville(Ville id_ville) {
-		this.id_ville = id_ville;
+	public void setVille(Ville ville) {
+		this.ville = ville;
 	}
 	
 	
