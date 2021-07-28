@@ -1,43 +1,33 @@
 package fr.cda.tender_du_poulet.dto;
 
-import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Embeddable;
+import org.springframework.stereotype.Component;
 
-import fr.cda.tender_du_poulet.beans.EtatCompte;
-import fr.cda.tender_du_poulet.beans.Utilisateur;
-
-@Embeddable
-public class Utilisateur_EtatCompteIdDTO implements Serializable {
-	private Utilisateur utilisateur;
-	private EtatCompte etat_compte;
+@Component
+public class Utilisateur_EtatCompteIdDTO {
+	private UtilisateurDTO utilisateur;
+	private EtatCompteDTO etat_compte;
 	private Date date_debut;
 
 	
 /////////////////////////////// CONSTRUCTEUR ///////////////////////////////////////////////////////////////////////////
 	public Utilisateur_EtatCompteIdDTO() {
 	}
-	
-	public Utilisateur_EtatCompteIdDTO(Utilisateur utilisateur, EtatCompte etat_compte, Date date_debut) {
-		this.utilisateur = utilisateur;
-		this.etat_compte = etat_compte;
-		this.date_debut = date_debut;
-	}
 
 
 /////////////////////////////// GETTER / SETTER ///////////////////////////////////////////////////////////////////////////
-	public Utilisateur getUtilisateur() {
+	public UtilisateurDTO getUtilisateur() {
 		return utilisateur;
 	}
-	public void setUtilisateur(Utilisateur utilisateur) {
+	public void setUtilisateur(UtilisateurDTO utilisateur) {
 		this.utilisateur = utilisateur;
 	}
 	
-	public EtatCompte getEtat_compte() {
+	public EtatCompteDTO getEtat_compte() {
 		return etat_compte;
 	}
-	public void setEtat_compte(EtatCompte etat_compte) {
+	public void setEtat_compte(EtatCompteDTO etat_compte) {
 		this.etat_compte = etat_compte;
 	}
 	

@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.cda.tender_du_poulet.beans.Utilisateur_EtatCompteId;
 import fr.cda.tender_du_poulet.dto.Utilisateur_EtatCompteDTO;
+import fr.cda.tender_du_poulet.dto.Utilisateur_EtatCompteIdDTO;
 import fr.cda.tender_du_poulet.service.Utilisateur_EtatCompteService;
 
 @RestController
@@ -24,7 +24,7 @@ public class Utilisateur_EtatCompteController {
 	}
 
 	@RequestMapping(value = "/findUtilisateur_EtatCompte", method = RequestMethod.POST)
-	public Utilisateur_EtatCompteDTO recupUtilisateur_EtatCompte(@RequestBody Utilisateur_EtatCompteId id) {
+	public Utilisateur_EtatCompteDTO recupUtilisateur_EtatCompte(@RequestBody Utilisateur_EtatCompteIdDTO id) {
 		return utilisateur_EtatCompteService.recupUtilisateur_EtatCompte(id);
 	}
 	
@@ -39,7 +39,7 @@ public class Utilisateur_EtatCompteController {
 	}
 
 	@RequestMapping(value = "/deleteUtilisateur_EtatCompte", method = RequestMethod.POST)
-	public void supprimerUtilisateur_EtatCompte(@RequestBody Utilisateur_EtatCompteId id) {
+	public void supprimerUtilisateur_EtatCompte(@RequestBody Utilisateur_EtatCompteIdDTO id) {
 		utilisateur_EtatCompteService.supprimerUtilisateur_EtatCompte(id);
 	}
 }
