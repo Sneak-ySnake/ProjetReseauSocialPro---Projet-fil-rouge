@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fr.cda.tender_du_poulet.beans.Utilisateur_ProfilId;
 import fr.cda.tender_du_poulet.dao.Utilisateur_ProfilRepository;
 import fr.cda.tender_du_poulet.dto.Utilisateur_ProfilDTO;
 import fr.cda.tender_du_poulet.dto.Utilisateur_ProfilIdDTO;
@@ -25,10 +24,6 @@ public class Utilisateur_ProfilService {
 	public void ajoutUtilisateur_Profil(Utilisateur_ProfilDTO uec) {
 		utilisateur_ProfilRepository.save(converter.dtoVersEntity(uec));
 	}
-	
-	public Utilisateur_ProfilDTO recupUtilisateur_Profil0(Utilisateur_ProfilId id) {
-		return converter.entityVersDto(utilisateur_ProfilRepository.findById(id).get());
-	}
 
 	public Utilisateur_ProfilDTO recupUtilisateur_Profil(Utilisateur_ProfilIdDTO id) {
 		return converter.entityVersDto(utilisateur_ProfilRepository.findById(converterId.dtoVersEntity(id)).get());
@@ -42,7 +37,7 @@ public class Utilisateur_ProfilService {
 		utilisateur_ProfilRepository.save(converter.dtoVersEntity(d));
 	}
 	
-	public void supprimerUtilisateur_Profil(Utilisateur_ProfilId id) {
-		utilisateur_ProfilRepository.deleteById(id);
+	public void supprimerUtilisateur_Profil(Utilisateur_ProfilIdDTO id) {
+		utilisateur_ProfilRepository.deleteById(converterId.dtoVersEntity(id));
 	}
 }
