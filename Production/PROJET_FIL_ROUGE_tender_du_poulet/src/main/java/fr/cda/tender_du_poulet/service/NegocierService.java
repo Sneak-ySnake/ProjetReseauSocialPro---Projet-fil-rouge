@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.beans.NegocierId;
 import fr.cda.tender_du_poulet.dao.NegocierRepository;
+import fr.cda.tender_du_poulet.dto.NegociationDTO;
 import fr.cda.tender_du_poulet.dto.NegocierDTO;
-import fr.cda.tender_du_poulet.iService.NegociationInterfaceService;
 import fr.cda.tender_du_poulet.iService.NegocierInterfaceService;
 import fr.cda.tender_du_poulet.util.NegocierConverter;
 
@@ -35,6 +35,16 @@ public class NegocierService implements NegocierInterfaceService{
 		return negocierConverter.entityVersDto(negocierRepository.findAll());
 		 
 	}
+	
+	public void supprimerNegocier(NegocierId id) {
+		negocierRepository.deleteById(id);
+	}
+	
+	public void modifNegocier(NegocierDTO n) {
+		negocierRepository.save(negocierConverter.dtoVersEntity(n));
+	}
+
+	
 	
 	 
 	 
