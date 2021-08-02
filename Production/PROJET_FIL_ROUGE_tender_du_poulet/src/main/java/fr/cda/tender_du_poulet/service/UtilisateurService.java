@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.UtilisateurRepository;
 import fr.cda.tender_du_poulet.dto.UtilisateurDTO;
+import fr.cda.tender_du_poulet.metiers.UtilisateurVerif;
 import fr.cda.tender_du_poulet.util.UtilisateurConverter;
 
 @Service
@@ -36,4 +37,9 @@ public class UtilisateurService {
 	public void supprimerUtilisateur(int id) {
 		utilisateurRepository.deleteById(id);
 	}
+	
+	public UtilisateurDTO recupUtilisateurEmail(String email_utilisateur) {
+		return converter.entityVersDto(utilisateurRepository.findByEmail(email_utilisateur));
+	}
+	
 }
