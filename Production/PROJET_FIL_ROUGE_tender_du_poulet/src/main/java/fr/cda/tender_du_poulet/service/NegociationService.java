@@ -31,7 +31,7 @@ public class NegociationService implements NegociationInterfaceService {
 		return negociationconverter.entityVersDto(negociationRepository.findAll());
 	}
 
-	 
+	  
 	public void supprimerNegociation(int id) {
 		negociationRepository.deleteById(id);
 	}

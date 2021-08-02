@@ -10,7 +10,5 @@ import fr.cda.tender_du_poulet.dto.FavoriDTO;
 import fr.cda.tender_du_poulet.dto.FavoriIdDTO;
 
 public interface FavoriRepository extends JpaRepository<Favori, FavoriId> {
-
-	 
  
 }

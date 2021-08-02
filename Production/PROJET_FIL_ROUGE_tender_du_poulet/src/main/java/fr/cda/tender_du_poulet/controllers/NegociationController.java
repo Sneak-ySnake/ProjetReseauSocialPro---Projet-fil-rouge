@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.cda.tender_du_poulet.dto.NegociationDTO;
+import fr.cda.tender_du_poulet.dto.PublicationDTO;
 import fr.cda.tender_du_poulet.service.NegociationService;
 
 @RestController
@@ -32,5 +33,13 @@ public class NegociationController {
 		negociationService.ajoutNegociation(n);
 	}
 	
+	@PostMapping(value = "/supprimerNegociation")
+	public void supprimerNegociation(@RequestBody String id) {
+		negociationService.supprimerNegociation(Integer.parseInt(id));
+	}
 	
+	@PostMapping(value = "/modifNegociation")
+	public void modifNegociation(@RequestBody NegociationDTO n) {
+		negociationService.modifNegociation(n);
+	}
 }

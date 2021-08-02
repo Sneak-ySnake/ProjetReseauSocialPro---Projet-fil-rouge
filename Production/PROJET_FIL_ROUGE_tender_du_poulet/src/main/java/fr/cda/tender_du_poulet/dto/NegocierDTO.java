@@ -6,12 +6,14 @@ public class NegocierDTO {
 	 
 	private String message;
 
-	public NegocierIdDTO getId_negocier() {
-		return id_negocier;
-	}
-
 	public NegocierDTO() {
 		
+	}
+
+	public NegocierDTO(NegocierIdDTO id_negocier, String message) {
+		 
+		this.id_negocier = id_negocier;
+		this.message = message;
 	}
 
 	public String getMessage() {
@@ -24,6 +26,10 @@ public class NegocierDTO {
 
 	public void setId_negocier(NegocierIdDTO id_negocier) {
 		this.id_negocier = id_negocier;
+	}
+	
+	public NegocierIdDTO getId_negocier() {
+		return id_negocier;
 	}
 	
 }

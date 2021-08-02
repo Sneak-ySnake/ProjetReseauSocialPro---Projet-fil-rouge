@@ -4,7 +4,6 @@ import java.util.List;
 
 import fr.cda.tender_du_poulet.beans.FavoriId;
 import fr.cda.tender_du_poulet.dto.FavoriDTO;
-import fr.cda.tender_du_poulet.dto.FavoriIdDTO;
 
 public interface FavoriInterfaceService { 
  
@@ -12,6 +11,10 @@ public interface FavoriInterfaceService {
 		
 		public FavoriDTO recupFavori(FavoriId id);
 		
-		public List<FavoriDTO> recupAllFavori();  
+		public List<FavoriDTO> recupAllFavori(); 
+		
+		public void supprimerFavori(FavoriId id);
+		
+		public void modifFavori(FavoriDTO f);
 	  
 }

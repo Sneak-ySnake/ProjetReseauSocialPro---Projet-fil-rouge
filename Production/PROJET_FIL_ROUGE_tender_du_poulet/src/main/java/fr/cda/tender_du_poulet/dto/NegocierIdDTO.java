@@ -13,6 +13,16 @@ public class NegocierIdDTO {
 
 	public NegocierIdDTO() {
 	}
+	 
+	public NegocierIdDTO(NegociationDTO negociation, PublicationDTO publication, UtilisateurDTO utilisateur,
+			Date date) {
+		 
+		this.negociation = negociation;
+		this.publication = publication;
+		this.utilisateur = utilisateur;
+		this.date = date;
+	}
+
 
 	public NegociationDTO getNegociation() {
 		return negociation;

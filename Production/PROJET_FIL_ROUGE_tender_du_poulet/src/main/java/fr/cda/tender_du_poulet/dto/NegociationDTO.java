@@ -3,11 +3,10 @@ package fr.cda.tender_du_poulet.dto;
 public class NegociationDTO {
 	
 	private int id_negociation;
-
 	
 	public NegociationDTO() { 
 	} 
-	
+	 
 	public NegociationDTO(int id_negociation) {
 		 
 		this.id_negociation = id_negociation;

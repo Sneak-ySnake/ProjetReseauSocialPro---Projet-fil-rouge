@@ -11,10 +11,10 @@ import fr.cda.tender_du_poulet.dto.NegocierDTO;
 	
     public NegocierDTO recupNegocier(NegocierId id);
 	
-	public List<NegocierDTO> recupAllFavoriNegocier(); 
+	public List<NegocierDTO> recupAllNegocier(); 
 	
 	public void supprimerNegocier(NegocierId id);
 	
-	public void modifNegocier(NegocierDTO p);	
+	public void modifNegocier(NegocierDTO n);	
   	
 }

@@ -7,8 +7,9 @@ public class FavoriIdDTO {
 	private UtilisateurDTO utilisateur;
  
 	private UtilisateurDTO utilisateur_favori;
-
-    public FavoriIdDTO() {}
+	
+	
+	public FavoriIdDTO() {} 
    
 	public FavoriIdDTO(UtilisateurDTO utilisateur, UtilisateurDTO utilisateur_favori) {
 		this.utilisateur = utilisateur;
@@ -30,6 +31,15 @@ public class FavoriIdDTO {
 	public void setId_utilisateur_favori(UtilisateurDTO utilisateur_favori) {
 		this.utilisateur_favori = utilisateur_favori;
 	}
+	
+	   public UtilisateurDTO getUtilisateur_favori() {
+			return utilisateur_favori;
+		}
+
+		public void setUtilisateur_favori(UtilisateurDTO utilisateur_favori) {
+			this.utilisateur_favori = utilisateur_favori;
+		}
+
  
 }
  

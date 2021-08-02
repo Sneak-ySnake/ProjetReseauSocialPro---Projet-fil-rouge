@@ -11,27 +11,39 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.cda.tender_du_poulet.beans.FavoriId;
 import fr.cda.tender_du_poulet.dto.FavoriDTO;
 import fr.cda.tender_du_poulet.dto.FavoriIdDTO;
+import fr.cda.tender_du_poulet.dto.NegociationDTO;
 import fr.cda.tender_du_poulet.service.FavoriService;
 
 @RestController
 public class FavoriController {
 
 	@Autowired
-	private FavoriService service = new FavoriService();
+	private FavoriService favoriService = new FavoriService();
 	
 	@GetMapping(value = "/recupAllFavori")
 	public List<FavoriDTO> recupAllFavori() {
-		return service.recupAllFavori();
+		return favoriService.recupAllFavori();
 	}
 	
 	@GetMapping(value = "/recupFavori")
 	public FavoriDTO recupFavori(@RequestBody FavoriId id) {
-		return service.recupFavori(id);
+		return favoriService.recupFavori(id);
 	}
 	
 	@PostMapping(value = "/ajoutFavori")
 	public void ajoutFavori(@RequestBody FavoriDTO f) {
-		service.ajoutFavori(f);
+		favoriService.ajoutFavori(f);
+	}
+	
+
+	@PostMapping(value = "/supprimerFavori")
+	public void supprimerFavori(@RequestBody FavoriId id) {
+		favoriService.supprimerFavori(id);
+	}
+	
+	@PostMapping(value = "/modifFavori")
+	public void modifFavori(@RequestBody FavoriDTO f) {
+		favoriService.modifFavori(f);
 	}
 	
 	

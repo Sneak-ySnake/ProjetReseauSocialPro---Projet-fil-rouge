@@ -8,14 +8,13 @@ import org.springframework.stereotype.Service;
 import fr.cda.tender_du_poulet.beans.FavoriId;
 import fr.cda.tender_du_poulet.dao.FavoriRepository;
 import fr.cda.tender_du_poulet.dto.FavoriDTO;
-import fr.cda.tender_du_poulet.dto.FavoriIdDTO;
 import fr.cda.tender_du_poulet.iService.FavoriInterfaceService;
 import fr.cda.tender_du_poulet.util.FavoriConverter;
 
 	@Service
 	public class FavoriService implements FavoriInterfaceService  {
 		
-		private FavoriConverter favoriconverter = new FavoriConverter();
+		private FavoriConverter favoriConverter = new FavoriConverter();
 		
 		@Autowired
 		FavoriRepository favoriRepository;
@@ -23,23 +22,30 @@ import fr.cda.tender_du_poulet.util.FavoriConverter;
 
 		@Override
 		public void ajoutFavori(FavoriDTO f) {
-			favoriRepository.save(favoriconverter.dtoVersEntity(f));
+			favoriRepository.save(favoriConverter.dtoVersEntity(f));
 			
 		}
 
 		@Override
 		public FavoriDTO recupFavori(FavoriId id) {
-			return favoriconverter.entityVersDto(favoriRepository.findById(id).get());
+			return favoriConverter.entityVersDto(favoriRepository.findById(id).get());
 			 
 		}
 
 		@Override
 		public List<FavoriDTO> recupAllFavori() {
-			return favoriconverter.entityVersDto(favoriRepository.findAll());
+			return favoriConverter.entityVersDto(favoriRepository.findAll());
 		 
 		}
 
-		 
+		  
+		public void supprimerFavori(FavoriId id) {
+			favoriRepository.deleteById(id);
+		}
+		
+		public void modifFavori(FavoriDTO n) {
+			favoriRepository.save(favoriConverter.dtoVersEntity(n));
+		}
 
 	}
 
