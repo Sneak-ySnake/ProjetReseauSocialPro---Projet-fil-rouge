@@ -49,10 +49,18 @@ public class UtilisateurController {
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public Boolean loginUtilisateur(@RequestBody UtilisateurDTO u) {
+		String email = u.getEmail_utilisateur();
+		String mdp = u.getMot_de_passe_utilisateur();
+		UtilisateurDTO utilisateur = utilisateurService.recupUtilisateurEmail(email);
+		return utilisateurVerif.verifLogin(utilisateur, mdp);
+	}
+	/*
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public Boolean loginUtilisateur(@RequestParam(name = "email") String email,
 								 @RequestParam(name = "mdp") String mdp) {
 		UtilisateurDTO u = utilisateurService.recupUtilisateurEmail(email);
 		return utilisateurVerif.verifLogin(u, mdp);
 	}
-	
+	*/
 }
