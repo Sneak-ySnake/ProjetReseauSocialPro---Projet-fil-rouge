@@ -21,23 +21,23 @@ public class Utilisateur_ProfilService {
 	@Autowired
 	Utilisateur_ProfilRepository utilisateur_ProfilRepository;
 
-	public void ajoutUtilisateur_Profil(Utilisateur_ProfilDTO uec) {
+	public void addUtilisateur_Profil(Utilisateur_ProfilDTO uec) {
 		utilisateur_ProfilRepository.save(converter.dtoVersEntity(uec));
 	}
 
-	public Utilisateur_ProfilDTO recupUtilisateur_Profil(Utilisateur_ProfilIdDTO id) {
+	public Utilisateur_ProfilDTO findUtilisateur_Profil(Utilisateur_ProfilIdDTO id) {
 		return converter.entityVersDto(utilisateur_ProfilRepository.findById(converterId.dtoVersEntity(id)).get());
 	}
 	
-	public List<Utilisateur_ProfilDTO> recupAllUtilisateur_Profil() {
+	public List<Utilisateur_ProfilDTO> findAllUtilisateur_Profil() {
 		return converter.entityVersDto(utilisateur_ProfilRepository.findAll());
 	}
 	
-	public void modifUtilisateur_Profil(Utilisateur_ProfilDTO d) {
+	public void updateUtilisateur_Profil(Utilisateur_ProfilDTO d) {
 		utilisateur_ProfilRepository.save(converter.dtoVersEntity(d));
 	}
 	
-	public void supprimerUtilisateur_Profil(Utilisateur_ProfilIdDTO id) {
+	public void deleteUtilisateur_Profil(Utilisateur_ProfilIdDTO id) {
 		utilisateur_ProfilRepository.deleteById(converterId.dtoVersEntity(id));
 	}
 }

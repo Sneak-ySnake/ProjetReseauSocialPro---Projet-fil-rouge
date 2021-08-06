@@ -53,20 +53,20 @@ public class AdminController {
 	private AdminService ads;
 		
 	
-	@PostMapping (value = "/creerAdmin")
-	public void ajouterAdmin (@RequestBody AdminDTO a) {
-		ads.ajoutAdmin(a);
+	@PostMapping (value = "/addAdmin")
+	public void addAdmin (@RequestBody AdminDTO a) {
+		ads.addAdmin(a);
 	}
 	
-	@PostMapping (value ="/recupAdmin")
-	public AdminDTO recupAdmin (@RequestBody String id) {
+	@PostMapping (value ="/findAdmin")
+	public AdminDTO findAdmin (@RequestBody String id) {
 		int idAdmin = Integer.parseInt(id);
-		return ads.recupAdmin(idAdmin);
+		return ads.findAdmin(idAdmin);
 	}
 	
-	@GetMapping (value = "/recupAllAdmin")
-	public List<AdminDTO> recupAllAdmin() {
-		return ads.recupAllAdmin();	
+	@GetMapping (value = "/findAllAdmin")
+	public List<AdminDTO> findAllAdmin() {
+		return ads.findAllAdmin();	
 	}
 	
 	@PostMapping (value = "/deleteAdmin")

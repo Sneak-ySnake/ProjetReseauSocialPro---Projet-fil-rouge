@@ -6,13 +6,13 @@ import fr.cda.tender_du_poulet.dto.EtatPublicationDTO;
 
 public interface EtatPublicationInterfaceService {
 
-	public void ajoutEtatPublication(EtatPublicationDTO e);
+	public void addEtatPublication(EtatPublicationDTO e);
 	
-	public EtatPublicationDTO recupEtatPublication(int id);
+	public EtatPublicationDTO findEtatPublication(int id);
 	
-	public List<EtatPublicationDTO> recupAllEtatPublication();
+	public List<EtatPublicationDTO> findAllEtatPublication();
 	
-	public void supprimerEtatPublication(int id);
+	public void deleteEtatPublication(int id);
 	
-	public void modifEtatPublication(EtatPublicationDTO e);
+	public void updateEtatPublication(EtatPublicationDTO e);
 }

@@ -19,24 +19,24 @@ public class NegociationService implements NegociationInterfaceService {
 	@Autowired
 	NegociationRepository negociationRepository;
 
-	public void ajoutNegociation(NegociationDTO n) {
+	public void addNegociation(NegociationDTO n) {
 		negociationRepository.save(negociationconverter.dtoVersEntity(n));
 	}
 	
-	public NegociationDTO recupNegociation(int id) {
+	public NegociationDTO findNegociation(int id) {
 		return negociationconverter.entityVersDto(negociationRepository.findById(id).get());
 	}
 	
-	public List<NegociationDTO> recupAllNegociation() {
+	public List<NegociationDTO> findAllNegociation() {
 		return negociationconverter.entityVersDto(negociationRepository.findAll());
 	}
 
 	  
-	public void supprimerNegociation(int id) {
+	public void deleteNegociation(int id) {
 		negociationRepository.deleteById(id);
 	}
 	
-	public void modifNegociation(NegociationDTO n) {
+	public void updateNegociation(NegociationDTO n) {
 		negociationRepository.save(negociationconverter.dtoVersEntity(n));
 	}
 

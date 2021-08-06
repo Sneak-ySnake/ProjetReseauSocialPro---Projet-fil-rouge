@@ -23,25 +23,25 @@ public class AccesPublicationService implements AccesPublicationInterfaceService
 	@Autowired
 	AccesPublicationRepository accesPublicationRepository;
 	
-	public void ajoutAccesPublication(AccesPublicationDTO a) {
+	public void addAccesPublication(AccesPublicationDTO a) {
 		accesPublicationRepository.save(converterAccesPublication.dtoVersEntity(a));
 	}
 	
-	public AccesPublicationDTO recupAccesPublication(AccesPublicationIdDTO id) {
+	public AccesPublicationDTO findAccesPublication(AccesPublicationIdDTO id) {
 		AccesPublicationId idEntity = converterAccesPublicationId.dtoVersEntity(id);
 		return converterAccesPublication.entityVersDto(accesPublicationRepository.findById(idEntity).get());
 	}
 	
-	public List<AccesPublicationDTO> recupAllAccesPublication() {
+	public List<AccesPublicationDTO> findAllAccesPublication() {
 		return converterAccesPublication.entityVersDto(accesPublicationRepository.findAll());
 	}
 	
-	public void supprimerAccesPublication(AccesPublicationIdDTO id) {
+	public void deleteAccesPublication(AccesPublicationIdDTO id) {
 		AccesPublicationId idEntity = converterAccesPublicationId.dtoVersEntity(id);
 		accesPublicationRepository.deleteById(idEntity);
 	}
 	
-	public void modifAccesPublication(AccesPublicationDTO a) {
+	public void updateAccesPublication(AccesPublicationDTO a) {
 		accesPublicationRepository.save(converterAccesPublication.dtoVersEntity(a));
 	}
 	

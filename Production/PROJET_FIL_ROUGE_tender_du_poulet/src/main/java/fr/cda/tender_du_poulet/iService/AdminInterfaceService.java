@@ -11,18 +11,18 @@ import fr.cda.tender_du_poulet.dto.UtilisateurDTO;
 @Service
 public interface AdminInterfaceService {
 	
-	public void ajoutAdmin (AdminDTO a);
+	public void addAdmin (AdminDTO a);
 	
-	public AdminDTO recupAdmin(int id);
+	public AdminDTO findAdmin(int id);
 	
-	public List<AdminDTO> recupAllAdmin();
+	public List<AdminDTO> findAllAdmin();
 	
 	public void deleteAdmin (int id);
 	
 	public void updateAdmin (AdminDTO a);
 	
-	public List<PublicationDTO> recupAllPublication();
+	public List<PublicationDTO> findAllPublication();
 	
-	public List<UtilisateurDTO> recupAllUtilisateur();
+	public List<UtilisateurDTO> findAllUtilisateur();
 
 }

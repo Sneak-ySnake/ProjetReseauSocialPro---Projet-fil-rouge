@@ -6,12 +6,12 @@ import fr.cda.tender_du_poulet.dto.PaysDTO;
 
 public interface PaysInterfaceService {
 
-	public void ajoutPays(PaysDTO p);
+	public void addPays(PaysDTO p);
 	
-	public PaysDTO recupPays(int id);
+	public PaysDTO findPays(int id);
 	
-	public List<PaysDTO> recupAllPays();
+	public List<PaysDTO> findAllPays();
 	
-	public void supprimerPays(int id);
+	public void deletePays(int id);
 	
 }

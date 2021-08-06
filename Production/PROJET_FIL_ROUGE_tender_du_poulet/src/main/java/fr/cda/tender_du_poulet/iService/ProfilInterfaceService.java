@@ -9,13 +9,13 @@ import fr.cda.tender_du_poulet.dto.ProfilDTO;
 @Service
 public interface ProfilInterfaceService {
 
-	public void ajoutProfil(ProfilDTO p);
+	public void addProfil(ProfilDTO p);
 	
-	public ProfilDTO recupProfil(int id);
+	public ProfilDTO findProfil(int id);
 	
-	public List<ProfilDTO> recupAllProfil();
+	public List<ProfilDTO> findAllProfil();
 	
-	public void modifProfil(ProfilDTO p);
+	public void updateProfil(ProfilDTO p);
 	
-	public void supprimerProfil(int id);
+	public void deleteProfil(int id);
 }

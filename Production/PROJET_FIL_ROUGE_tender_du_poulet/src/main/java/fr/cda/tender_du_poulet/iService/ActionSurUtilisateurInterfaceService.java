@@ -9,11 +9,11 @@ import fr.cda.tender_du_poulet.dto.ActionSurUtilisateurDTO;
 @Service
 public interface ActionSurUtilisateurInterfaceService {
 	
-	public void ajoutActionSurUtilisateur (ActionSurUtilisateurDTO au);
+	public void addActionSurUtilisateur (ActionSurUtilisateurDTO au);
 	
-	public ActionSurUtilisateurDTO recupActionSurUtilisateur (int id);
+	public ActionSurUtilisateurDTO findActionSurUtilisateur (int id);
 	
-	public List<ActionSurUtilisateurDTO> recupAllActionSurUtilisateur();
+	public List<ActionSurUtilisateurDTO> findAllActionSurUtilisateur();
 	
 	public void deleteActionSurUtilisateur (int id);
 	

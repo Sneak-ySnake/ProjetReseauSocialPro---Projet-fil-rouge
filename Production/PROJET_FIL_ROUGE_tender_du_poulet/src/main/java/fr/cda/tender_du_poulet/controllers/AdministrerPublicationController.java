@@ -19,19 +19,19 @@ public class AdministrerPublicationController {
 	private AdministrerPublicationService aps;
 	
 	
-	@PostMapping(value = "/creerAdministrerPublication")
-	public void creerAdministrerPublication(@RequestBody AdministrerPublicationDTO a) { 
-		aps.creerAdministrerPublication(a);
+	@PostMapping(value = "/addAdministrerPublication")
+	public void addAdministrerPublication(@RequestBody AdministrerPublicationDTO a) { 
+		aps.addAdministrerPublication(a);
 	}
 	
-	@PostMapping (value ="/recupAdministrerPublication")
-	public AdministrerPublicationDTO recupAdministrerPublication (@RequestBody AdministrerPublicationId id ) {
-		return aps.recupAdministrerPublication(id);
+	@PostMapping (value ="/findAdministrerPublication")
+	public AdministrerPublicationDTO findAdministrerPublication (@RequestBody AdministrerPublicationId id ) {
+		return aps.findAdministrerPublication(id);
 	}
 	
-	@GetMapping (value = "/recupAllAdministrerPublication")
-	public List<AdministrerPublicationDTO> recupAllAdministrerPublication() {
-		return aps.recupAllAdministrerPublication();	
+	@GetMapping (value = "/findAllAdministrerPublication")
+	public List<AdministrerPublicationDTO> findAllAdministrerPublication() {
+		return aps.findAllAdministrerPublication();	
 	}
 	
 	@PostMapping (value = "/deleteAdministrerPublication")

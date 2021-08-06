@@ -18,23 +18,23 @@ public class StatutPublicationService implements StatutPublicationInterfaceServi
 	@Autowired
 	StatutPublicationRepository statutPublicationRepository;
 	
-	public void ajoutStatutPublication(StatutPublicationDTO s) {
+	public void addStatutPublication(StatutPublicationDTO s) {
 		statutPublicationRepository.save(converter.dtoVersEntity(s));
 	}
 	
-	public StatutPublicationDTO recupStatutPublication(int id) {
+	public StatutPublicationDTO findStatutPublication(int id) {
 		return converter.entityVersDto(statutPublicationRepository.findById(id).get());
 	}
 	
-	public List<StatutPublicationDTO> recupAllStatutPublication() {
+	public List<StatutPublicationDTO> findAllStatutPublication() {
 		return converter.entityVersDto(statutPublicationRepository.findAll());
 	}
 	
-	public void supprimerStatutPublication(int id) {
+	public void deleteStatutPublication(int id) {
 		statutPublicationRepository.deleteById(id);
 	}
 	
-	public void modifStatutPublication(StatutPublicationDTO s) {
+	public void updateStatutPublication(StatutPublicationDTO s) {
 		statutPublicationRepository.save(converter.dtoVersEntity(s));
 	}
 }

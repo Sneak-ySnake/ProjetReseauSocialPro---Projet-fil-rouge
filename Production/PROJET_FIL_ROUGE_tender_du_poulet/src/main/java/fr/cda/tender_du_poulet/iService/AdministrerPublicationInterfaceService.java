@@ -11,11 +11,11 @@ import fr.cda.tender_du_poulet.dto.AdministrerPublicationDTO;
 
 public interface AdministrerPublicationInterfaceService {
 	
-	public void creerAdministrerPublication (AdministrerPublicationDTO ap);	
+	public void addAdministrerPublication (AdministrerPublicationDTO ap);	
 	
-	public AdministrerPublicationDTO recupAdministrerPublication (AdministrerPublicationId id);
+	public AdministrerPublicationDTO findAdministrerPublication (AdministrerPublicationId id);
 	
-	public List<AdministrerPublicationDTO> recupAllAdministrerPublication();
+	public List<AdministrerPublicationDTO> findAllAdministrerPublication();
 	
 	public void deleteAdministrerPublication (AdministrerPublicationId id);
 	

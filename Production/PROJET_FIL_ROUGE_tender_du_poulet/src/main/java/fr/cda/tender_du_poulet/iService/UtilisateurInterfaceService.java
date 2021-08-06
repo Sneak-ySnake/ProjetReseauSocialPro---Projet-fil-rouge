@@ -7,13 +7,13 @@ import fr.cda.tender_du_poulet.dto.UtilisateurDTO;
 public interface UtilisateurInterfaceService {
 
 
-	public void ajoutUtilisateur(UtilisateurDTO u);
+	public void addUtilisateur(UtilisateurDTO u);
 	
-	public UtilisateurDTO recupUtilisateur(int id);
+	public UtilisateurDTO findUtilisateur(int id);
 	
-	public List<UtilisateurDTO> recupAllUtilisateur();
+	public List<UtilisateurDTO> findAllUtilisateur();
 	
-	public void modifUtilisateur(UtilisateurDTO u);
+	public void updateUtilisateur(UtilisateurDTO u);
 	
-	public void supprimerUtilisateur(int id);
+	public void deleteUtilisateur(int id);
 }

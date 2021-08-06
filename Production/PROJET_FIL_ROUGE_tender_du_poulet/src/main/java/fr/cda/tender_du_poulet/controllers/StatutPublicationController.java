@@ -17,29 +17,29 @@ public class StatutPublicationController {
 	@Autowired
 	private StatutPublicationService service;
 	
-	@GetMapping(value = "/recupStatutPublication")
-	public StatutPublicationDTO recupStatutPublication(@RequestBody String id) {
-		return service.recupStatutPublication(Integer.parseInt(id));
+	@GetMapping(value = "/findStatutPublication")
+	public StatutPublicationDTO findStatutPublication(@RequestBody String id) {
+		return service.findStatutPublication(Integer.parseInt(id));
 	}
 	
-	@GetMapping(value = "/recupAllStatutPublication")
-	public List<StatutPublicationDTO> recupAllStatutPublication() {
-		return service.recupAllStatutPublication();
+	@GetMapping(value = "/findAllStatutPublication")
+	public List<StatutPublicationDTO> findAllStatutPublication() {
+		return service.findAllStatutPublication();
 	}
 	
-	@PostMapping(value = "/ajoutStatutPublication")
-	public void ajoutStatutPublication(@RequestBody StatutPublicationDTO s) {
-		service.ajoutStatutPublication(s);
+	@PostMapping(value = "/addStatutPublication")
+	public void addStatutPublication(@RequestBody StatutPublicationDTO s) {
+		service.addStatutPublication(s);
 	}
 	
-	@PostMapping(value = "/supprimerStatutPublication")
-	public void supprimerStatutPublication(@RequestBody String id) {
-		service.supprimerStatutPublication(Integer.parseInt(id));
+	@PostMapping(value = "/deleteStatutPublication")
+	public void deleteStatutPublication(@RequestBody String id) {
+		service.deleteStatutPublication(Integer.parseInt(id));
 	}
 
-	@PostMapping(value = "/modifStatutPublication")
-	public void modifStatutPublication(@RequestBody StatutPublicationDTO s) {
-		service.modifStatutPublication(s);
+	@PostMapping(value = "/updateStatutPublication")
+	public void updateStatutPublication(@RequestBody StatutPublicationDTO s) {
+		service.updateStatutPublication(s);
 	}
 	
 }

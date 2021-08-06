@@ -18,29 +18,29 @@ public class EtatCompteController {
 	private EtatCompteService etatCompteService;
 	
 	@RequestMapping(value = "/addEtatCompte", method = RequestMethod.POST)
-	public void ajoutEtatCompte(@RequestBody EtatCompteDTO d) {
-		etatCompteService.ajoutEtatCompte(d);
+	public void addEtatCompte(@RequestBody EtatCompteDTO d) {
+		etatCompteService.addEtatCompte(d);
 	}
 
 	@RequestMapping(value = "/findEtatCompte", method = RequestMethod.POST)
-	public EtatCompteDTO recupEtatCompte(@RequestBody String id) {
+	public EtatCompteDTO findEtatCompte(@RequestBody String id) {
 		int idEtatCompte = Integer.parseInt(id);
-		return etatCompteService.recupEtatCompte(idEtatCompte);
+		return etatCompteService.findEtatCompte(idEtatCompte);
 	}
 	
 	@RequestMapping(value = "/findAllEtatCompte", method = RequestMethod.POST)
-	public List<EtatCompteDTO> recupAllEtatCompte() {
-		return etatCompteService.recupAllEtatCompte();
+	public List<EtatCompteDTO> findAllEtatCompte() {
+		return etatCompteService.findAllEtatCompte();
 	}
 
 	@RequestMapping(value = "/updateEtatCompte", method = RequestMethod.POST)
-	public void modifEtatCompte(@RequestBody EtatCompteDTO d) {
-		etatCompteService.modifEtatCompte(d);
+	public void updateEtatCompte(@RequestBody EtatCompteDTO d) {
+		etatCompteService.updateEtatCompte(d);
 	}
 
 	@RequestMapping(value = "/deleteEtatCompte", method = RequestMethod.POST)
-	public void supprimerEtatCompte(@RequestBody String id) {
+	public void deleteEtatCompte(@RequestBody String id) {
 		int idEtatCompte = Integer.parseInt(id);
-		etatCompteService.supprimerEtatCompte(idEtatCompte);
+		etatCompteService.deleteEtatCompte(idEtatCompte);
 	}
 }

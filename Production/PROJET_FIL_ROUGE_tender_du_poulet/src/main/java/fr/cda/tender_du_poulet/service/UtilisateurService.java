@@ -18,27 +18,27 @@ public class UtilisateurService {
 	@Autowired
 	UtilisateurRepository utilisateurRepository;
 	
-	public void ajoutUtilisateur(UtilisateurDTO u) {
+	public void addUtilisateur(UtilisateurDTO u) {
 		utilisateurRepository.save(converter.dtoVersEntity(u));
 	}
 	
-	public UtilisateurDTO recupUtilisateur(int id) {
+	public UtilisateurDTO findUtilisateur(int id) {
 		return converter.entityVersDto(utilisateurRepository.findById(id).get());
 	}
 	
-	public List<UtilisateurDTO> recupAllUtilisateur() {
+	public List<UtilisateurDTO> findAllUtilisateur() {
 		return converter.entityVersDto(utilisateurRepository.findAll());
 	}
 
-	public void modifUtilisateur(UtilisateurDTO u) {
+	public void updateUtilisateur(UtilisateurDTO u) {
 		utilisateurRepository.save(converter.dtoVersEntity(u));
 	}
 	
-	public void supprimerUtilisateur(int id) {
+	public void deleteUtilisateur(int id) {
 		utilisateurRepository.deleteById(id);
 	}
 	
-	public UtilisateurDTO recupUtilisateurEmail(String email_utilisateur) {
+	public UtilisateurDTO findUtilisateurEmail(String email_utilisateur) {
 		return converter.entityVersDto(utilisateurRepository.findByEmail(email_utilisateur));
 	}
 	

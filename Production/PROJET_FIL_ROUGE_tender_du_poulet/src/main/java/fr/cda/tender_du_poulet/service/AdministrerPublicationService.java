@@ -30,15 +30,15 @@ public class AdministrerPublicationService implements AdministrerPublicationInte
 	
 	
 	
-	public void creerAdministrerPublication (AdministrerPublicationDTO ap) {
+	public void addAdministrerPublication (AdministrerPublicationDTO ap) {
 		administrerPublicationRepo.save(converter.dtoVersEntity(ap));	
 	}
 	
-	public AdministrerPublicationDTO recupAdministrerPublication (AdministrerPublicationId id) {
+	public AdministrerPublicationDTO findAdministrerPublication (AdministrerPublicationId id) {
 		return converter.entityVersDto(administrerPublicationRepo.findById(id).get());
 	}
 	
-	public List<AdministrerPublicationDTO> recupAllAdministrerPublication() {
+	public List<AdministrerPublicationDTO> findAllAdministrerPublication() {
 		return converter.entityVersDto(administrerPublicationRepo.findAll());
 	}
 

@@ -21,27 +21,27 @@ public class NegocierService implements NegocierInterfaceService{
 	@Autowired
 	NegocierRepository negocierRepository;
 	
-	public void ajoutNegocier(NegocierDTO n) {
+	public void addNegocier(NegocierDTO n) {
 		negocierRepository.save(negocierConverter.dtoVersEntity(n));
 	}
 
 	@Override
-	public NegocierDTO recupNegocier(NegocierId id) {
+	public NegocierDTO findNegocier(NegocierId id) {
 		return negocierConverter.entityVersDto(negocierRepository.findById(id).get());
 		 
 	} 
 
 	@Override
-	public List<NegocierDTO> recupAllNegocier() {
+	public List<NegocierDTO> findAllNegocier() {
 		return negocierConverter.entityVersDto(negocierRepository.findAll());
 		 
 	}
 	@Override
-	public void supprimerNegocier(NegocierId id) {
+	public void deleteNegocier(NegocierId id) {
 		negocierRepository.deleteById(id);
 	}
 	@Override
-	public void modifNegocier(NegocierDTO n) {
+	public void updateNegocier(NegocierDTO n) {
 		negocierRepository.save(negocierConverter.dtoVersEntity(n));
 	}
 

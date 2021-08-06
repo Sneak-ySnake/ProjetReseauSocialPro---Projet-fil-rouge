@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.PaysRepository;
 import fr.cda.tender_du_poulet.dto.PaysDTO;
+import fr.cda.tender_du_poulet.dto.ProfilDTO;
 import fr.cda.tender_du_poulet.iService.PaysInterfaceService;
 import fr.cda.tender_du_poulet.util.PaysConverter;
 
@@ -18,19 +19,23 @@ public class PaysService implements PaysInterfaceService {
 	@Autowired
 	private PaysRepository paysRepository;
 	
-	public void ajoutPays(PaysDTO p) {
+	public void addPays(PaysDTO p) {
 		paysRepository.save(converter.dtoVersEntity(p));
 	}
 	
-	public PaysDTO recupPays(int id) {
+	public PaysDTO findPays(int id) {
 		return converter.entityVersDto(paysRepository.findById(id).get());
 	}
 	
-	public List<PaysDTO> recupAllPays() {
+	public List<PaysDTO> findAllPays() {
 		return converter.entityVersDto(paysRepository.findAll());
 	}
 	
-	public void supprimerPays(int id) {
+	public void updatePays(PaysDTO p) {
+		paysRepository.save(converter.dtoVersEntity(p));
+	}
+	
+	public void deletePays(int id) {
 		paysRepository.deleteById(id);
 	}
 	

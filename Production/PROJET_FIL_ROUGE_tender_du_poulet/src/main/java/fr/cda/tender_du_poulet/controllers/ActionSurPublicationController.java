@@ -22,20 +22,20 @@ public class ActionSurPublicationController {
 	private ActionSurPublicationService asps;
 	
 	
-	@PostMapping (value = "/creerActionSurPublication")
-	public void ajouterActionSurPublication(@RequestBody ActionSurPublicationDTO a) {
-		asps.ajoutActionSurPublication(a);
+	@PostMapping (value = "/addActionSurPublication")
+	public void addActionSurPublication(@RequestBody ActionSurPublicationDTO a) {
+		asps.addActionSurPublication(a);
 	}
 	
-	@PostMapping (value ="/recupActionSurPublication")
-	public ActionSurPublicationDTO recupActionSurPublication (@RequestBody String id) {
+	@PostMapping (value ="/findActionSurPublication")
+	public ActionSurPublicationDTO findActionSurPublication (@RequestBody String id) {
 		int idActionSurPublication = Integer.parseInt(id);
-		return asps.recupActionSurPublication(idActionSurPublication);
+		return asps.findActionSurPublication(idActionSurPublication);
 	}
 	
-	@GetMapping (value = "/recupAllActionSurPublication")
-	public List<ActionSurPublicationDTO> recupAllActionSurPublication() {
-		return asps.recupAllActionSurPublication();	
+	@GetMapping (value = "/findAllActionSurPublication")
+	public List<ActionSurPublicationDTO> findAllActionSurPublication() {
+		return asps.findAllActionSurPublication();	
 	}
 	
 	@PostMapping (value = "/deleteActionSurPublication")

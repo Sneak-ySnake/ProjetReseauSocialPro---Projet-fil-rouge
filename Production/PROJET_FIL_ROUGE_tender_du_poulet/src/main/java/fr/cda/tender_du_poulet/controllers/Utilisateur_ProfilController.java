@@ -18,27 +18,27 @@ public class Utilisateur_ProfilController {
 	private Utilisateur_ProfilService utilisateur_ProfilService;
 	
 	@RequestMapping(value = "/addUtilisateur_Profil", method = RequestMethod.POST)
-	public void ajoutUtilisateur_Profil(@RequestBody Utilisateur_ProfilDTO d) {
-		utilisateur_ProfilService.ajoutUtilisateur_Profil(d);
+	public void addUtilisateur_Profil(@RequestBody Utilisateur_ProfilDTO d) {
+		utilisateur_ProfilService.addUtilisateur_Profil(d);
 	}
 
 	@RequestMapping(value = "/findUtilisateur_Profil", method = RequestMethod.POST)
-	public Utilisateur_ProfilDTO recupUtilisateur_Profil(@RequestBody Utilisateur_ProfilIdDTO id) {
-		return utilisateur_ProfilService.recupUtilisateur_Profil(id);
+	public Utilisateur_ProfilDTO findUtilisateur_Profil(@RequestBody Utilisateur_ProfilIdDTO id) {
+		return utilisateur_ProfilService.findUtilisateur_Profil(id);
 	}
 	
 	@RequestMapping(value = "/findAllUtilisateur_Profil", method = RequestMethod.POST)
-	public List<Utilisateur_ProfilDTO> recupAllUtilisateur_Profil() {
-		return utilisateur_ProfilService.recupAllUtilisateur_Profil();
+	public List<Utilisateur_ProfilDTO> findAllUtilisateur_Profil() {
+		return utilisateur_ProfilService.findAllUtilisateur_Profil();
 	}
 
 	@RequestMapping(value = "/updateUtilisateur_Profil", method = RequestMethod.POST)
-	public void modifUtilisateur_Profil(@RequestBody Utilisateur_ProfilDTO d) {
-		utilisateur_ProfilService.modifUtilisateur_Profil(d);
+	public void updateUtilisateur_Profil(@RequestBody Utilisateur_ProfilDTO d) {
+		utilisateur_ProfilService.updateUtilisateur_Profil(d);
 	}
 
 	@RequestMapping(value = "/deleteUtilisateur_Profil", method = RequestMethod.POST)
-	public void supprimerUtilisateur_Profil(@RequestBody Utilisateur_ProfilIdDTO id) {
-		utilisateur_ProfilService.supprimerUtilisateur_Profil(id);
+	public void deleteUtilisateur_Profil(@RequestBody Utilisateur_ProfilIdDTO id) {
+		utilisateur_ProfilService.deleteUtilisateur_Profil(id);
 	}
 }

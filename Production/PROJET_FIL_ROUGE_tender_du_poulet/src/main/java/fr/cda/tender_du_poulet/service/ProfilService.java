@@ -18,23 +18,23 @@ public class ProfilService implements ProfilInterfaceService {
 	@Autowired
 	ProfilRepository profilRepository;
 	
-	public void ajoutProfil(ProfilDTO p) {
+	public void addProfil(ProfilDTO p) {
 		profilRepository.save(converter.dtoVersEntity(p));
 	}
 	
-	public ProfilDTO recupProfil(int id) {
+	public ProfilDTO findProfil(int id) {
 		return converter.entityVersDto(profilRepository.findById(id).get());
 	}
 	
-	public List<ProfilDTO> recupAllProfil() {
+	public List<ProfilDTO> findAllProfil() {
 		return converter.entityVersDto(profilRepository.findAll());
 	}
 	
-	public void modifProfil(ProfilDTO p) {
+	public void updateProfil(ProfilDTO p) {
 		profilRepository.save(converter.dtoVersEntity(p));
 	}
 	
-	public void supprimerProfil(int id) {
+	public void deleteProfil(int id) {
 		profilRepository.deleteById(id);
 	}
 }

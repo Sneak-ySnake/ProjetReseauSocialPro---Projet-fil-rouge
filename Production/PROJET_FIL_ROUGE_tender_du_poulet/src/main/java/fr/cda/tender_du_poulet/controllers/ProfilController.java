@@ -18,29 +18,29 @@ public class ProfilController {
 	private ProfilService profilService;
 
 	@RequestMapping(value = "/addProfil", method = RequestMethod.POST)
-	public void ajoutProfil(@RequestBody ProfilDTO d) {
-		profilService.ajoutProfil(d);
+	public void addProfil(@RequestBody ProfilDTO d) {
+		profilService.addProfil(d);
 	}
 
 	@RequestMapping(value = "/findProfil", method = RequestMethod.POST)
-	public ProfilDTO recupProfil(@RequestBody String id) {
+	public ProfilDTO findProfil(@RequestBody String id) {
 		int idProfil = Integer.parseInt(id);
-		return profilService.recupProfil(idProfil);
+		return profilService.findProfil(idProfil);
 	}
 	
 	@RequestMapping(value = "/findAllProfil", method = RequestMethod.POST)
-	public List<ProfilDTO> recupAllProfil() {
-		return profilService.recupAllProfil();
+	public List<ProfilDTO> findAllProfil() {
+		return profilService.findAllProfil();
 	}
 
 	@RequestMapping(value = "/updateProfil", method = RequestMethod.POST)
-	public void modifProfil(@RequestBody ProfilDTO d) {
-		profilService.modifProfil(d);
+	public void updateProfil(@RequestBody ProfilDTO d) {
+		profilService.updateProfil(d);
 	}
 
 	@RequestMapping(value = "/deleteProfil", method = RequestMethod.POST)
-	public void supprimerProfil(@RequestBody String id) {
+	public void deleteProfil(@RequestBody String id) {
 		int idProfil = Integer.parseInt(id);
-		profilService.supprimerProfil(idProfil);
+		profilService.deleteProfil(idProfil);
 	}
 }

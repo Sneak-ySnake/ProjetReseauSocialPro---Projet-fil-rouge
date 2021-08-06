@@ -18,15 +18,15 @@ public class ActionSurUtilisateurService implements ActionSurUtilisateurInterfac
 	@Autowired
 	ActionSurUtilisateurRepository actionSurUtilisateurRepo;
 	
-	public void ajoutActionSurUtilisateur (ActionSurUtilisateurDTO au) {
+	public void addActionSurUtilisateur (ActionSurUtilisateurDTO au) {
 		actionSurUtilisateurRepo.save(converter.dtoVersEntity(au));
 	}
 	
-	public ActionSurUtilisateurDTO recupActionSurUtilisateur(int id) {
+	public ActionSurUtilisateurDTO findActionSurUtilisateur(int id) {
 		return converter.entityVersDto(actionSurUtilisateurRepo.findById(id).get());
 	}
 	
-	public List<ActionSurUtilisateurDTO> recupAllActionSurUtilisateur() {
+	public List<ActionSurUtilisateurDTO> findAllActionSurUtilisateur() {
 		return converter.entityVersDto(actionSurUtilisateurRepo.findAll());
 	}
 

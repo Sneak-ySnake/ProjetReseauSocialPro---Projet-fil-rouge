@@ -17,29 +17,29 @@ public class EtatPublicationController {
 	@Autowired
 	private EtatPublicationService service;
 	
-	@PostMapping(value = "/recupEtatPublication") 
-	public EtatPublicationDTO recupEtatPublication(@RequestBody String id) {
-		return service.recupEtatPublication(Integer.parseInt(id));
+	@PostMapping(value = "/findEtatPublication") 
+	public EtatPublicationDTO findEtatPublication(@RequestBody String id) {
+		return service.findEtatPublication(Integer.parseInt(id));
 	}
 	
-	@GetMapping(value = "/recupAllEtatPublication")
-	public List<EtatPublicationDTO> recupAllEtatPublication() {
-		return service.recupAllEtatPublication();
+	@GetMapping(value = "/findAllEtatPublication")
+	public List<EtatPublicationDTO> findAllEtatPublication() {
+		return service.findAllEtatPublication();
 	}
 	
-	@PostMapping(value = "/ajoutEtatPublication")
-	public void ajouterEtatPublication(@RequestBody EtatPublicationDTO e) {
-		service.ajoutEtatPublication(e);
+	@PostMapping(value = "/addEtatPublication")
+	public void addEtatPublication(@RequestBody EtatPublicationDTO e) {
+		service.addEtatPublication(e);
 	}
 	
-	@PostMapping(value = "/supprimerEtatPublication")
-	public void supprimerEtatPublication(@RequestBody String id) {
-		service.supprimerEtatPublication(Integer.parseInt(id));
+	@PostMapping(value = "/deleteEtatPublication")
+	public void deleteEtatPublication(@RequestBody String id) {
+		service.deleteEtatPublication(Integer.parseInt(id));
 	}
 	
-	@PostMapping(value = "/modifEtatPublication")
-	public void modifEtatPublication(@RequestBody EtatPublicationDTO e) {
-		service.modifEtatPublication(e);
+	@PostMapping(value = "/updateEtatPublication")
+	public void updateEtatPublication(@RequestBody EtatPublicationDTO e) {
+		service.updateEtatPublication(e);
 	}
 	
 }

@@ -20,30 +20,29 @@ public class FavoriController {
 	@Autowired
 	private FavoriService favoriService = new FavoriService();
 	
-	@GetMapping(value = "/recupAllFavori")
-	public List<FavoriDTO> recupAllFavori() {
-		return favoriService.recupAllFavori();
+	@GetMapping(value = "/findAllFavori")
+	public List<FavoriDTO> findAllFavori() {
+		return favoriService.findAllFavori();
 	}
 	
-	@GetMapping(value = "/recupFavori")
-	public FavoriDTO recupFavori(@RequestBody FavoriId id) {
-		return favoriService.recupFavori(id);
+	@GetMapping(value = "/findFavori")
+	public FavoriDTO findFavori(@RequestBody FavoriId id) {
+		return favoriService.findFavori(id);
 	}
 	
-	@PostMapping(value = "/ajoutFavori")
-	public void ajoutFavori(@RequestBody FavoriDTO f) {
-		favoriService.ajoutFavori(f);
+	@PostMapping(value = "/addFavori")
+	public void addFavori(@RequestBody FavoriDTO f) {
+		favoriService.addFavori(f);
 	}
 	
-
-	@PostMapping(value = "/supprimerFavori")
-	public void supprimerFavori(@RequestBody FavoriId id) {
-		favoriService.supprimerFavori(id);
+	@PostMapping(value = "/deleteFavori")
+	public void deleteFavori(@RequestBody FavoriId id) {
+		favoriService.deleteFavori(id);
 	}
 	
-	@PostMapping(value = "/modifFavori")
-	public void modifFavori(@RequestBody FavoriDTO f) {
-		favoriService.modifFavori(f);
+	@PostMapping(value = "/updateFavori")
+	public void updateFavori(@RequestBody FavoriDTO f) {
+		favoriService.updateFavori(f);
 	}
 	
 	

@@ -17,24 +17,24 @@ public class PaysController {
 	@Autowired
 	private PaysService service;
 	
-	@PostMapping(value = "/ajoutPays")
-	public void ajoutPays(@RequestBody PaysDTO p) {
-		service.ajoutPays(p);
+	@PostMapping(value = "/addPays")
+	public void addPays(@RequestBody PaysDTO p) {
+		service.addPays(p);
 	}
 	
-	@PostMapping(value = "/recupPays")
-	public PaysDTO recupPays(@RequestBody String id) {
-		return service.recupPays(Integer.parseInt(id));
+	@PostMapping(value = "/findPays")
+	public PaysDTO findPays(@RequestBody String id) {
+		return service.findPays(Integer.parseInt(id));
 	}
 	
-	@GetMapping(value = "/recupAllPays")
-	public List<PaysDTO> recupAllPays() {
-		return service.recupAllPays();
+	@GetMapping(value = "/findAllPays")
+	public List<PaysDTO> findAllPays() {
+		return service.findAllPays();
 	}
 	
-	@PostMapping(value = "/supprimerPays")
-	public void supprimerPays(@RequestBody String id) {
-		service.supprimerPays(Integer.parseInt(id));
+	@PostMapping(value = "/deletePays")
+	public void deletePays(@RequestBody String id) {
+		service.deletePays(Integer.parseInt(id));
 	}
 	
 }

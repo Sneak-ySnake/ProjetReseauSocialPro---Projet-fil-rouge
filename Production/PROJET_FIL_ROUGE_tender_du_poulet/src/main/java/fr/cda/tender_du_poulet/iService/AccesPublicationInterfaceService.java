@@ -7,13 +7,13 @@ import fr.cda.tender_du_poulet.dto.AccesPublicationIdDTO;
 
 public interface AccesPublicationInterfaceService {
 
-	public void ajoutAccesPublication(AccesPublicationDTO a);
+	public void addAccesPublication(AccesPublicationDTO a);
 	
-	public AccesPublicationDTO recupAccesPublication(AccesPublicationIdDTO id);
+	public AccesPublicationDTO findAccesPublication(AccesPublicationIdDTO id);
 	
-	public List<AccesPublicationDTO> recupAllAccesPublication();
+	public List<AccesPublicationDTO> findAllAccesPublication();
 	
-	public void supprimerAccesPublication(AccesPublicationIdDTO id);
+	public void deleteAccesPublication(AccesPublicationIdDTO id);
 	
-	public void modifAccesPublication(AccesPublicationDTO a);
+	public void updateAccesPublication(AccesPublicationDTO a);
 }

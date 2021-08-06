@@ -6,13 +6,13 @@ import fr.cda.tender_du_poulet.dto.StatutPublicationDTO;
 
 public interface StatutPublicationInterfaceService {
 
-	public void ajoutStatutPublication(StatutPublicationDTO s);
+	public void addStatutPublication(StatutPublicationDTO s);
 	
-	public StatutPublicationDTO recupStatutPublication(int id);
+	public StatutPublicationDTO findStatutPublication(int id);
 	
-	public List<StatutPublicationDTO> recupAllStatutPublication();
+	public List<StatutPublicationDTO> findAllStatutPublication();
 	
-	public void supprimerStatutPublication(int id);
+	public void deleteStatutPublication(int id);
 	
-	public void modifStatutPublication(StatutPublicationDTO s);
+	public void updateStatutPublication(StatutPublicationDTO s);
 }

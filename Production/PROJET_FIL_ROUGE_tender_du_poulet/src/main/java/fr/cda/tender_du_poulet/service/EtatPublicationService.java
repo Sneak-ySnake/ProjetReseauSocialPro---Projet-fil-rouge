@@ -18,23 +18,23 @@ public class EtatPublicationService implements EtatPublicationInterfaceService {
 	@Autowired
 	private EtatPublicationRepository etatPublicationRepository;
 	
-	public void ajoutEtatPublication(EtatPublicationDTO e) {
+	public void addEtatPublication(EtatPublicationDTO e) {
 		etatPublicationRepository.save(converter.dtoVersEntity(e));
 	}
 	
-	public EtatPublicationDTO recupEtatPublication(int id) {
+	public EtatPublicationDTO findEtatPublication(int id) {
 		return converter.entityVersDto(etatPublicationRepository.findById(id).get());
 	}
 	
-	public List<EtatPublicationDTO> recupAllEtatPublication() {
+	public List<EtatPublicationDTO> findAllEtatPublication() {
 		return converter.entityVersDto(etatPublicationRepository.findAll());
 	}
 	
-	public void supprimerEtatPublication(int id) {
+	public void deleteEtatPublication(int id) {
 		etatPublicationRepository.deleteById(id);
 	}
 	
-	public void modifEtatPublication(EtatPublicationDTO e) {
+	public void updateEtatPublication(EtatPublicationDTO e) {
 		etatPublicationRepository.save(converter.dtoVersEntity(e));
 	}
 	

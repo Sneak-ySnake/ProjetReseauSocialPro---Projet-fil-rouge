@@ -21,20 +21,20 @@ public class ActionSurUtilisateurController {
 	@Autowired 
 	private ActionSurUtilisateurService asus;
 	
-	@PostMapping (value = "/creerActionSurUtilisateur")
-	public void ajouterActionSurUtilisateur(@RequestBody ActionSurUtilisateurDTO a) {
-		asus.ajoutActionSurUtilisateur(a);
+	@PostMapping (value = "/addActionSurUtilisateur")
+	public void addActionSurUtilisateur(@RequestBody ActionSurUtilisateurDTO a) {
+		asus.addActionSurUtilisateur(a);
 	}
 	
-	@PostMapping (value ="/recupActionSurUtilisateur")
-	public ActionSurUtilisateurDTO recupActionSurUtilisateur (@RequestBody String id) {
+	@PostMapping (value ="/findActionSurUtilisateur")
+	public ActionSurUtilisateurDTO findActionSurUtilisateur (@RequestBody String id) {
 		int idActionSurUtilisateur = Integer.parseInt(id);
-		return asus.recupActionSurUtilisateur(idActionSurUtilisateur);
+		return asus.findActionSurUtilisateur(idActionSurUtilisateur);
 	}
 	
-	@GetMapping (value = "/recupAllActionSurUtilisateur")
-	public List<ActionSurUtilisateurDTO> recupAllActionSurUtilisateur() {
-		return asus.recupAllActionSurUtilisateur();	
+	@GetMapping (value = "/findAllActionSurUtilisateur")
+	public List<ActionSurUtilisateurDTO> findAllActionSurUtilisateur() {
+		return asus.findAllActionSurUtilisateur();	
 	}
 	
 	@PostMapping (value = "/deleteActionSurUtilisateur")

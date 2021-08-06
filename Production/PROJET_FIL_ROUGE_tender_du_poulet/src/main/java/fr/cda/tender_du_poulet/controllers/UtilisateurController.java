@@ -22,37 +22,37 @@ public class UtilisateurController {
 	private UtilisateurVerif utilisateurVerif = new UtilisateurVerif();
 	
 	@RequestMapping(value = "/addUtilisateur", method = RequestMethod.POST)
-	public void ajoutUtilisateur(@RequestBody UtilisateurDTO u) {
-		utilisateurService.ajoutUtilisateur(u);
+	public void addUtilisateur(@RequestBody UtilisateurDTO u) {
+		utilisateurService.addUtilisateur(u);
 	}
 
 	@RequestMapping(value = "/findUtilisateur", method = RequestMethod.POST)
-	public UtilisateurDTO recupUtilisateur(@RequestParam(name = "id") String id) {
+	public UtilisateurDTO findUtilisateur(@RequestParam(name = "id") String id) {
 		int idUtilisateur = Integer.parseInt(id);
-		return utilisateurService.recupUtilisateur(idUtilisateur);
+		return utilisateurService.findUtilisateur(idUtilisateur);
 	}
 	
 	@RequestMapping(value = "/findAllUtilisateur", method = RequestMethod.POST)
-	public List<UtilisateurDTO> recupAllUtilisateur() {
-		return utilisateurService.recupAllUtilisateur();
+	public List<UtilisateurDTO> findAllUtilisateur() {
+		return utilisateurService.findAllUtilisateur();
 	}
 
 	@RequestMapping(value = "/updateUtilisateur", method = RequestMethod.POST)
-	public void modifUtilisateur(@RequestBody UtilisateurDTO u) {
-		utilisateurService.modifUtilisateur(u);
+	public void updateUtilisateur(@RequestBody UtilisateurDTO u) {
+		utilisateurService.updateUtilisateur(u);
 	}
 
 	@RequestMapping(value = "/deleteUtilisateur", method = RequestMethod.POST)
-	public void supprimerUtilisateur(@RequestParam(name = "id") String id) {
+	public void deleteUtilisateur(@RequestParam(name = "id") String id) {
 		int idUtilisateur = Integer.parseInt(id);
-		utilisateurService.supprimerUtilisateur(idUtilisateur);
+		utilisateurService.deleteUtilisateur(idUtilisateur);
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public UtilisateurDTO loginUtilisateur(@RequestBody UtilisateurDTO u) {
 		String email = u.getEmail_utilisateur();
 		String mdp = u.getMot_de_passe_utilisateur();
-		UtilisateurDTO utilisateur = utilisateurService.recupUtilisateurEmail(email);
+		UtilisateurDTO utilisateur = utilisateurService.findUtilisateurEmail(email);
 		if(utilisateurVerif.verifLogin(utilisateur, mdp)) {
 			return utilisateur;
 		}

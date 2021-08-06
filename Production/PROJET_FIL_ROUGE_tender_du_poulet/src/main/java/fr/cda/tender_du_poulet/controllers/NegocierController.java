@@ -19,29 +19,29 @@ public class NegocierController {
 		@Autowired
 		private NegocierService negocierService = new NegocierService();
 	 
-		@PostMapping(value = "/ajoutNegocier")
-		public void ajoutNegocier(@RequestBody NegocierDTO n) {
-			negocierService.ajoutNegocier(n);
+		@PostMapping(value = "/addNegocier")
+		public void addNegocier(@RequestBody NegocierDTO n) {
+			negocierService.addNegocier(n);
 		}
 		
-		@GetMapping(value = "/recupAllNegocier")
-		public List<NegocierDTO> recupAllNegocier() {
-			return negocierService.recupAllNegocier();
+		@GetMapping(value = "/findAllNegocier")
+		public List<NegocierDTO> findAllNegocier() {
+			return negocierService.findAllNegocier();
 		}
 		
-		@PostMapping(value = "/recupNegocier")
-		public NegocierDTO recupNegocier(@RequestBody NegocierId id) {
-			return negocierService.recupNegocier(id);
+		@PostMapping(value = "/findNegocier")
+		public NegocierDTO findNegocier(@RequestBody NegocierId id) {
+			return negocierService.findNegocier(id);
 		}
 		
-		@PostMapping(value = "/supprimerNegocier")
-		public void supprimerNegocier(@RequestBody NegocierId id) {
-			negocierService.supprimerNegocier(id);
+		@PostMapping(value = "/deleteNegocier")
+		public void deleteNegocier(@RequestBody NegocierId id) {
+			negocierService.deleteNegocier(id);
 		}
 		
-		@PostMapping(value = "/modifNegocier")
-		public void modifNegocier(@RequestBody NegocierDTO n) {
-			negocierService.modifNegocier(n);
+		@PostMapping(value = "/updateNegocier")
+		public void updateNegocier(@RequestBody NegocierDTO n) {
+			negocierService.updateNegocier(n);
 		}
 
 		

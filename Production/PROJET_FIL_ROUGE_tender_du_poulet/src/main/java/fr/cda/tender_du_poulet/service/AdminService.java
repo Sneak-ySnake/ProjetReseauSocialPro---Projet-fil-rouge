@@ -33,15 +33,15 @@ public class AdminService implements AdminInterfaceService{
 	@Autowired
 	PublicationRepository publicationRepo;
 	
-	public void ajoutAdmin (AdminDTO a) {
+	public void addAdmin (AdminDTO a) {
 		adminRepo.save(converter.dtoVersEntity(a));
 	}
 	
-	public AdminDTO recupAdmin (int id) {
+	public AdminDTO findAdmin (int id) {
 		return converter.entityVersDto(adminRepo.findById(id).get());
 	}
 	
-	public List<AdminDTO> recupAllAdmin () {
+	public List<AdminDTO> findAllAdmin () {
 		return converter.entityVersDto(adminRepo.findAll());
 	}
 	
@@ -53,11 +53,11 @@ public class AdminService implements AdminInterfaceService{
 		adminRepo.save(converter.dtoVersEntity(a));	
 	}
 
-	public List<PublicationDTO> recupAllPublication() {
+	public List<PublicationDTO> findAllPublication() {
 		return publicationConverter.entityVersDto(publicationRepo.findAll());
 	}
 
-	public List<UtilisateurDTO> recupAllUtilisateur() {
+	public List<UtilisateurDTO> findAllUtilisateur() {
 		// TODO Auto-generated method stub
 		return utilisateurConverter.entityVersDto (utilisateurRepo.findAll());
 	}

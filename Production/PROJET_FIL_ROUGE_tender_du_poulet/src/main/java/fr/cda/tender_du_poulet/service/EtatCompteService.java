@@ -18,23 +18,23 @@ public class EtatCompteService implements EtatCompteInterfaceService {
 	@Autowired
 	EtatCompteRepository etatCompteRepository;
 	
-	public void ajoutEtatCompte(EtatCompteDTO ec) {
+	public void addEtatCompte(EtatCompteDTO ec) {
 		etatCompteRepository.save(converter.dtoVersEntity(ec));
 	}
 	
-	public EtatCompteDTO recupEtatCompte(int id) {
+	public EtatCompteDTO findEtatCompte(int id) {
 		return converter.entityVersDto(etatCompteRepository.findById(id).get());
 	}
 	
-	public List<EtatCompteDTO> recupAllEtatCompte() {
+	public List<EtatCompteDTO> findAllEtatCompte() {
 		return converter.entityVersDto(etatCompteRepository.findAll());
 	}
 	
-	public void modifEtatCompte(EtatCompteDTO d) {
+	public void updateEtatCompte(EtatCompteDTO d) {
 		etatCompteRepository.save(converter.dtoVersEntity(d));
 	}
 	
-	public void supprimerEtatCompte(int id) {
+	public void deleteEtatCompte(int id) {
 		etatCompteRepository.deleteById(id);
 	}
 }

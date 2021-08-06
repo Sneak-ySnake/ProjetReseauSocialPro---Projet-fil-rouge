@@ -22,23 +22,23 @@ public class Utilisateur_EtatCompteService implements Utilisateur_EtatCompteInte
 	@Autowired
 	Utilisateur_EtatCompteRepository utilisateur_EtatCompteRepository;
 	
-	public void ajoutUtilisateur_EtatCompte(Utilisateur_EtatCompteDTO uec) {
+	public void addUtilisateur_EtatCompte(Utilisateur_EtatCompteDTO uec) {
 		utilisateur_EtatCompteRepository.save(converter.dtoVersEntity(uec));
 	}
 	
-	public Utilisateur_EtatCompteDTO recupUtilisateur_EtatCompte(Utilisateur_EtatCompteIdDTO id) {
+	public Utilisateur_EtatCompteDTO findUtilisateur_EtatCompte(Utilisateur_EtatCompteIdDTO id) {
 		return converter.entityVersDto(utilisateur_EtatCompteRepository.findById(converterId.dtoVersEntity(id)).get());
 	}
 	
-	public List<Utilisateur_EtatCompteDTO> recupAllUtilisateur_EtatCompte() {
+	public List<Utilisateur_EtatCompteDTO> findAllUtilisateur_EtatCompte() {
 		return converter.entityVersDto(utilisateur_EtatCompteRepository.findAll());
 	}
 	
-	public void modifUtilisateur_EtatCompte(Utilisateur_EtatCompteDTO d) {
+	public void updateUtilisateur_EtatCompte(Utilisateur_EtatCompteDTO d) {
 		utilisateur_EtatCompteRepository.save(converter.dtoVersEntity(d));
 	}
 	
-	public void supprimerUtilisateur_EtatCompte(Utilisateur_EtatCompteIdDTO id) {
+	public void deleteUtilisateur_EtatCompte(Utilisateur_EtatCompteIdDTO id) {
 		utilisateur_EtatCompteRepository.deleteById(converterId.dtoVersEntity(id));
 	}
 }

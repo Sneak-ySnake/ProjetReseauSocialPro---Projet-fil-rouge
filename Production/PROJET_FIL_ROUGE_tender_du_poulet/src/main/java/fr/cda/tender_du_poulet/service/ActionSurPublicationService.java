@@ -18,15 +18,15 @@ public class ActionSurPublicationService implements ActionSurPublicationInterfac
 	@Autowired
 	ActionSurPublicationRepository actionSurPublicationRepo;
 	
-	public void ajoutActionSurPublication(ActionSurPublicationDTO ap) {
+	public void addActionSurPublication(ActionSurPublicationDTO ap) {
 		actionSurPublicationRepo.save(converter.dtoVersEntity(ap));
 	}
 	
-	public ActionSurPublicationDTO recupActionSurPublication(int id) {
+	public ActionSurPublicationDTO findActionSurPublication(int id) {
 		return converter.entityVersDto(actionSurPublicationRepo.findById(id).get());
 	}
 	
-	public List<ActionSurPublicationDTO> recupAllActionSurPublication() {
+	public List<ActionSurPublicationDTO> findAllActionSurPublication() {
 		return converter.entityVersDto(actionSurPublicationRepo.findAll());
 	}
 	

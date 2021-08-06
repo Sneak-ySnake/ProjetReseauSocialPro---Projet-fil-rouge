@@ -18,29 +18,29 @@ public class DomaineController {
 	private DomaineService domaineService;
 	
 	@RequestMapping(value = "/addDomaine", method = RequestMethod.POST)
-	public void ajoutDomaine(@RequestBody DomaineDTO d) {
-		domaineService.ajoutDomaine(d);
+	public void addDomaine(@RequestBody DomaineDTO d) {
+		domaineService.addDomaine(d);
 	}
 
 	@RequestMapping(value = "/findDomaine", method = RequestMethod.POST)
-	public DomaineDTO recupDomaine(@RequestBody String id) {
+	public DomaineDTO findDomaine(@RequestBody String id) {
 		int idDomaine = Integer.parseInt(id);
-		return domaineService.recupDomaine(idDomaine);
+		return domaineService.findDomaine(idDomaine);
 	}
 	
 	@RequestMapping(value = "/findAllDomaine", method = RequestMethod.POST)
-	public List<DomaineDTO> recupAllDomaine() {
-		return domaineService.recupAllDomaine();
+	public List<DomaineDTO> findAllDomaine() {
+		return domaineService.findAllDomaine();
 	}
 
 	@RequestMapping(value = "/updateDomaine", method = RequestMethod.POST)
-	public void modifDomaine(@RequestBody DomaineDTO d) {
-		domaineService.modifDomaine(d);
+	public void updateDomaine(@RequestBody DomaineDTO d) {
+		domaineService.updateDomaine(d);
 	}
 
 	@RequestMapping(value = "/deleteDomaine", method = RequestMethod.POST)
-	public void supprimerDomaine(@RequestBody String id) {
+	public void deleteDomaine(@RequestBody String id) {
 		int idDomaine = Integer.parseInt(id);
-		domaineService.supprimerDomaine(idDomaine);
+		domaineService.deleteDomaine(idDomaine);
 	}
 }

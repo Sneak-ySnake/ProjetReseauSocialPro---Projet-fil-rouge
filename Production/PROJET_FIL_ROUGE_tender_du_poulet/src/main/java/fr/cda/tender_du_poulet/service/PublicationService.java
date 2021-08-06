@@ -18,23 +18,23 @@ public class PublicationService implements PublicationInterfaceService {
 	@Autowired
 	PublicationRepository publicationRepository;
 	
-	public void ajoutPublication(PublicationDTO p) {
+	public void addPublication(PublicationDTO p) {
 		publicationRepository.save(converter.dtoVersEntity(p));
 	}
 	
-	public PublicationDTO recupPublication(int id) {
+	public PublicationDTO findPublication(int id) {
 		return converter.entityVersDto(publicationRepository.findById(id).get());
 	}
 	
-	public List<PublicationDTO> recupAllPublication() {
+	public List<PublicationDTO> findAllPublication() {
 		return converter.entityVersDto(publicationRepository.findAll());
 	}
 	
-	public void supprimerPublication(int id) {
+	public void deletePublication(int id) {
 		publicationRepository.deleteById(id);
 	}
 	
-	public void modifPublication(PublicationDTO p) {
+	public void updatePublication(PublicationDTO p) {
 		publicationRepository.save(converter.dtoVersEntity(p));
 	}
 	

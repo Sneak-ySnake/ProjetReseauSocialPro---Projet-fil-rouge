@@ -17,19 +17,19 @@ public class AdministrerUtilisateurController {
 	@Autowired
 	private AdministrerUtilisateurService au;
 
-	@PostMapping(value = "/creerAdministrerUtilisateur")
-	public void creerAdministrerUtilisateur(@RequestBody AdministrerUtilisateurDTO a) { 
-		au.creerAdministrerUtilisateur(a);
+	@PostMapping(value = "/addAdministrerUtilisateur")
+	public void addAdministrerUtilisateur(@RequestBody AdministrerUtilisateurDTO a) { 
+		au.addAdministrerUtilisateur(a);
 	}
 	
-	@PostMapping (value ="/recupAdministrerUtilisateur")
-	public AdministrerUtilisateurDTO recupAdministrerUtilisateur (@RequestBody AdministrerUtilisateurId id ) {
-		return au.recupAdministrerUtilisateur(id);
+	@PostMapping (value ="/findAdministrerUtilisateur")
+	public AdministrerUtilisateurDTO findAdministrerUtilisateur (@RequestBody AdministrerUtilisateurId id ) {
+		return au.findAdministrerUtilisateur(id);
 	}
 	
-	@GetMapping (value = "/recupAllAdministrerUtilisateur")
-	public List<AdministrerUtilisateurDTO> recupAllAdministrerUtilisateur() {
-		return au.recupAllAdministrerUtilisateur();	
+	@GetMapping (value = "/findAllAdministrerUtilisateur")
+	public List<AdministrerUtilisateurDTO> findAllAdministrerUtilisateur() {
+		return au.findAllAdministrerUtilisateur();	
 	}
 	
 	@PostMapping (value = "/deleteAdministrerUtilisateur")

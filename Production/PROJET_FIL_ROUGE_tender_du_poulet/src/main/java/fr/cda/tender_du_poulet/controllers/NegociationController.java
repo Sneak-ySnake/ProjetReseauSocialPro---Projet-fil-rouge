@@ -18,28 +18,28 @@ public class NegociationController {
 	@Autowired
 	private NegociationService negociationService = new NegociationService();
 	
-	@GetMapping(value = "/recupAllNegociation")
-	public List<NegociationDTO> recupAllNegociation() {
-		return negociationService.recupAllNegociation();
+	@GetMapping(value = "/findAllNegociation")
+	public List<NegociationDTO> findAllNegociation() {
+		return negociationService.findAllNegociation();
 	}
 	
-	@PostMapping(value = "/recupNegociation")
-	public NegociationDTO recupNegociation(@RequestBody String id) {
-		return negociationService.recupNegociation(Integer.parseInt(id));
+	@PostMapping(value = "/findNegociation")
+	public NegociationDTO findNegociation(@RequestBody String id) {
+		return negociationService.findNegociation(Integer.parseInt(id));
 	}
 	
-	@PostMapping(value = "/ajoutNegociation")
-	public void ajoutNegociation(@RequestBody NegociationDTO n) {
-		negociationService.ajoutNegociation(n);
+	@PostMapping(value = "/addNegociation")
+	public void addNegociation(@RequestBody NegociationDTO n) {
+		negociationService.addNegociation(n);
 	}
 	
-	@PostMapping(value = "/supprimerNegociation")
-	public void supprimerNegociation(@RequestBody String id) {
-		negociationService.supprimerNegociation(Integer.parseInt(id));
+	@PostMapping(value = "/deleteNegociation")
+	public void deleteNegociation(@RequestBody String id) {
+		negociationService.deleteNegociation(Integer.parseInt(id));
 	}
 	
-	@PostMapping(value = "/modifNegociation")
-	public void modifNegociation(@RequestBody NegociationDTO n) {
-		negociationService.modifNegociation(n);
+	@PostMapping(value = "/updateNegociation")
+	public void updateNegociation(@RequestBody NegociationDTO n) {
+		negociationService.updateNegociation(n);
 	}
 }

@@ -21,29 +21,29 @@ import fr.cda.tender_du_poulet.util.FavoriConverter;
 		 
 
 		@Override
-		public void ajoutFavori(FavoriDTO f) {
+		public void addFavori(FavoriDTO f) {
 			favoriRepository.save(favoriConverter.dtoVersEntity(f));
 			
 		}
 
 		@Override
-		public FavoriDTO recupFavori(FavoriId id) {
+		public FavoriDTO findFavori(FavoriId id) {
 			return favoriConverter.entityVersDto(favoriRepository.findById(id).get());
 			 
 		}
 
 		@Override
-		public List<FavoriDTO> recupAllFavori() {
+		public List<FavoriDTO> findAllFavori() {
 			return favoriConverter.entityVersDto(favoriRepository.findAll());
 		 
 		}
 
 		  
-		public void supprimerFavori(FavoriId id) {
+		public void deleteFavori(FavoriId id) {
 			favoriRepository.deleteById(id);
 		}
 		
-		public void modifFavori(FavoriDTO n) {
+		public void updateFavori(FavoriDTO n) {
 			favoriRepository.save(favoriConverter.dtoVersEntity(n));
 		}
 

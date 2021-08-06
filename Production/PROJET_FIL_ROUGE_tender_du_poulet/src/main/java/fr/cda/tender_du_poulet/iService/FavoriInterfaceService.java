@@ -7,14 +7,14 @@ import fr.cda.tender_du_poulet.dto.FavoriDTO;
 
 public interface FavoriInterfaceService { 
  
-		public void ajoutFavori(FavoriDTO f);  
+		public void addFavori(FavoriDTO f);  
 		
-		public FavoriDTO recupFavori(FavoriId id);
+		public FavoriDTO findFavori(FavoriId id);
 		
-		public List<FavoriDTO> recupAllFavori(); 
+		public List<FavoriDTO> findAllFavori(); 
 		
-		public void supprimerFavori(FavoriId id);
+		public void deleteFavori(FavoriId id);
 		
-		public void modifFavori(FavoriDTO f);
+		public void updateFavori(FavoriDTO f);
 	  
 }

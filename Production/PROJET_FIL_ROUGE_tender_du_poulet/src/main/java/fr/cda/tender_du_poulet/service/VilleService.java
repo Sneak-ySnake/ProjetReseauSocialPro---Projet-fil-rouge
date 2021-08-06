@@ -18,19 +18,19 @@ public class VilleService implements VilleInterfaceService {
 	@Autowired
 	private VilleRepository villeRepository;
 	
-	public void ajoutVille(VilleDTO v) {
+	public void addVille(VilleDTO v) {
 		villeRepository.save(converter.dtoVersEntity(v));
 	}
 	
-	public VilleDTO recupVille(int id) {
+	public VilleDTO findVille(int id) {
 		return converter.entityVersDto(villeRepository.findById(id).get());
 	}
 	
-	public List<VilleDTO> recupAllVille() {
+	public List<VilleDTO> findAllVille() {
 		return converter.entityVersDto(villeRepository.findAll());
 	}
 	
-	public void supprimerVille(int id) {
+	public void deleteVille(int id) {
 		villeRepository.deleteById(id);
 	}
 	

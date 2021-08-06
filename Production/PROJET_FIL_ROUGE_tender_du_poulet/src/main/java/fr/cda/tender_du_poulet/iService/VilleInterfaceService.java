@@ -6,12 +6,12 @@ import fr.cda.tender_du_poulet.dto.VilleDTO;
 
 public interface VilleInterfaceService {
 
-	public void ajoutVille(VilleDTO v);
+	public void addVille(VilleDTO v);
 	
-	public VilleDTO recupVille(int id);
+	public VilleDTO findVille(int id);
 	
-	public List<VilleDTO> recupAllVille();
+	public List<VilleDTO> findAllVille();
 	
-	public void supprimerVille(int id);
+	public void deleteVille(int id);
 	
 }

@@ -17,24 +17,24 @@ public class VilleController {
 	@Autowired
 	private VilleService service;
 	
-	@PostMapping(value = "/ajoutVille")
-	public void ajoutVille(@RequestBody VilleDTO v) {
-		service.ajoutVille(v);
+	@PostMapping(value = "/addVille")
+	public void addVille(@RequestBody VilleDTO v) {
+		service.addVille(v);
 	}
 	
-	@PostMapping(value = "/recupVille")
-	public VilleDTO recupVille(@RequestBody String id) {
-		return service.recupVille(Integer.parseInt(id));
+	@PostMapping(value = "/findVille")
+	public VilleDTO findVille(@RequestBody String id) {
+		return service.findVille(Integer.parseInt(id));
 	}
 	
-	@GetMapping(value = "/recupAllVille")
-	public List<VilleDTO> recupAllVille() {
-		return service.recupAllVille();
+	@GetMapping(value = "/findAllVille")
+	public List<VilleDTO> findAllVille() {
+		return service.findAllVille();
 	}
 	
-	@PostMapping(value = "/supprimerVille")
-	public void supprimerVille(@RequestBody String id) {
-		service.supprimerVille(Integer.parseInt(id));
+	@PostMapping(value = "/deleteVille")
+	public void deleteVille(@RequestBody String id) {
+		service.deleteVille(Integer.parseInt(id));
 	}
 	
 }

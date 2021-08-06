@@ -19,27 +19,27 @@ public class Utilisateur_EtatCompteController {
 	private Utilisateur_EtatCompteService utilisateur_EtatCompteService;
 	
 	@RequestMapping(value = "/addUtilisateur_EtatCompte", method = RequestMethod.POST)
-	public void ajoutUtilisateur_EtatCompte(@RequestBody Utilisateur_EtatCompteDTO d) {
-		utilisateur_EtatCompteService.ajoutUtilisateur_EtatCompte(d);
+	public void addUtilisateur_EtatCompte(@RequestBody Utilisateur_EtatCompteDTO d) {
+		utilisateur_EtatCompteService.addUtilisateur_EtatCompte(d);
 	}
 
 	@RequestMapping(value = "/findUtilisateur_EtatCompte", method = RequestMethod.POST)
-	public Utilisateur_EtatCompteDTO recupUtilisateur_EtatCompte(@RequestBody Utilisateur_EtatCompteIdDTO id) {
-		return utilisateur_EtatCompteService.recupUtilisateur_EtatCompte(id);
+	public Utilisateur_EtatCompteDTO findUtilisateur_EtatCompte(@RequestBody Utilisateur_EtatCompteIdDTO id) {
+		return utilisateur_EtatCompteService.findUtilisateur_EtatCompte(id);
 	}
 	
 	@RequestMapping(value = "/findAllUtilisateur_EtatCompte", method = RequestMethod.POST)
-	public List<Utilisateur_EtatCompteDTO> recupAllUtilisateur_EtatCompte() {
-		return utilisateur_EtatCompteService.recupAllUtilisateur_EtatCompte();
+	public List<Utilisateur_EtatCompteDTO> findAllUtilisateur_EtatCompte() {
+		return utilisateur_EtatCompteService.findAllUtilisateur_EtatCompte();
 	}
 
 	@RequestMapping(value = "/updateUtilisateur_EtatCompte", method = RequestMethod.POST)
-	public void modifUtilisateur_EtatCompte(@RequestBody Utilisateur_EtatCompteDTO d) {
-		utilisateur_EtatCompteService.modifUtilisateur_EtatCompte(d);
+	public void updateUtilisateur_EtatCompte(@RequestBody Utilisateur_EtatCompteDTO d) {
+		utilisateur_EtatCompteService.updateUtilisateur_EtatCompte(d);
 	}
 
 	@RequestMapping(value = "/deleteUtilisateur_EtatCompte", method = RequestMethod.POST)
-	public void supprimerUtilisateur_EtatCompte(@RequestBody Utilisateur_EtatCompteIdDTO id) {
-		utilisateur_EtatCompteService.supprimerUtilisateur_EtatCompte(id);
+	public void deleteUtilisateur_EtatCompte(@RequestBody Utilisateur_EtatCompteIdDTO id) {
+		utilisateur_EtatCompteService.deleteUtilisateur_EtatCompte(id);
 	}
 }

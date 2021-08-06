@@ -17,29 +17,29 @@ public class TypePublicationController {
 	@Autowired
 	private TypePublicationService service;
 	
-	@PostMapping(value = "/recupTypePublication")
-	public TypePublicationDTO recupTypePublication(@RequestBody String id) {
-		return service.recupTypePublication(Integer.parseInt(id));
+	@PostMapping(value = "/findpTypePublication")
+	public TypePublicationDTO findTypePublication(@RequestBody String id) {
+		return service.findTypePublication(Integer.parseInt(id));
 	}
 	
-	@GetMapping(value = "/recupAllTypePublication")
-	public List<TypePublicationDTO> recupAllTypePublication() {
-		return service.recupAllTypePublication();
+	@GetMapping(value = "/findAllTypePublication")
+	public List<TypePublicationDTO> findAllTypePublication() {
+		return service.findAllTypePublication();
 	}
 	
-	@PostMapping("/ajoutTypePublication")
-	public void ajoutTypePublication(@RequestBody TypePublicationDTO t) {
-		service.ajoutTypePublication(t);		
+	@PostMapping("/addTypePublication")
+	public void addTypePublication(@RequestBody TypePublicationDTO t) {
+		service.addTypePublication(t);		
 	}
 	
-	@PostMapping("/supprimerTypePublication")
-	public void supprimerTypePublication(@RequestBody String id) {
-		service.supprimerTypePublication(Integer.parseInt(id));
+	@PostMapping("/deleteTypePublication")
+	public void deleteTypePublication(@RequestBody String id) {
+		service.deleteTypePublication(Integer.parseInt(id));
 	}
 	
-	@PostMapping("/modifTypePublication")
-	public void modifTypePublication(@RequestBody TypePublicationDTO t) {
-		service.modifTypePublication(t);
+	@PostMapping("/updateTypePublication")
+	public void updateTypePublication(@RequestBody TypePublicationDTO t) {
+		service.updateTypePublication(t);
 	}
 	
 }

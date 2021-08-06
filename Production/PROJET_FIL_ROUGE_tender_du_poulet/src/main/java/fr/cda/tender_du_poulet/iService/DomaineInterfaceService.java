@@ -6,14 +6,14 @@ import fr.cda.tender_du_poulet.dto.DomaineDTO;
 
 public interface DomaineInterfaceService {
 	
-	public void ajoutDomaine(DomaineDTO u);
+	public void addDomaine(DomaineDTO u);
 	
-	public DomaineDTO recupDomaine(int id);
+	public DomaineDTO findDomaine(int id);
 	
-	public List<DomaineDTO> recupAllDomaine();
+	public List<DomaineDTO> findAllDomaine();
 	
-	public void modifDomaine(DomaineDTO d);
+	public void updateDomaine(DomaineDTO d);
 	
-	public void supprimerDomaine(int id);
+	public void deleteDomaine(int id);
 
 }

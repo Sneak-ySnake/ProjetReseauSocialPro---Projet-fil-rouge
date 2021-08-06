@@ -7,13 +7,13 @@ import fr.cda.tender_du_poulet.dto.Utilisateur_EtatCompteIdDTO;
 
 public interface Utilisateur_EtatCompteInterfaceService {
 
-	public void ajoutUtilisateur_EtatCompte(Utilisateur_EtatCompteDTO uec);
+	public void addUtilisateur_EtatCompte(Utilisateur_EtatCompteDTO uec);
 	
-	public Utilisateur_EtatCompteDTO recupUtilisateur_EtatCompte(Utilisateur_EtatCompteIdDTO id);
+	public Utilisateur_EtatCompteDTO findUtilisateur_EtatCompte(Utilisateur_EtatCompteIdDTO id);
 	
-	public List<Utilisateur_EtatCompteDTO> recupAllUtilisateur_EtatCompte();
+	public List<Utilisateur_EtatCompteDTO> findAllUtilisateur_EtatCompte();
 	
-	public void modifUtilisateur_EtatCompte(Utilisateur_EtatCompteDTO d);
+	public void updateUtilisateur_EtatCompte(Utilisateur_EtatCompteDTO d);
 	
-	public void supprimerUtilisateur_EtatCompte(Utilisateur_EtatCompteIdDTO id);
+	public void deleteUtilisateur_EtatCompte(Utilisateur_EtatCompteIdDTO id);
 }

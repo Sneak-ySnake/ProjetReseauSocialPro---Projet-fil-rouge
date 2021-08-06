@@ -18,23 +18,23 @@ public class DomaineService implements DomaineInterfaceService {
 	@Autowired
 	DomaineRepository domaineRepository;
 	
-	public void ajoutDomaine(DomaineDTO u) {
+	public void addDomaine(DomaineDTO u) {
 		domaineRepository.save(converter.dtoVersEntity(u));
 	}
 	
-	public DomaineDTO recupDomaine(int id) {
+	public DomaineDTO findDomaine(int id) {
 		return converter.entityVersDto(domaineRepository.findById(id).get());
 	}
 	
-	public List<DomaineDTO> recupAllDomaine() {
+	public List<DomaineDTO> findAllDomaine() {
 		return converter.entityVersDto(domaineRepository.findAll());
 	}
 	
-	public void modifDomaine(DomaineDTO d) {
+	public void updateDomaine(DomaineDTO d) {
 		domaineRepository.save(converter.dtoVersEntity(d));
 	}
 	
-	public void supprimerDomaine(int id) {
+	public void deleteDomaine(int id) {
 		domaineRepository.deleteById(id);
 	}
 }

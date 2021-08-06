@@ -17,29 +17,29 @@ public class PublicationController {
 	@Autowired
 	private PublicationService service;
 	
-	@GetMapping(value = "/recupAllPublication")
-	public List<PublicationDTO> recupAllPublication() {
-		return service.recupAllPublication();
+	@GetMapping(value = "/findAllPublication")
+	public List<PublicationDTO> findAllPublication() {
+		return service.findAllPublication();
 	}
 	
-	@PostMapping(value = "/recupPublication")
-	public PublicationDTO recupPublication(@RequestBody String id) {
-		return service.recupPublication(Integer.parseInt(id));
+	@PostMapping(value = "/findPublication")
+	public PublicationDTO findPublication(@RequestBody String id) {
+		return service.findPublication(Integer.parseInt(id));
 	}
 	
-	@PostMapping(value = "/ajoutPublication")
-	public void AjoutPublication(@RequestBody PublicationDTO p) {
-		service.ajoutPublication(p);
+	@PostMapping(value = "/addPublication")
+	public void addPublication(@RequestBody PublicationDTO p) {
+		service.addPublication(p);
 	}
 	
-	@PostMapping(value = "/supprimerPublication")
-	public void supprimerPublication(@RequestBody String id) {
-		service.supprimerPublication(Integer.parseInt(id));
+	@PostMapping(value = "/deletePublication")
+	public void deletePublication(@RequestBody String id) {
+		service.deletePublication(Integer.parseInt(id));
 	}
 	
-	@PostMapping(value = "/modifPublication")
-	public void modifPublication(@RequestBody PublicationDTO p) {
-		service.modifPublication(p);
+	@PostMapping(value = "/updatePublication")
+	public void updatePublication(@RequestBody PublicationDTO p) {
+		service.updatePublication(p);
 	}
 	
 }

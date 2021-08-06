@@ -20,15 +20,15 @@ public class AdministrerUtilisateurService implements AdministrerUtilisateurInte
 	@Autowired
 	private AdministrerUtilisateurRepository administrerUtilisateurRepo;
 	
-	public void creerAdministrerUtilisateur(AdministrerUtilisateurDTO au) {
+	public void addAdministrerUtilisateur(AdministrerUtilisateurDTO au) {
 		administrerUtilisateurRepo.save(converter.dtoVersEntity(au));	
 	}
 	
-	public AdministrerUtilisateurDTO recupAdministrerUtilisateur(AdministrerUtilisateurId id) {
+	public AdministrerUtilisateurDTO findAdministrerUtilisateur(AdministrerUtilisateurId id) {
 		return converter.entityVersDto(administrerUtilisateurRepo.findById(id).get());
 	}
 	
-	public List<AdministrerUtilisateurDTO> recupAllAdministrerUtilisateur () {
+	public List<AdministrerUtilisateurDTO> findAllAdministrerUtilisateur () {
 		return converter.entityVersDto(administrerUtilisateurRepo.findAll());
 	}
 	

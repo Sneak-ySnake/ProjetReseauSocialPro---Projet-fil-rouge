@@ -19,29 +19,29 @@ public class AccesPublicationController {
 	@Autowired
 	AccesPublicationService service;
 	
-	@GetMapping(value = "/recupAllAccesPublication")
-	public List<AccesPublicationDTO> recupAllAccesPublication() {
-		return service.recupAllAccesPublication();
+	@GetMapping(value = "/findAllAccesPublication")
+	public List<AccesPublicationDTO> findAllAccesPublication() {
+		return service.findAllAccesPublication();
 	}
 	
-	@PostMapping(value = "/recupAccesPublication")
-	public AccesPublicationDTO recupAccesPublication(@RequestBody AccesPublicationIdDTO id) {
-		return service.recupAccesPublication(id);
+	@PostMapping(value = "/findAccesPublication")
+	public AccesPublicationDTO findAccesPublication(@RequestBody AccesPublicationIdDTO id) {
+		return service.findAccesPublication(id);
 	}
 	
-	@PostMapping(value = "/ajoutAccesPublication")
-	public void ajoutAccesPublication(@RequestBody AccesPublicationDTO a) {
-		service.ajoutAccesPublication(a);
+	@PostMapping(value = "/addAccesPublication")
+	public void addAccesPublication(@RequestBody AccesPublicationDTO a) {
+		service.addAccesPublication(a);
 	}
 	
-	@PostMapping(value = "/supprimerAccesPublication")
-	public void supprimerAccesPublication(@RequestBody AccesPublicationIdDTO id) {
-		service.supprimerAccesPublication(id);
+	@PostMapping(value = "/deleteAccesPublication")
+	public void deleteAccesPublication(@RequestBody AccesPublicationIdDTO id) {
+		service.deleteAccesPublication(id);
 	}
 	
 	@PostMapping(value = "/modifAccesPublication")
-	public void modifAccesPublication(@RequestBody AccesPublicationDTO a) {
-		service.modifAccesPublication(a);
+	public void updateAccesPublication(@RequestBody AccesPublicationDTO a) {
+		service.updateAccesPublication(a);
 	}
 	
 }

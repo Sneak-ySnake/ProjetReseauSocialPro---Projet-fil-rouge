@@ -6,13 +6,13 @@ import fr.cda.tender_du_poulet.dto.EtatCompteDTO;
 
 public interface EtatCompteInterfaceService {
 
-	public void ajoutEtatCompte(EtatCompteDTO ec);
+	public void addEtatCompte(EtatCompteDTO ec);
 	
-	public EtatCompteDTO recupEtatCompte(int id);
+	public EtatCompteDTO findEtatCompte(int id);
 	
-	public List<EtatCompteDTO> recupAllEtatCompte();
+	public List<EtatCompteDTO> findAllEtatCompte();
 	
-	public void modifEtatCompte(EtatCompteDTO d);
+	public void updateEtatCompte(EtatCompteDTO d);
 	
-	public void supprimerEtatCompte(int id);
+	public void deleteEtatCompte(int id);
 }

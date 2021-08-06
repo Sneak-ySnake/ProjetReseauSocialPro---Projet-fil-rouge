@@ -18,23 +18,23 @@ public class TypePublicationService implements TypePublicationInterfaceService{
 	@Autowired
 	private TypePublicationRepository typePublicationRepository;
 
-	public void ajoutTypePublication(TypePublicationDTO t) {
+	public void addTypePublication(TypePublicationDTO t) {
 		typePublicationRepository.save(converter.dtoVersEntity(t));
 	}
 	
-	public TypePublicationDTO recupTypePublication(int id) {
+	public TypePublicationDTO findTypePublication(int id) {
 		return converter.entityVersDto(typePublicationRepository.findById(id).get());
 	}
 	
-	public List<TypePublicationDTO> recupAllTypePublication() {
+	public List<TypePublicationDTO> findAllTypePublication() {
 		return converter.entityVersDto(typePublicationRepository.findAll());
 	}
 	
-	public void supprimerTypePublication(int id) {
+	public void deleteTypePublication(int id) {
 		typePublicationRepository.deleteById(id);
 	}
 	
-	public void modifTypePublication(TypePublicationDTO t) {
+	public void updateTypePublication(TypePublicationDTO t) {
 		typePublicationRepository.save(converter.dtoVersEntity(t));
 	}
 	

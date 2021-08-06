@@ -9,11 +9,11 @@ import fr.cda.tender_du_poulet.dto.ActionSurPublicationDTO;
 @Service
 public interface ActionSurPublicationInterfaceService  {
 	
-	public void ajoutActionSurPublication(ActionSurPublicationDTO ap);
+	public void addActionSurPublication(ActionSurPublicationDTO ap);
 	
-	public ActionSurPublicationDTO recupActionSurPublication(int id);
+	public ActionSurPublicationDTO findActionSurPublication(int id);
 	
-	public List<ActionSurPublicationDTO> recupAllActionSurPublication();
+	public List<ActionSurPublicationDTO> findAllActionSurPublication();
 	
 	public void deleteActionSurPublication (int id);
 	
