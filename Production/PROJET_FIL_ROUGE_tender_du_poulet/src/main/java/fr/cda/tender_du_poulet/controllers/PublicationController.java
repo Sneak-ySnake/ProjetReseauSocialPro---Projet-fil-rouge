@@ -44,8 +44,13 @@ public class PublicationController {
 	}
 	
 	@PostMapping(value = "/findAllDemandeUtilisateur")
-	public List<PublicationDTO> recupAllPublicationUtilisateur(@RequestBody UtilisateurDTO u) {
-		return service.recupAllDemandeUtilisateur(u);
+	public List<PublicationDTO> findAllDemandeUtilisateur(@RequestBody UtilisateurDTO u) {
+		return service.findAllDemandeUtilisateur(u);
+	}
+	
+	@PostMapping(value = "/findAllOffreUtilisateur")
+	public List<PublicationDTO> findAllOffreUtilisateur(@RequestBody UtilisateurDTO u) {
+		return service.findAllOffreUtilisateur(u);
 	}
 	
 }

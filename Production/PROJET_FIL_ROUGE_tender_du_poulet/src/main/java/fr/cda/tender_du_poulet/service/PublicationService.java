@@ -39,8 +39,13 @@ public class PublicationService implements PublicationInterfaceService {
 		publicationRepository.save(converter.dtoVersEntity(p));
 	}
 	
-	public List<PublicationDTO> recupAllDemandeUtilisateur(UtilisateurDTO u) {
+	public List<PublicationDTO> findAllDemandeUtilisateur(UtilisateurDTO u) {
 		List<PublicationDTO> listePubli = converter.entityVersDto(publicationRepository.findAllPublicationByUtilisateur(u.getId_utilisateur(), 1));
+		return listePubli;
+	}
+	
+	public List<PublicationDTO> findAllOffreUtilisateur(UtilisateurDTO u) {
+		List<PublicationDTO> listePubli = converter.entityVersDto(publicationRepository.findAllPublicationByUtilisateur(u.getId_utilisateur(), 2));
 		return listePubli;
 	}
 	
