@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.PublicationRepository;
 import fr.cda.tender_du_poulet.dto.PublicationDTO;
+import fr.cda.tender_du_poulet.dto.UtilisateurDTO;
 import fr.cda.tender_du_poulet.iService.PublicationInterfaceService;
 import fr.cda.tender_du_poulet.util.PublicationConverter;
 

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.cda.tender_du_poulet.dto.PublicationDTO;
+import fr.cda.tender_du_poulet.dto.UtilisateurDTO;
 import fr.cda.tender_du_poulet.service.PublicationService;
 
 @RestController
