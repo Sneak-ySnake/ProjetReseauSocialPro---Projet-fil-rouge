@@ -42,4 +42,9 @@ public class PublicationController {
 		service.updatePublication(p);
 	}
 	
+	@PostMapping(value = "/findAllDemandeUtilisateur")
+	public List<PublicationDTO> recupAllPublicationUtilisateur(@RequestBody UtilisateurDTO u) {
+		return service.recupAllDemandeUtilisateur(u);
+	}
+	
 }
