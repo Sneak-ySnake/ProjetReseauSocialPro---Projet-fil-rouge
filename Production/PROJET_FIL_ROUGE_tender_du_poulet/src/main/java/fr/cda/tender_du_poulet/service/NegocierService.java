@@ -25,28 +25,29 @@ public class NegocierService implements NegocierInterfaceService{
 		negocierRepository.save(negocierConverter.dtoVersEntity(n));
 	}
 
-	@Override
 	public NegocierDTO findNegocier(NegocierId id) {
 		return negocierConverter.entityVersDto(negocierRepository.findById(id).get());
 		 
 	} 
 
-	@Override
 	public List<NegocierDTO> findAllNegocier() {
 		return negocierConverter.entityVersDto(negocierRepository.findAll());
 		 
 	}
-	@Override
+
 	public void deleteNegocier(NegocierId id) {
 		negocierRepository.deleteById(id);
 	}
-	@Override
+
 	public void updateNegocier(NegocierDTO n) {
 		negocierRepository.save(negocierConverter.dtoVersEntity(n));
 	}
 
 	
-	
+	public List<NegocierDTO> findAllNegocierPublication(int id_publication) {
+		List<NegocierDTO> listeNegocier = negocierConverter.entityVersDto(negocierRepository.findAllNegocierPublication(id_publication));
+		return listeNegocier;
+	}
 	 
 	 
 
