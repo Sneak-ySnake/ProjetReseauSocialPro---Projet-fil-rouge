@@ -28,7 +28,7 @@ public class DomaineController {
 		return domaineService.findDomaine(idDomaine);
 	}
 	
-	@RequestMapping(value = "/findAllDomaine", method = RequestMethod.POST)
+	@RequestMapping(value = "/findAllDomaine", method = RequestMethod.GET)
 	public List<DomaineDTO> findAllDomaine() {
 		return domaineService.findAllDomaine();
 	}

@@ -11,7 +11,7 @@ import fr.cda.tender_du_poulet.beans.NegocierId;
 
 public interface NegocierRepository extends JpaRepository<Negocier, NegocierId>   {
 
-	@Query("select n from Negocier n where n.id_negocier.publication.id_publication=(:id_publication) ")
+	@Query("select n from Negocier n where n.id_negocier.publication.id_publication=(:id_publication) group by n.id_negocier.utilisateur.id_utilisateur having count(*) = 1")
 	public List<Negocier> findAllNegocierPublication(@Param("id_publication") int id_publication);
 	
 }
