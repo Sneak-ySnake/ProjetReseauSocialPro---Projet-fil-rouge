@@ -27,12 +27,12 @@ public class UtilisateurController {
 	}
 
 	@RequestMapping(value = "/findUtilisateur", method = RequestMethod.POST)
-	public UtilisateurDTO findUtilisateur(@RequestParam(name = "id") String id) {
+	public UtilisateurDTO findUtilisateur(@RequestBody String id) {
 		int idUtilisateur = Integer.parseInt(id);
 		return utilisateurService.findUtilisateur(idUtilisateur);
 	}
 	
-	@RequestMapping(value = "/findAllUtilisateur", method = RequestMethod.POST)
+	@RequestMapping(value = "/findAllUtilisateur", method = RequestMethod.GET)
 	public List<UtilisateurDTO> findAllUtilisateur() {
 		return utilisateurService.findAllUtilisateur();
 	}

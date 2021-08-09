@@ -7,9 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 import fr.cda.tender_du_poulet.beans.AdministrerPublication;
-import fr.cda.tender_du_poulet.beans.AdministrerUtilisateur;
 import fr.cda.tender_du_poulet.dto.AdministrerPublicationDTO;
-import fr.cda.tender_du_poulet.dto.AdministrerUtilisateurDTO;
 
 @Component
 public class AdministrerPublicationConverter {

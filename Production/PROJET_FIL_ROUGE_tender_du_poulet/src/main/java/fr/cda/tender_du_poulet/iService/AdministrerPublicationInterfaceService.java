@@ -2,9 +2,6 @@ package fr.cda.tender_du_poulet.iService;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
-import fr.cda.tender_du_poulet.beans.AdministrerPublication;
 import fr.cda.tender_du_poulet.beans.AdministrerPublicationId;
 import fr.cda.tender_du_poulet.dto.AdministrerPublicationDTO;
 

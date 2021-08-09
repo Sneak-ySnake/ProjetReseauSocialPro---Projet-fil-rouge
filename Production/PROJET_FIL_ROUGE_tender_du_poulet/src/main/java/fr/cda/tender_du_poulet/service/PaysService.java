@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.PaysRepository;
 import fr.cda.tender_du_poulet.dto.PaysDTO;
-import fr.cda.tender_du_poulet.dto.ProfilDTO;
 import fr.cda.tender_du_poulet.iService.PaysInterfaceService;
 import fr.cda.tender_du_poulet.util.PaysConverter;
 

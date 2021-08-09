@@ -28,7 +28,7 @@ public class EtatCompteController {
 		return etatCompteService.findEtatCompte(idEtatCompte);
 	}
 	
-	@RequestMapping(value = "/findAllEtatCompte", method = RequestMethod.POST)
+	@RequestMapping(value = "/findAllEtatCompte", method = RequestMethod.GET)
 	public List<EtatCompteDTO> findAllEtatCompte() {
 		return etatCompteService.findAllEtatCompte();
 	}

@@ -1,9 +1,6 @@
 package fr.cda.tender_du_poulet.dto;
 
 import java.util.Date;
-import fr.cda.tender_du_poulet.beans.ActionSurPublication;
-import fr.cda.tender_du_poulet.beans.Admin;
-import fr.cda.tender_du_poulet.beans.Publication;
 
 public class AdministrerPublicationIdDTO {
 	

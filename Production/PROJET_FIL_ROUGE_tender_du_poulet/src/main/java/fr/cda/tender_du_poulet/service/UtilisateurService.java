@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.UtilisateurRepository;
 import fr.cda.tender_du_poulet.dto.UtilisateurDTO;
-import fr.cda.tender_du_poulet.metiers.UtilisateurVerif;
 import fr.cda.tender_du_poulet.util.UtilisateurConverter;
 
 @Service

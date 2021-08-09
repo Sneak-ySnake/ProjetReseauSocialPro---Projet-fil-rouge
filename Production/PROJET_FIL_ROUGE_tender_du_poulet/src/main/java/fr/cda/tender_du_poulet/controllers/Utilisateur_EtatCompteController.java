@@ -28,7 +28,7 @@ public class Utilisateur_EtatCompteController {
 		return utilisateur_EtatCompteService.findUtilisateur_EtatCompte(id);
 	}
 	
-	@RequestMapping(value = "/findAllUtilisateur_EtatCompte", method = RequestMethod.POST)
+	@RequestMapping(value = "/findAllUtilisateur_EtatCompte", method = RequestMethod.GET)
 	public List<Utilisateur_EtatCompteDTO> findAllUtilisateur_EtatCompte() {
 		return utilisateur_EtatCompteService.findAllUtilisateur_EtatCompte();
 	}
