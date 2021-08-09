@@ -2,22 +2,28 @@ package fr.cda.tender_du_poulet.dto;
 
 public class FavoriDTO {  
  
-	private FavoriIdDTO favoriIdDTO;
+	private FavoriIdDTO id_favori;
 
-	public FavoriDTO() {}  
-
-	public FavoriDTO(FavoriIdDTO favoriIdDTO) {
-		 
-		this.favoriIdDTO = favoriIdDTO;
+	public FavoriDTO() {		
+		
+	}
+		
+	public FavoriDTO(FavoriIdDTO id_favori) {
+		
+		this.id_favori = id_favori;
 	}
 
-	public FavoriIdDTO getFavoriIdDTO() {
-		return favoriIdDTO;
+	public FavoriIdDTO getId_favori() {
+		return id_favori;
 	}
 
-	public void setFavoriIdDTO(FavoriIdDTO favoriIdDTO) {
-		this.favoriIdDTO = favoriIdDTO;
-	} 
+	public void setId_favori(FavoriIdDTO id_favori) {
+		this.id_favori = id_favori;
+	}
+	
+
+	
+	 
 	
 	
 	
