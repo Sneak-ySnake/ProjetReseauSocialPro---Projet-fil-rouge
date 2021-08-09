@@ -28,7 +28,7 @@ public class ProfilController {
 		return profilService.findProfil(idProfil);
 	}
 	
-	@RequestMapping(value = "/findAllProfil", method = RequestMethod.POST)
+	@RequestMapping(value = "/findAllProfil", method = RequestMethod.GET)
 	public List<ProfilDTO> findAllProfil() {
 		return profilService.findAllProfil();
 	}

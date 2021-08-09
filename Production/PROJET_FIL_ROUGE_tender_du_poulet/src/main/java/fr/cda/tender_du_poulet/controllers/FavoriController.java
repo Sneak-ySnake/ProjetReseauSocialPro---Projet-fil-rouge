@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.cda.tender_du_poulet.beans.FavoriId;
 import fr.cda.tender_du_poulet.dto.FavoriDTO;
-import fr.cda.tender_du_poulet.dto.FavoriIdDTO;
-import fr.cda.tender_du_poulet.dto.NegociationDTO;
 import fr.cda.tender_du_poulet.service.FavoriService;
 
 @RestController

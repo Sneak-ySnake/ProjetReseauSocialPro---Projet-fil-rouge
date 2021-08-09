@@ -1,7 +1,5 @@
 package fr.cda.tender_du_poulet.dto;
 
-import fr.cda.tender_du_poulet.beans.Utilisateur;
-
 public class FavoriIdDTO { 
 	 
 	private UtilisateurDTO utilisateur;

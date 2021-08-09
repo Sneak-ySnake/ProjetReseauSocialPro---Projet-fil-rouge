@@ -1,9 +1,6 @@
 package fr.cda.tender_du_poulet.dto;
 
 import java.util.Date;
-import fr.cda.tender_du_poulet.beans.ActionSurUtilisateur;
-import fr.cda.tender_du_poulet.beans.Admin;
-import fr.cda.tender_du_poulet.beans.Utilisateur;
 
 public class AdministrerUtilisateurIdDTO {
 	

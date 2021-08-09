@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import fr.cda.tender_du_poulet.dao.NegociationRepository;
 import fr.cda.tender_du_poulet.dto.NegociationDTO;
-import fr.cda.tender_du_poulet.dto.PublicationDTO;
 import fr.cda.tender_du_poulet.iService.NegociationInterfaceService;
 import fr.cda.tender_du_poulet.util.NegociationConverter;
 

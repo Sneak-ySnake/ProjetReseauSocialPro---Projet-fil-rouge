@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.cda.tender_du_poulet.beans.NegocierId;
 import fr.cda.tender_du_poulet.dto.NegocierDTO;
-import fr.cda.tender_du_poulet.dto.NegocierIdDTO;
 import fr.cda.tender_du_poulet.dto.PublicationDTO;
-import fr.cda.tender_du_poulet.dto.UtilisateurDTO;
 import fr.cda.tender_du_poulet.service.NegocierService;
 
 @RestController

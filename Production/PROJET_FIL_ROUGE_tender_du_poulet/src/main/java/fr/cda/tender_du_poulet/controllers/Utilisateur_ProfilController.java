@@ -27,7 +27,7 @@ public class Utilisateur_ProfilController {
 		return utilisateur_ProfilService.findUtilisateur_Profil(id);
 	}
 	
-	@RequestMapping(value = "/findAllUtilisateur_Profil", method = RequestMethod.POST)
+	@RequestMapping(value = "/findAllUtilisateur_Profil", method = RequestMethod.GET)
 	public List<Utilisateur_ProfilDTO> findAllUtilisateur_Profil() {
 		return utilisateur_ProfilService.findAllUtilisateur_Profil();
 	}

@@ -6,9 +6,7 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
-import fr.cda.tender_du_poulet.beans.Negocier;
 import fr.cda.tender_du_poulet.beans.NegocierId;
-import fr.cda.tender_du_poulet.dto.NegocierDTO;
 import fr.cda.tender_du_poulet.dto.NegocierIdDTO;
 
 @Component
