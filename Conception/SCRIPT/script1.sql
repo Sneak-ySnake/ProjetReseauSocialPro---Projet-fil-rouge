@@ -6,7 +6,7 @@ owner to gestionnaire;
 
 create table pfr_tender.profil
 (id_profil serial not null,
-nom_profil varchar(50) not null
+nom_profil varchar(20) not null
 );
 
 alter table pfr_tender.profil
@@ -17,7 +17,7 @@ owner to gestionnaire;
 
 create table pfr_tender.etat_compte
 (id_etat_compte serial not null,
-nom_etat_compte varchar(50) not null,
+nom_etat_compte varchar(20) not null,
 duree integer not null
 );
 
@@ -29,7 +29,7 @@ owner to gestionnaire;
 
 create table pfr_tender.domaine
 (id_domaine serial not null,
-nom_domaine varchar(50) not null
+nom_domaine varchar(20) not null
 );
 
 alter table pfr_tender.domaine
@@ -63,15 +63,15 @@ owner to gestionnaire;
 
 create table pfr_tender.utilisateur
 (id_utilisateur serial not null,
-nom_utilisateur varchar(50) not null,
-prenom_utilisateur varchar(50) not null,
-site_web varchar(50),
+nom_utilisateur varchar(20) not null,
+prenom_utilisateur varchar(20) not null,
+site_web varchar(20),
 telephone varchar(20) not null,
 poste_occupe varchar(50),
-email_utilisateur varchar(100) not null,
-mot_de_passe_utilisateur varchar(100) not null,
+email_utilisateur varchar(20) not null,
+mot_de_passe_utilisateur varchar(20) not null,
 siret varchar(20),
-nom_entreprise varchar(100),
+nom_entreprise varchar(50),
 num_voie varchar(10),
 adresse varchar(100),
 complement_adresse varchar(150),
@@ -130,7 +130,7 @@ owner to gestionnaire;
 create table pfr_tender.type_publication
 (
 id_type_publication serial not null,
-nom_type_publication varchar(100) not null
+nom_type_publication varchar(20) not null
 );
 
 alter table pfr_tender.type_publication
@@ -142,7 +142,7 @@ owner to gestionnaire
 create table pfr_tender.etat_publication
 (
 id_etat_publication serial not null,
-nom_etat_publication varchar(50) not null
+nom_etat_publication varchar(20) not null
 );
 
 alter table pfr_tender.etat_publication
@@ -154,7 +154,7 @@ owner to gestionnaire
 create table pfr_tender.statut_publication
 (
 id_statut_publication serial not null,
-nom_statut_publication varchar(50) not null
+nom_statut_publication varchar(20) not null
 );
 
 alter table pfr_tender.statut_publication
@@ -166,10 +166,10 @@ owner to gestionnaire
 create table pfr_tender.publication
 (
 id_publication serial not null,
-nom_publication varchar(50) not null,
+nom_publication varchar(20) not null,
 description_publication varchar(500) not null,
 prix float not null,
-type_produit varchar(50) not null,
+type_produit varchar(20) not null,
 date_publication date not null,
 quantite integer,
 id_utilisateur integer not null,
@@ -205,7 +205,7 @@ owner to gestionnaire;
 CREATE TABLE pfr_tender.action_sur_utilisateur
 (
 id_action_sur_utilisateur serial NOT NULL,
-nom_action_sur_utilisateur varchar(50) NOT NULL
+nom_action_sur_utilisateur varchar(20) NOT NULL
 )
 ;
 
@@ -218,7 +218,7 @@ OWNER to gestionnaire
 CREATE TABLE pfr_tender.action_sur_publication
 (
 id_action_sur_publication Serial NOT NULL,
-nom_action_sur_publication varchar(50) NOT NULL
+nom_action_sur_publication varchar(20) NOT NULL
 );
 
 alter table pfr_tender.action_sur_publication
@@ -230,8 +230,8 @@ OWNER to gestionnaire
 CREATE TABLE pfr_tender.admin
 (
 id_admin Serial NOT NULL,
-mail_admin varchar(100) NOT NULL,
-mot_de_passe_admin varchar(100) NOT NULL,
+mail_admin varchar(30) NOT NULL,
+mot_de_passe_admin varchar(20) NOT NULL,
 telephone varchar(20),
 num_voie_admin varchar(10),
 adresse_admin varchar(100),
@@ -306,47 +306,6 @@ constraint FK_NEGOCIER_NEGOCIATION foreign key (id_negociation) references pfr_t
 alter table pfr_tender.negocier 
 OWNER to gestionnaire
 ;
-
-
-INSERT INTO pfr_tender.domaine (nom_domaine) VALUES ('poulet');
-INSERT INTO pfr_tender.domaine (nom_domaine) VALUES ('cheval');
-
-INSERT INTO pfr_tender.pays (nom_pays) VALUES ('france');
-INSERT INTO pfr_tender.pays (nom_pays) VALUES ('allemagne');
-
-INSERT INTO pfr_tender.ville (nom_ville, code_postal, id_pays) VALUES ('lille', '59000', 1);
-INSERT INTO pfr_tender.ville (nom_ville, code_postal, id_pays) VALUES ('lens', '62000', 1);
-INSERT INTO pfr_tender.ville (nom_ville, code_postal, id_pays) VALUES ('paris', '75000', 1);
-INSERT INTO pfr_tender.ville (nom_ville, code_postal, id_pays) VALUES ('berlin', '10178', 2);
-
-INSERT INTO pfr_tender.utilisateur (nom_utilisateur, prenom_utilisateur, site_web, telephone, poste_occupe, email_utilisateur, mot_de_passe_utilisateur, siret, nom_entreprise, num_voie, adresse, complement_adresse, id_domaine, id_ville)
-VALUES ('nomTest', 'prenomTest', 'test.com', '0123456789', 'développeur', 'test@test.com', 'test', '123 456 789', 'entrepriseTest', '25', 'rue du test', 'complementTest', 1, 1);
-
-INSERT INTO pfr_tender.profil (nom_profil) VALUES ('grossiste');
-INSERT INTO pfr_tender.profil (nom_profil) VALUES ('distributer');
-INSERT INTO pfr_tender.profil (nom_profil) VALUES ('détaillant');
-
-INSERT INTO pfr_tender.utilisateur_profil (id_utilisateur, id_profil) VALUES (1, 1);
-INSERT INTO pfr_tender.utilisateur_profil (id_utilisateur, id_profil) VALUES (1, 2);
-INSERT INTO pfr_tender.utilisateur_profil (id_utilisateur, id_profil) VALUES (1, 3);
-
-INSERT INTO pfr_tender.etat_compte (nom_etat_compte, duree) VALUES ('actif', 0);
-INSERT INTO pfr_tender.etat_compte (nom_etat_compte, duree) VALUES ('suspendu', 30);
-
-INSERT INTO pfr_tender.utilisateur_etat_compte (id_utilisateur, id_etat_compte, date_debut) VALUES (1, 1, '2021-08-06');
-
-INSERT INTO pfr_tender.type_publication (nom_type_publication) VALUES ('offre');
-INSERT INTO pfr_tender.type_publication (nom_type_publication) VALUES ('demande');
-
-INSERT INTO pfr_tender.statut_publication (nom_statut_publication) VALUES ('public');
-INSERT INTO pfr_tender.statut_publication (nom_statut_publication) VALUES ('privé');
-
-INSERT INTO pfr_tender.etat_publication (nom_etat_publication) VALUES ('en cours');
-INSERT INTO pfr_tender.etat_publication (nom_etat_publication) VALUES ('archivé');
-INSERT INTO pfr_tender.etat_publication (nom_etat_publication) VALUES ('suspendu');
-
-INSERT INTO pfr_tender.publication (nom_publication, description_publication, prix, type_produit, date_publication, quantite, id_utilisateur, id_type_publication, id_statut_publication, id_etat_publication)
-VALUES ('nomPublicationTest', 'descriptionTest', 60, 'typeTest', '2021-08-08', 20, 1, 1, 1, 1);
 
 commit;
 
