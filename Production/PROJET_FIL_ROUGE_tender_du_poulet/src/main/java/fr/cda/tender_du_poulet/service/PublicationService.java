@@ -40,12 +40,12 @@ public class PublicationService implements PublicationInterfaceService {
 	}
 	
 	public List<PublicationDTO> findAllDemandeUtilisateur(UtilisateurDTO u) {
-		List<PublicationDTO> listePubli = converter.entityVersDto(publicationRepository.findAllPublicationByUtilisateur(u.getId_utilisateur(), 1));
+		List<PublicationDTO> listePubli = converter.entityVersDto(publicationRepository.findAllPublicationByUtilisateur(u.getId_utilisateur(), 2));
 		return listePubli;
 	}
 	
 	public List<PublicationDTO> findAllOffreUtilisateur(UtilisateurDTO u) {
-		List<PublicationDTO> listePubli = converter.entityVersDto(publicationRepository.findAllPublicationByUtilisateur(u.getId_utilisateur(), 2));
+		List<PublicationDTO> listePubli = converter.entityVersDto(publicationRepository.findAllPublicationByUtilisateur(u.getId_utilisateur(), 1));
 		return listePubli;
 	}
 	
