@@ -2,8 +2,6 @@ package fr.cda.tender_du_poulet.dto;
 
 import java.util.Date;
 
-import fr.cda.tender_du_poulet.beans.Utilisateur;
-
 public class PublicationDTO {
 	
 	private int id_publication;
@@ -20,7 +18,7 @@ public class PublicationDTO {
 
 	private int quantite;
 
-	private Utilisateur utilisateur;
+	private UtilisateurDTO utilisateur;
 
 	private TypePublicationDTO type_publication;
 
@@ -106,12 +104,12 @@ public class PublicationDTO {
 	}
 
 
-	public Utilisateur getUtilisateur() {
+	public UtilisateurDTO getUtilisateur() {
 		return utilisateur;
 	}
 
 
-	public void setUtilisateur(Utilisateur utilisateur) {
+	public void setUtilisateurDTO(UtilisateurDTO utilisateur) {
 		this.utilisateur = utilisateur;
 	}
 
