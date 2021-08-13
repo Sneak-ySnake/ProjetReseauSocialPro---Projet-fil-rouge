@@ -295,7 +295,7 @@ create table pfr_tender.negocier
 id_utilisateur int,
 id_publication int,
 id_negociation int,
-date Date,
+date TIMESTAMP,
 message text,
 constraint PK_NEGOCIER primary key (id_utilisateur, id_publication, id_negociation, date),
 constraint FK_NEGOCIER_UTILISATEUR foreign key (id_utilisateur) references pfr_tender.utilisateur(id_utilisateur),
@@ -320,7 +320,7 @@ INSERT INTO pfr_tender.ville (nom_ville, code_postal, id_pays) VALUES ('paris', 
 INSERT INTO pfr_tender.ville (nom_ville, code_postal, id_pays) VALUES ('berlin', '10178', 2);
 
 INSERT INTO pfr_tender.utilisateur (nom_utilisateur, prenom_utilisateur, site_web, telephone, poste_occupe, email_utilisateur, mot_de_passe_utilisateur, siret, nom_entreprise, num_voie, adresse, complement_adresse, id_domaine, id_ville)
-VALUES ('nomTest', 'prenomTest', 'test.com', '0123456789', 'développeur', 'test@test.com', 'test', '123 456 789', 'entrepriseTest', '25', 'rue du test', 'complementTest', 1, 1);
+VALUES ('nomTest', 'prenomTest', 'test.com', '0123456789', 'développeur', 'test@test.com', '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08', '123 456 789', 'entrepriseTest', '25', 'rue du test', 'complementTest', 1, 1);
 
 INSERT INTO pfr_tender.profil (nom_profil) VALUES ('grossiste');
 INSERT INTO pfr_tender.profil (nom_profil) VALUES ('distributer');

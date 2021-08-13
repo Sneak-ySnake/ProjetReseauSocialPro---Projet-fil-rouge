@@ -13,22 +13,20 @@ public class Favori {
 	@Id
 	@Embedded
 	@GeneratedValue( strategy=GenerationType.IDENTITY)
-	private FavoriId favoriId;
-	
+	private FavoriId id_favori;
+
 	public Favori() {
-			
-		}
-	public Favori(FavoriId favoriId) {
-		 this.favoriId = favoriId;
+		
 	}
-
-	public FavoriId getFavoriId() {
-		return favoriId;
+	public Favori(FavoriId id_favori) {
+		this.id_favori = id_favori;
 	}
-
-	public void setFavoriId(FavoriId favoriId) {
-		this.favoriId = favoriId;
-	} 
+	public FavoriId getId_favori() {
+		return id_favori;
+	}
+	public void setId_favori(FavoriId id_favori) {
+		this.id_favori = id_favori;
+	}
 	
 	
 }

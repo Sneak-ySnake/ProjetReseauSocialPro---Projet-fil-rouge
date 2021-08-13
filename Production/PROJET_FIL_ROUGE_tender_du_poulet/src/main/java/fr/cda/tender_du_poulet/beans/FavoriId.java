@@ -12,33 +12,38 @@ public class FavoriId  implements Serializable {
 	
 	@ManyToOne()
 	@JoinColumn(name = "id_utilisateur")
-	private Utilisateur utilisateur;
+	private Utilisateur id_utilisateur;
 	
 	@ManyToOne()
 	@JoinColumn(name = "id_utilisateur_favori")
-	private Utilisateur utilisateur_favori;
+	private Utilisateur id_utilisateur_favori;
 
-   public FavoriId() {}
-   
-	public FavoriId(Utilisateur utilisateur, Utilisateur utilisateur_favori) {
-		this.utilisateur = utilisateur;
-		this.utilisateur_favori = utilisateur_favori;
+	public FavoriId() {
+		
 	}
+
+	public FavoriId(Utilisateur id_utilisateur, Utilisateur id_utilisateur_favori) {
 	
-	public Utilisateur getUtilisateur() {
-		return utilisateur;
+		this.id_utilisateur = id_utilisateur;
+		this.id_utilisateur_favori = id_utilisateur_favori;
 	}
 
-	public void setUtilisateur(Utilisateur utilisateur) {
-		this.utilisateur = utilisateur;
+	public Utilisateur getId_utilisateur() {
+		return id_utilisateur;
+	}
+
+	public void setId_utilisateur(Utilisateur id_utilisateur) {
+		this.id_utilisateur = id_utilisateur;
 	}
 
 	public Utilisateur getId_utilisateur_favori() {
-		return utilisateur_favori;
+		return id_utilisateur_favori;
 	}
 
-	public void setId_utilisateur_favori(Utilisateur utilisateur_favori) {
-		this.utilisateur_favori = utilisateur_favori;
+	public void setId_utilisateur_favori(Utilisateur id_utilisateur_favori) {
+		this.id_utilisateur_favori = id_utilisateur_favori;
 	}
- 
+	
+	
+	
 }
