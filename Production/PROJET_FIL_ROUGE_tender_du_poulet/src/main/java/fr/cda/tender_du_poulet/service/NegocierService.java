@@ -43,12 +43,13 @@ public class NegocierService implements NegocierInterfaceService{
 	}
 
 	
-	public List<NegocierDTO> findAllNegocierPublication(int id_publication) {
+	public List<NegocierDTO> findAllNegocierPublication(int id_publication, int id_utilisateur) {
 		List<NegocierDTO> listeNegocier = negocierConverter.entityVersDto(negocierRepository.findAllNegocierPublication(id_publication));
 		
 		for(int i=0 ; i<listeNegocier.size() ; i++) {
 			for(int j = 1 ; j<listeNegocier.size() ; j++) {
-				if(listeNegocier.get(i).getId_negocier().getUtilisateur()==listeNegocier.get(j).getId_negocier().getUtilisateur()) {
+				if(listeNegocier.get(i).getId_negocier().getUtilisateur()==listeNegocier.get(j).getId_negocier().getUtilisateur()
+						|| listeNegocier.get(j).getId_negocier().getUtilisateur().getId_utilisateur() == id_utilisateur) {
 					listeNegocier.remove(j);
 				}
 			}
