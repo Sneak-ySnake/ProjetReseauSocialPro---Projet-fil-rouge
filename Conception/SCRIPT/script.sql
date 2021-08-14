@@ -279,28 +279,16 @@ add constraint PK_ADMINISTRER_PUBLICATION_PUBLICATION FOREIGN KEY (id_publicatio
 OWNER to gestionnaire
 ;
 
-
-create table pfr_tender.negociation
-(
-id_negociation serial not null,
-CONSTRAINT PK_NEGOCATION primary key (id_negociation)
-);
-
-alter table pfr_tender.negociation 
-OWNER to gestionnaire
-;
-
 create table pfr_tender.negocier
 (
 id_utilisateur int,
 id_publication int,
-id_negociation int,
+id_negociation text,
 date TIMESTAMP,
 message text,
 constraint PK_NEGOCIER primary key (id_utilisateur, id_publication, id_negociation, date),
 constraint FK_NEGOCIER_UTILISATEUR foreign key (id_utilisateur) references pfr_tender.utilisateur(id_utilisateur),
-constraint FK_NEGOCIER_PUBLICATION foreign key (id_publication) references pfr_tender.publication(id_publication),
-constraint FK_NEGOCIER_NEGOCIATION foreign key (id_negociation) references pfr_tender.negociation(id_negociation)
+constraint FK_NEGOCIER_PUBLICATION foreign key (id_publication) references pfr_tender.publication(id_publication)
 );
 
 alter table pfr_tender.negocier 

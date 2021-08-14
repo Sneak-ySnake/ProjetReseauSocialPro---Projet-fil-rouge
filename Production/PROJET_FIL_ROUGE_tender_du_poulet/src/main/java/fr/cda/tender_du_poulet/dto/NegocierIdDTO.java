@@ -5,31 +5,30 @@ import java.util.Date;
  
 public class NegocierIdDTO {
  
-	private NegociationDTO negociation;
 	private PublicationDTO publication;
 	private UtilisateurDTO utilisateur;
+	
+	String id_negociation;
 	
 	private Date date;
 
 	public NegocierIdDTO() {
 	}
 	 
-	public NegocierIdDTO(NegociationDTO negociation, PublicationDTO publication, UtilisateurDTO utilisateur,
+	public NegocierIdDTO(String id_negociation, PublicationDTO publication, UtilisateurDTO utilisateur,
 			Date date) {
-		 
-		this.negociation = negociation;
+		this.id_negociation = id_negociation;
 		this.publication = publication;
 		this.utilisateur = utilisateur;
 		this.date = date;
 	}
-
-
-	public NegociationDTO getNegociation() {
-		return negociation;
+	
+	public String getId_negociation() {
+		return id_negociation;
 	}
 
-	public void setNegociation(NegociationDTO negociation) {
-		this.negociation = negociation;
+	public void setId_negociation(String id_negociation) {
+		this.id_negociation = id_negociation;
 	}
 
 	public PublicationDTO getPublication() {
