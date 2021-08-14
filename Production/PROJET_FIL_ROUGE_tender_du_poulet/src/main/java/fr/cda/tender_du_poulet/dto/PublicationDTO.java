@@ -109,7 +109,7 @@ public class PublicationDTO {
 	}
 
 
-	public void setUtilisateurDTO(UtilisateurDTO utilisateur) {
+	public void setUtilisateur(UtilisateurDTO utilisateur) {
 		this.utilisateur = utilisateur;
 	}
 

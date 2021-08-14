@@ -80,9 +80,4 @@ public class PublicationController {
 		}
 	}
 	
-	@PostMapping(value = "/publierVerificationn")
-	public boolean publicationVerificationn(@RequestBody PublicationDTO p) {
-		return true;
-	}
-	
 }
