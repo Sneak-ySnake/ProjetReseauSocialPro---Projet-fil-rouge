@@ -58,6 +58,8 @@ public class NegocierService implements NegocierInterfaceService{
 		return listeNegocier;
 	}
 	 
-	 
-
+	public List<NegocierDTO> findAllMessagePublication(int id_publication, String id_negociation) {
+		return negocierConverter.entityVersDto(negocierRepository.findAllMessagePublication(id_publication, id_negociation));
+	}
+	
 }

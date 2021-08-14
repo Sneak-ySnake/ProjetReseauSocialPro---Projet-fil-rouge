@@ -27,8 +27,8 @@ public class PublicationController {
 	}
 	
 	@PostMapping(value = "/findPublication")
-	public PublicationDTO findPublication(@RequestBody String id) {
-		return service.findPublication(Integer.parseInt(id));
+	public PublicationDTO findPublication(@RequestBody PublicationDTO p) {
+		return service.findPublication(p.getId_publication());
 	}
 	
 	@PostMapping(value = "/addPublication")

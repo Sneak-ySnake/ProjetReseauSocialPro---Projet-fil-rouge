@@ -1,11 +1,18 @@
 package fr.cda.tender_du_poulet.beans;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Timestamp;
 
 import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 
 @Embeddable
 public class NegocierId implements Serializable{
@@ -17,21 +24,19 @@ public class NegocierId implements Serializable{
 	@ManyToOne()
 	@JoinColumn(name = "id_publication")
 	private Publication publication;
+
+	private String id_negociation;
 	
-	@ManyToOne()
-	@JoinColumn(name = "id_negociation")
-	private Negociation negociation;
-	
-	private Date date;
+	private Timestamp date;
 
 	public NegocierId() {
 		
 	}
 
-	public NegocierId(Utilisateur utilisateur, Publication publication, Negociation negociation, Date date) {
+	public NegocierId(Utilisateur utilisateur, Publication publication, String id_negociation, Timestamp date) {
 		this.utilisateur = utilisateur;
 		this.publication = publication;
-		this.negociation = negociation;
+		this.id_negociation = id_negociation;
 		this.date = date;
 	}
 
@@ -51,19 +56,19 @@ public class NegocierId implements Serializable{
 		this.publication = publication;
 	}
 
-	public Negociation getNegociation() {
-		return negociation;
+	public String getId_negociation() {
+		return id_negociation;
 	}
 
-	public void setNegociation(Negociation negociation) {
-		this.negociation = negociation;
+	public void setId_negociation(String id_negociation) {
+		this.id_negociation = id_negociation;
 	}
 
-	public Date getDate() {
+	public Timestamp getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(Timestamp date) {
 		this.date = date;
 	}
 
