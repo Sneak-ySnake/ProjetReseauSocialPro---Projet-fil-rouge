@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.cda.tender_du_poulet.dto.ProfilDTO;
+import fr.cda.tender_du_poulet.metiers.ProfilVerif;
 import fr.cda.tender_du_poulet.service.ProfilService;
 
 @RestController
@@ -16,6 +17,8 @@ public class ProfilController {
 	
 	@Autowired
 	private ProfilService profilService;
+
+	private ProfilVerif profilVerif = new ProfilVerif();
 
 	@RequestMapping(value = "/addProfil", method = RequestMethod.POST)
 	public void addProfil(@RequestBody ProfilDTO d) {
@@ -43,4 +46,14 @@ public class ProfilController {
 		int idProfil = Integer.parseInt(id);
 		profilService.deleteProfil(idProfil);
 	}
+
+	/*@RequestMapping(value = "/inscriptionDesProfilsIsValeurOk", method = RequestMethod.POST)
+	public boolean inscriptionDesProfilsIsValeurOk(@RequestBody ProfilDTO profil1, 
+			@RequestBody ProfilDTO profil2, @RequestBody ProfilDTO profil3) {
+		if(profilVerif.inscriptionDesProfilsIsValeurOk(profil1, profil2, profil3)) {
+			return true;
+		} else {
+			return false;
+		}
+	}*/
 }
