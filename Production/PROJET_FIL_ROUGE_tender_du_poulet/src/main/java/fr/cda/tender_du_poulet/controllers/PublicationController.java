@@ -80,9 +80,9 @@ public class PublicationController {
 		}
 	}
 	
-	@PostMapping(value = "/publierVerificationn")
-	public boolean publicationVerificationn(@RequestBody PublicationDTO p) {
-		return true;
+	@PostMapping(value = "/dateFormater")
+	public String dateFormater(@RequestBody PublicationDTO p) {
+		return service.dateFormater(p);
 	}
 	
 }

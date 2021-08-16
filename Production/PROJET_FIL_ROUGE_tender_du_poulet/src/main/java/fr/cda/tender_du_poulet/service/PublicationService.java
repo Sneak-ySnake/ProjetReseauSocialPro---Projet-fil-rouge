@@ -1,5 +1,7 @@
 package fr.cda.tender_du_poulet.service;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +49,13 @@ public class PublicationService implements PublicationInterfaceService {
 	public List<PublicationDTO> findAllOffreUtilisateur(UtilisateurDTO u) {
 		List<PublicationDTO> listePubli = converter.entityVersDto(publicationRepository.findAllPublicationByUtilisateur(u.getId_utilisateur(), 1));
 		return listePubli;
+	}
+
+	public String dateFormater(PublicationDTO p) {
+		String pattern = "yyyy-MM-dd";
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+		String datePublicationFormatter = simpleDateFormat.format(p.getDate_publication());
+		return datePublicationFormatter;
 	}
 	
 }

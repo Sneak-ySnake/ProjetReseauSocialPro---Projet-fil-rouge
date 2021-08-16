@@ -2,7 +2,9 @@ package fr.cda.tender_du_poulet.controllers;
 
 import java.util.List;
 
+import org.hibernate.TransientObjectException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -66,4 +68,44 @@ public class UtilisateurController {
 		return utilisateurVerif.verifLogin(u, mdp);
 	}
 	*/
+
+	
+	@PostMapping(value = "/inscriptionVerification")
+	public boolean inscriptionVerification(@RequestBody UtilisateurDTO u) {
+		if(utilisateurVerif.isNotEmpty(u.getNom_utilisateur(), u.getPrenom_utilisateur(), u.getSite_web(), 
+				u.getTelephone(), u.getEmail_utilisateur(), u.getMot_de_passe_utilisateur(), u.getSiret(),
+				u.getNom_entreprise(), u.getNum_voie(), u.getAdresse(), u.getComplement_adresse(), 
+				u.getVille(), u.getDomaine() )) {
+			if(utilisateurVerif.isTypeOk(u.getNom_utilisateur(), u.getPrenom_utilisateur(), u.getTelephone(), 
+					u.getEmail_utilisateur(), u.getSiret(),u.getVille(), u.getDomaine() )) {
+				if(utilisateurVerif.isValeurOk(u.getSiret(),u.getVille(), u.getDomaine() )) {
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
+			else {
+				return false;
+			}
+		}
+		else {
+			return false;
+		}
+	}
+	
+	@PostMapping(value = "/findUtilisateurByEmail_utilisateur")
+	public UtilisateurDTO findUtilisateurByEmail_utilisateur(@RequestBody UtilisateurDTO u) {
+		try {
+			return utilisateurService.findUtilisateurEmail(u.getEmail_utilisateur());
+		} catch (IllegalArgumentException e) {
+			UtilisateurDTO u2 = new UtilisateurDTO();
+			u2.setEmail_utilisateur(null);
+			return u2;
+		} catch (TransientObjectException e) {
+			UtilisateurDTO u2 = new UtilisateurDTO();
+			u2.setEmail_utilisateur(null);
+			return u2;
+		}
+	}
 }

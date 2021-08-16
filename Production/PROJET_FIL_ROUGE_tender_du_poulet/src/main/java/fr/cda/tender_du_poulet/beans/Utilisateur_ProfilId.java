@@ -20,7 +20,6 @@ public class Utilisateur_ProfilId implements Serializable {
 	}
 
 	public Utilisateur_ProfilId(Utilisateur utilisateur, Profil profil) {
-		super();
 		this.utilisateur = utilisateur;
 		this.profil = profil;
 	}
