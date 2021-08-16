@@ -17,4 +17,6 @@ public interface NegocierRepository extends JpaRepository<Negocier, NegocierId> 
 	@Query("select n from Negocier n where n.id_negocier.publication.id_publication=(:id_publication) and n.id_negocier.id_negociation=(:id_negociation) order by date")
 	public List<Negocier> findAllMessagePublication(@Param("id_publication") int id_publication, @Param("id_negociation") String id_negociation);
 	
+	@Query("select n from Negocier n where n.id_negocier.utilisateur.id_utilisateur=(:id_utilisateur) ")
+	public List<Negocier> findAllNegociationUtilisateur(@Param("id_utilisateur") int id_utilisateur);
 }
