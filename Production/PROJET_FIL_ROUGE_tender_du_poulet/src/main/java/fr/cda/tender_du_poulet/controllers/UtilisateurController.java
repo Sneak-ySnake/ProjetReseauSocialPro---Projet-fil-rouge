@@ -2,6 +2,7 @@ package fr.cda.tender_du_poulet.controllers;
 
 import java.util.List;
 
+import org.hibernate.TransientObjectException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -95,7 +96,16 @@ public class UtilisateurController {
 	
 	@PostMapping(value = "/findUtilisateurByEmail_utilisateur")
 	public UtilisateurDTO findUtilisateurByEmail_utilisateur(@RequestBody UtilisateurDTO u) {
-		System.out.println(u.getEmail_utilisateur());
-		return utilisateurService.findUtilisateurEmail(u.getEmail_utilisateur());
+		try {
+			return utilisateurService.findUtilisateurEmail(u.getEmail_utilisateur());
+		} catch (IllegalArgumentException e) {
+			UtilisateurDTO u2 = new UtilisateurDTO();
+			u2.setEmail_utilisateur(null);
+			return u2;
+		} catch (TransientObjectException e) {
+			UtilisateurDTO u2 = new UtilisateurDTO();
+			u2.setEmail_utilisateur(null);
+			return u2;
+		}
 	}
 }
