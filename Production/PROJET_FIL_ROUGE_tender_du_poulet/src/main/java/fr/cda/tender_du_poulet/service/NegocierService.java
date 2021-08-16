@@ -62,4 +62,19 @@ public class NegocierService implements NegocierInterfaceService{
 		return negocierConverter.entityVersDto(negocierRepository.findAllMessagePublication(id_publication, id_negociation));
 	}
 	
+	public List<NegocierDTO> findAllNegociationUtilisateur(int id_utilisateur) {
+
+		List<NegocierDTO> listeNegocier = negocierConverter.entityVersDto(negocierRepository.findAllNegociationUtilisateur(id_utilisateur));
+		
+		for(int i=0 ; i<listeNegocier.size() ; i++) {
+			for(int j = 1 ; j<listeNegocier.size() ; j++) {
+				if(listeNegocier.get(i).getId_negocier().getId_negociation().equals(listeNegocier.get(j).getId_negocier().getId_negociation())) {
+					listeNegocier.remove(j);
+				}
+			}
+		}
+		
+		return listeNegocier;
+	}
+	
 }
