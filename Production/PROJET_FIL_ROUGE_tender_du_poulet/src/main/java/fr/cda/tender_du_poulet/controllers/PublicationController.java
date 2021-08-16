@@ -80,4 +80,9 @@ public class PublicationController {
 		}
 	}
 	
+	@PostMapping(value = "/dateFormater")
+	public String dateFormater(@RequestBody PublicationDTO p) {
+		return service.dateFormater(p);
+	}
+	
 }
