@@ -62,5 +62,8 @@ public class AdminService implements AdminInterfaceService{
 		return utilisateurConverter.entityVersDto (utilisateurRepo.findAll());
 	}
 
+	public AdminDTO findAdministrateurEmail(String email_administrateur) {
+		return converter.entityVersDto(adminRepo.findByEmail(email_administrateur));
+	}
 
 }
