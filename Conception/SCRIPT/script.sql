@@ -336,5 +336,17 @@ INSERT INTO pfr_tender.etat_publication (nom_etat_publication) VALUES ('suspendu
 INSERT INTO pfr_tender.publication (nom_publication, description_publication, prix, type_produit, date_publication, quantite, id_utilisateur, id_type_publication, id_statut_publication, id_etat_publication)
 VALUES ('nomPublicationTest', 'descriptionTest', 60, 'typeTest', '2021-08-08', 20, 1, 1, 1, 1);
 
+INSERT INTO pfr_tender.admin (mail_admin, mot_de_passe_admin, telephone, num_voie_admin, adresse_admin, complement_adresse_admin, id_ville)
+VALUES ('admin01@hotmail.fr', 'a9ef6dba8516aa17f7fe41ccf5a7ec25ae58d005ffdaa9348d68526a8a088150', '0422334455', '109', 'messerschmidt strass', 'null', '4');
+
+INSERT INTO pfr_tender.admin (mail_admin, mot_de_passe_admin, telephone, num_voie_admin, adresse_admin, complement_adresse_admin, id_ville)
+VALUES ('admin02@free.fr', 'a9ef6dba8516aa17f7fe41ccf5a7ec25ae58d005ffdaa9348d68526a8a088150', '0103050709', '89', 'Rue Vauban', 'Quartier Kléber', '1');
+
+INSERT INTO pfr_tender.action_sur_utilisateur (nom_action_sur_utilisateur) VALUES ('supprimer');
+INSERT INTO pfr_tender.action_sur_utilisateur (nom_action_sur_utilisateur) VALUES ('bannir temporairement');
+
+INSERT INTO pfr_tender.action_sur_publication (nom_action_sur_publication) VALUES ('supprimer');
+INSERT INTO pfr_tender.action_sur_publication (nom_action_sur_publication) VALUES ('bannir temporairement')
+
 commit;
 

@@ -8,9 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.cda.tender_du_poulet.dto.AdminDTO;
+import fr.cda.tender_du_poulet.dto.UtilisateurDTO;
+import fr.cda.tender_du_poulet.metiers.AdminVerif;
+import fr.cda.tender_du_poulet.metiers.UtilisateurVerif;
 import fr.cda.tender_du_poulet.service.AdminService;
 
 /*
@@ -45,6 +50,8 @@ public class AdminController {
 		
 	@Autowired
 	private AdminService ads;
+	
+	private AdminVerif administrateurVerif = new AdminVerif();
 		
 	
 	@PostMapping (value = "/addAdmin")
@@ -72,6 +79,17 @@ public class AdminController {
 	@PostMapping (value ="/updateAdmin")
 	public void updateAdmin(@RequestBody AdminDTO a) {
 		ads.updateAdmin(a);
+	}
+	
+	@RequestMapping(value = "/loginAdmin", method = RequestMethod.POST)
+	public AdminDTO loginAdministrateur(@RequestBody AdminDTO a) {
+		String email = a.getMail_admin();
+		String mdp = a.getMot_de_passe_admin();
+		AdminDTO administrateur = ads.findAdministrateurEmail(email);
+		if(administrateurVerif.verifLogin(administrateur, mdp)) {
+			return administrateur;
+		}
+		else return null;
 	}
 	}
 
